@@ -1,259 +1,1234 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayotunde Okunubi | Freelance Web Developer</title>
-    <link rel="stylesheet" href="assets/timeline/assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/tail-output.css">
-    <style>
-        body, html {
-            height: 100%;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Eagle Solutions — Web Development That Scales</title>
+  <meta name="description" content="Royal Eagle Solutions builds fast, accessible, and conversion-focused websites for growing businesses. Custom web development, e-commerce, and SaaS products.">
+  <link rel="canonical" href="https://royaleaglesolutions.com/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Royal Eagle Solutions — Web Development That Scales">
+  <meta property="og:description" content="Custom web development, e-commerce, and SaaS products built for performance and growth.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://royaleaglesolutions.com/">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80">
+  
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Royal Eagle Solutions",
+    "description": "Custom web development agency specializing in performance-driven websites and applications.",
+    "url": "https://royaleaglesolutions.com",
+    "telephone": "+234-808-367-3149",
+    "email": "royaleagle.dev@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lagos",
+      "addressRegion": "Lagos",
+      "addressCountry": "NG"
+    },
+    "priceRange": "$$"
+  }
+  </script>
+  
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+    gtag('event', 'page_view');
+  </script>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0D8FDB',
+            secondary: '#4535E6',
+            accent: '#F53E3E',
+            dark: '#1F1B17',
+            light: '#F6F4F2',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Inter', 'system-ui', 'sans-serif'],
+          },
         }
-        .parallax {
-        /* The image used */
-        background: linear-gradient(270deg, transparent 1% 10%, rgb(10, 1, 38, 1)), url("assets/images/img1.jpg");
-        /* Full height */
-        height: 100%;
-        /* Create the parallax scrolling effect */
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        }
-    </style>
-</head>
-<body class="bg-indigo-900 w-full">
-    <div class="parallax">
-        <div class=" flex flex-wrap container">
-            <div class="h-full p-5 lg:w-2/4">
-                <div class="p-5 pt-[40%]">
-                    <span class="text-white text-2xl" style="font-family:monospace">Hi, I am</span>
-                    <h1 class="text-5xl text-white font-bold mb-3">Ayotunde Okunubi</h1>
-                    <p class="text-white text-2xl" style="font-family:monospace">Freelance Web Developer from Nigeria</p>
-                    <!--
-                        <hr>
-                    -->
-                    <button class="bg-blue-300 mt-3 p-4 text-blue-700 font-bold rounded-lg text-lg" style="font-family:monospace">Know More</button>
-                </div>
-            </div>
-            <div class="h-full p-4 lg:w-2/4">
-
-            </div>
-            
-        </div>
-    </div>
-    <div class="mt-3 p-5 flex flex-wrap container justify-center items-center">
-        <div class="p-5 h-full lg:w-2/4">
-            <h1 class = "text-4xl font-bold text-center text-yellow-200">Tech Stacks</h1>
-            <div class="px-5 py-3">
-            <div class="mt-5">
-                <h3 class="text-2xl mb-4 text-white" style="font-family:monospace">HTML</h3>
-                <div class="w-full bg-yellow-600">
-                    <div class="bg-yellow-200 p-0.5 text-center text-xs font-medium leading-none text-primary-100" style="width: 80%">
-                      70%
-                    </div>
-                </div>
-            </div>
-            <div class="mt-5">
-                <h3 class="text-2xl mb-4 text-white" style="font-family:monospace">Django</h3>
-                <div class="w-full bg-yellow-600">
-                    <div class="bg-yellow-200 p-0.5 text-center text-xs font-medium leading-none text-primary-100" style="width: 65%">
-                      65%
-                    </div>
-                </div>
-            </div>
-            <div class="mt-5">
-                <h3 class="text-2xl mb-4 text-white" style="font-family:monospace">CSS</h3>
-                <div class="w-full bg-yellow-600">
-                    <div class="bg-yellow-200 p-0.5 text-center text-xs font-medium leading-none text-primary-100" style="width: 60%">
-                        60%
-                    </div>
-                </div>
-            </div>
-            <div class="mt-5">
-                <h3 class="text-2xl mb-4 text-white" style="font-family:monospace">Python</h3>
-                <div class="w-full bg-yellow-600">
-                    <div class="bg-yellow-200 p-0.5 text-center text-xs font-medium leading-none text-primary-100" style="width: 65%">
-                        65%
-                    </div>
-                </div>
-            </div>
-            <div class="mt-5">
-                <h3 class="text-2xl mb-4 text-white" style="font-family:monospace">Javascript</h3>
-                <div class="w-full bg-yellow-600">
-                    <div class="bg-yellow-200 p-0.5 text-center text-xs font-medium leading-none text-primary-100" style="width: 50%">
-                        50%
-                    </div>
-                </div>
-            </div>
-            <div class="mt-5">
-                <h3 class="text-2xl mb-4 text-white" style="font-family:monospace">PHP</h3>
-                <div class="w-full bg-yellow-600">
-                    <div class="bg-yellow-200 p-0.5 text-center text-xs font-medium leading-none text-primary-100" style="width: 70%">
-                        70%
-                    </div>
-                </div>
-            </div>
-            <div class="mt-5">
-                <h3 class="text-2xl mb-4 text-white" style="font-family:monospace">Kotlin / Android Studio</h3>
-                <div class="w-full bg-yellow-600">
-                    <div class="bg-yellow-200 p-0.5 text-center text-xs font-medium leading-none text-primary-100" style="width: 30%">
-                        30%
-                    </div>
-                </div>
-            </div>
-            
-            </div>
-        </div>
-    </div>
-
-    <div class="p-5 w-full">
-        <h1 class = "text-4xl font-bold text-center text-white">Experiences</h1>
-        <div class="px-5 py-3">
-
-            <style>
-                span.cd-timeline__date{
-                    color:white !important;
-                }
-            </style>
-
-            <!--timeline css/js library-->
-
-            <section class="cd-timeline js-cd-timeline" style="background-color: transparent;">
-                <div class="container max-width-lg cd-timeline__container" style="background:transparent;">
-                    
-                  <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--picture">
-                      <img src="assets/timeline/assets/img/cd-icon-picture.svg" alt="Picture">
-                    </div>
-            
-                    <div class="cd-timeline__content text-component">
-                      <h2>Web Developer, City of David Mount of Zion</h2>
-                      <p class="color-contrast-medium">Freelance WordPress Web Developer at City of David Mount of Zion Church, Maryland USA. Responsible for building website</p>
-            
-                      <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">March, 2024</span>
-                        <a href="https://cityofdavidmountofzion.org" class="btn btn--subtle">View Project</a>
-                      </div>
-                    </div>
-                  </div> 
-                    
-            
-                  <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--movie">
-                      <img src="assets/timeline/assets/img/cd-icon-movie.svg" alt="Movie">
-                    </div> <!-- cd-timeline__img -->
-            
-                    <div class="cd-timeline__content text-component">
-                      <h2>Web Developer, Ijebu Anglican Diocese</h2>
-                      <p class="color-contrast-medium">Freelance Website Redesign for Ijebu Anglican Diocese, Added new features for their web platform</p>
-                      
-                      <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">Jan, 2022</span>
-                        <a href="http://ijebuanglicandiocese.org" class="btn btn--subtle">View Project</a>
-                      </div>
-                    </div> <!-- cd-timeline__content -->
-                  </div> <!-- cd-timeline__block -->
-            
-                  <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--picture">
-                      <img src="assets/timeline/assets/img/cd-icon-picture.svg" alt="Picture">
-                    </div> <!-- cd-timeline__img -->
-            
-                    <div class="cd-timeline__content text-component">
-                      <h2>Wordpress Web Developer, Christ SPEM Church USA</h2>
-                      <p class="color-contrast-medium">Design and Development of WordPress Website for Christ SPEM Church Indiana, USA</p>
-            
-                      <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">Dec, 2021</span>
-                        <a href="https://christspemchurch.org" class="btn btn--subtle">View Project</a>
-                      </div>
-                    </div> <!-- cd-timeline__content -->
-                  </div> <!-- cd-timeline__block -->
-
-                  <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--location">
-                      <img src="assets/timeline/assets/img/cd-icon-location.svg" alt="Location">
-                    </div> <!-- cd-timeline__img -->
-            
-                    <div class="cd-timeline__content text-component">
-                      <h2>Web Developer, Adedotun Emiloluwafe Sickle Cell Foundation</h2>
-                      <p class="color-contrast-medium">Designed and Developed Website for a sickle cell foundation in Nigeria.</p>
-            
-                      <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">July, 2021</span>
-                        <a href="https://aek-scf.org" class="btn btn--subtle">View Project</a>
-                      </div>
-                    </div> <!-- cd-timeline__content -->
-                  </div> <!-- cd-timeline__block -->
-            
-                  <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--location">
-                      <img src="assets/timeline/assets/img/cd-icon-location.svg" alt="Location">
-                    </div> <!-- cd-timeline__img -->
-            
-                    <div class="cd-timeline__content text-component">
-                      <h2>Web Developer, British Afrique Int. Schools</h2>
-                      <p class="color-contrast-medium">Freelance Web Developer for British Afrique International School</p>
-            
-                      <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">Sept, 2020</span>
-                        <a href="https://britishafriqueintschool.org" class="btn btn--subtle">View Project</a>
-                      </div>
-                    </div> <!-- cd-timeline__content -->
-                  </div> <!-- cd-timeline__block -->
-        
-            
-                  <div class="cd-timeline__block">
-                    <div class="cd-timeline__img cd-timeline__img--movie">
-                      <img src="assets/timeline/assets/img/cd-icon-movie.svg" alt="Movie">
-                    </div> <!-- cd-timeline__img -->
-            
-                    <div class="cd-timeline__content text-component">
-                      <h2>Web Developer & Administrator</h2>
-                      <p class="color-contrast-medium">Web Design and Development for Ijebu Anglican Diocese, Administration of website and social media channels.</p>
-            
-                      <div class="flex justify-between items-center">
-                        <span class="cd-timeline__date">Sept, 2020</span>
-                      </div>
-                    </div> <!-- cd-timeline__content -->
-                  </div> <!-- cd-timeline__block -->
-                </div>
-              </section> <!-- cd-timeline -->
-
-            <!-- end of timeline -->
-        </div>
-    </div>
-
-    <!-- Get in touch -->
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ============================================
+       DESIGN TOKENS — Royal Eagle Solutions
+       Seeds: A=27 | B=1897 | C=154
+       Type: Personal/Resume Sites
+       Style: Startup / Growth
+       Layout: Layered Parallax
+       Hero: Bento Grid Hero
+       ============================================ */
     
+    :root {
+      --color-primary: #0D8FDB;
+      --color-primary-light: #3BA8E8;
+      --color-primary-dark: #0A6FA8;
+      --color-secondary: #4535E6;
+      --color-secondary-light: #6B5EEB;
+      --color-accent: #F53E3E;
+      --color-accent-light: #F76B6B;
+      --color-dark: #1F1B17;
+      --color-dark-80: rgba(31, 27, 23, 0.8);
+      --color-dark-60: rgba(31, 27, 23, 0.6);
+      --color-dark-40: rgba(31, 27, 23, 0.4);
+      --color-dark-20: rgba(31, 27, 23, 0.2);
+      --color-dark-10: rgba(31, 27, 23, 0.1);
+      --color-light: #F6F4F2;
+      --color-light-80: rgba(246, 244, 242, 0.8);
+      --color-light-60: rgba(246, 244, 242, 0.6);
+      --color-light-40: rgba(246, 244, 242, 0.4);
+      
+      --space-1: 0.25rem;   /* 4px */
+      --space-2: 0.5rem;    /* 8px */
+      --space-3: 0.75rem;   /* 12px */
+      --space-4: 1rem;      /* 16px */
+      --space-5: 1.25rem;   /* 20px */
+      --space-6: 1.5rem;    /* 24px */
+      --space-8: 2rem;      /* 32px */
+      --space-10: 2.5rem;   /* 40px */
+      --space-12: 3rem;     /* 48px */
+      --space-16: 4rem;     /* 64px */
+      --space-20: 5rem;     /* 80px */
+      --space-24: 6rem;     /* 96px */
+      --space-32: 8rem;     /* 128px */
+      
+      --text-xs: 0.75rem;   /* 12px */
+      --text-sm: 0.875rem;  /* 14px */
+      --text-base: 1rem;    /* 16px */
+      --text-lg: 1.125rem;  /* 18px */
+      --text-xl: 1.25rem;   /* 20px */
+      --text-2xl: 1.5rem;   /* 24px */
+      --text-3xl: 1.875rem; /* 30px */
+      --text-4xl: 2.25rem;  /* 36px */
+      --text-5xl: 3rem;     /* 48px */
+      --text-6xl: 3.75rem;  /* 60px */
+      --text-7xl: 4.5rem;   /* 72px */
+      --text-8xl: 6rem;     /* 96px */
+      
+      --radius-sm: 0.375rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-2xl: 1.5rem;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--color-light);
+      color: var(--color-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Skip to content link */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: var(--space-4);
+      z-index: 9999;
+      padding: var(--space-3) var(--space-5);
+      background: var(--color-primary);
+      color: white;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: var(--space-4); }
+    
+    /* Focus styles */
+    *:focus-visible {
+      outline: 3px solid var(--color-primary);
+      outline-offset: 2px;
+      border-radius: var(--radius-sm);
+    }
+    
+    /* Typography scale */
+    .text-display {
+      font-size: clamp(var(--text-4xl), 5vw, var(--text-7xl));
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    
+    .text-headline {
+      font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+    
+    .text-title {
+      font-size: clamp(var(--text-xl), 2.5vw, var(--text-3xl));
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    
+    .text-body-lg {
+      font-size: var(--text-lg);
+      line-height: 1.7;
+      color: var(--color-dark-60);
+    }
+    
+    /* Parallax layers */
+    .parallax-container { position: relative; overflow: hidden; }
+    
+    .parallax-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      will-change: transform;
+    }
+    
+    .parallax-content { position: relative; z-index: 1; }
+    
+    /* Bento Grid Hero */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(6, minmax(80px, auto));
+      gap: var(--space-4);
+      min-height: 90vh;
+    }
+    
+    .bento-item {
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .bento-item:hover { transform: translateY(-4px); }
+    
+    .bento-item-1 { grid-column: 1 / 8; grid-row: 1 / 4; }
+    .bento-item-2 { grid-column: 8 / 13; grid-row: 1 / 3; }
+    .bento-item-3 { grid-column: 8 / 11; grid-row: 3 / 5; }
+    .bento-item-4 { grid-column: 11 / 13; grid-row: 3 / 5; }
+    .bento-item-5 { grid-column: 1 / 5; grid-row: 4 / 7; }
+    .bento-item-6 { grid-column: 5 / 13; grid-row: 5 / 7; }
+    .bento-item-7 { grid-column: 5 / 8; grid-row: 4 / 5; }
+    
+    /* Gradient overlays */
+    .gradient-primary { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); }
+    .gradient-accent { background: linear-gradient(135deg, var(--color-accent) 0%, #FF6B6B 100%); }
+    .gradient-dark { background: linear-gradient(180deg, var(--color-dark) 0%, #2D2824 100%); }
+    
+    /* Glassmorphism panels */
+    .glass {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    
+    /* Animated gradient border */
+    .gradient-border {
+      position: relative;
+      background: var(--color-light);
+      border-radius: var(--radius-2xl);
+    }
+    .gradient-border::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: calc(var(--radius-2xl) + 2px);
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
+      z-index: -1;
+      opacity: 0.6;
+    }
+    
+    /* Button styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-6);
+      font-weight: 600;
+      font-size: var(--text-base);
+      border-radius: var(--radius-lg);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    .btn-primary {
+      background: var(--color-primary);
+      color: white;
+    }
+    .btn-primary:hover { background: var(--color-primary-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(13, 143, 219, 0.3); }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-dark);
+      border: 2px solid var(--color-dark-20);
+    }
+    .btn-secondary:hover { border-color: var(--color-primary); color: var(--color-primary); }
+    
+    .btn-white {
+      background: white;
+      color: var(--color-dark);
+    }
+    .btn-white:hover { background: var(--color-light); transform: translateY(-2px); }
+    
+    /* Card component */
+    .card {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8);
+      box-shadow: 0 4px 24px rgba(31, 27, 23, 0.06);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(31, 27, 23, 0.06);
+    }
+    .card:hover { transform: translateY(-8px); box-shadow: 0 20px 48px rgba(31, 27, 23, 0.1); }
+    
+    /* Service icon container */
+    .icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--text-xl);
+    }
+    
+    /* Stats counter */
+    .stat-number {
+      font-size: clamp(var(--text-4xl), 4vw, var(--text-6xl));
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Testimonial card */
+    .testimonial-card {
+      background: white;
+      border-radius: var(--radius-2xl);
+      padding: var(--space-8);
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: var(--space-4);
+      right: var(--space-6);
+      font-size: 6rem;
+      line-height: 1;
+      color: var(--color-primary);
+      opacity: 0.1;
+      font-weight: 800;
+    }
+    
+    /* Process timeline */
+    .process-step {
+      position: relative;
+      padding-left: var(--space-12);
+    }
+    .process-step::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 48px;
+      bottom: -24px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+      opacity: 0.3;
+    }
+    .process-step:last-child::before { display: none; }
+    
+    .process-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: var(--text-sm);
+    }
+    
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      max-width: 380px;
+      height: 100vh;
+      background: white;
+      z-index: 100;
+      transition: right 0.3s ease;
+      box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+    .mobile-menu.open { right: 0; }
+    
+    .menu-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(31, 27, 23, 0.5);
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    .menu-overlay.open { opacity: 1; visibility: visible; }
+    
+    /* Hamburger */
+    .hamburger {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-dark);
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+    .hamburger[aria-expanded="true"] span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .hamburger[aria-expanded="true"] span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    
+    /* Scroll reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Marquee */
+    .marquee-track {
+      display: flex;
+      gap: var(--space-12);
+      animation: marquee 30s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    /* Floating shapes */
+    .float-shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: 0.4;
+      pointer-events: none;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--color-light); }
+    ::-webkit-scrollbar-thumb { background: var(--color-dark-20); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--color-dark-40); }
+    
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .marquee-track { animation: none; }
+      .reveal { opacity: 1; transform: none; }
+    }
+    
+    /* Responsive bento */
+    @media (max-width: 1024px) {
+      .bento-grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+      }
+      .bento-item-1 { grid-column: 1 / 7; grid-row: 1 / 3; min-height: 400px; }
+      .bento-item-2 { grid-column: 1 / 4; grid-row: 3 / 4; }
+      .bento-item-3 { grid-column: 4 / 7; grid-row: 3 / 4; }
+      .bento-item-4 { grid-column: 1 / 4; grid-row: 4 / 5; }
+      .bento-item-5 { grid-column: 4 / 7; grid-row: 4 / 6; }
+      .bento-item-6 { grid-column: 1 / 7; grid-row: 6 / 7; }
+      .bento-item-7 { grid-column: 1 / 4; grid-row: 5 / 6; }
+    }
+    
+    @media (max-width: 640px) {
+      .bento-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+      }
+      .bento-item-1, .bento-item-2, .bento-item-3, 
+      .bento-item-4, .bento-item-5, .bento-item-6, .bento-item-7 {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        min-height: 280px;
+      }
+    }
+  </style>
+</head>
 
-    <div class="mt-[10%] p-3 px-5">
-        <h1 class = "text-4xl font-bold text-center text-white" style="margin-bottom: 5%;">Get In Touch</h1>
-        <div class="md:flex justify-center gap-3">
-            <div class="p-3 px-10 bg-blue-300 cursor-pointer mb-3" onclick = "window.location='https://twitter.com/zeyphrOne'">
-                <div class = "md:w-24 text-white text-center">
-                    <h4>Twitter</h4>
-                </div>
-            </div>
-            <div class="p-3 px-10 bg-green-500 cursor-pointer mb-3" onclick = "window.location='https://wa.me/+2348083673149'">
-                <div class = "md:w-24 text-white text-center">
-                    <h4>Whatsapp</h4>
-                </div>
-            </div>
-            <div class="p-3 px-10 bg-blue-500 cursor-pointer mb-3" onclick = "window.location='https://www.linkedin.com/in/ayotunde-okunubi-4a76ab25b/'">
-                <div class = "md:w-24 text-white text-center">
-                    <h4>LinkedIn</h4>
-                </div>
-            </div>
+<body>
+  <!-- Skip to content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Mobile Menu Overlay -->
+  <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()" aria-hidden="true"></div>
+  
+  <!-- Mobile Menu Panel -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <div class="p-6 flex justify-between items-center border-b border-gray-100">
+      <span class="font-bold text-xl text-dark">Menu</span>
+      <button class="hamburger" onclick="closeMenu()" aria-label="Close menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="p-6 flex flex-col gap-2">
+      <a href="#services" class="py-3 px-4 rounded-lg hover:bg-gray-50 font-medium text-dark transition-colors" onclick="closeMenu()">Services</a>
+      <a href="#work" class="py-3 px-4 rounded-lg hover:bg-gray-50 font-medium text-dark transition-colors" onclick="closeMenu()">Work</a>
+      <a href="#process" class="py-3 px-4 rounded-lg hover:bg-gray-50 font-medium text-dark transition-colors" onclick="closeMenu()">Process</a>
+      <a href="#about" class="py-3 px-4 rounded-lg hover:bg-gray-50 font-medium text-dark transition-colors" onclick="closeMenu()">About</a>
+      <a href="#testimonials" class="py-3 px-4 rounded-lg hover:bg-gray-50 font-medium text-dark transition-colors" onclick="closeMenu()">Testimonials</a>
+      <div class="mt-6 pt-6 border-t border-gray-100">
+        <a href="#contact" class="btn btn-primary w-full justify-center" onclick="closeMenu()">Start Your Project</a>
+      </div>
+      <div class="mt-4 text-sm text-gray-500">
+        <p><a href="mailto:royaleagle.dev@gmail.com" class="hover:text-primary transition-colors">royaleagle.dev@gmail.com</a></p>
+        <p class="mt-1"><a href="tel:+2348083673149" class="hover:text-primary transition-colors">+234-808-357-3149</a></p>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group" aria-label="Royal Eagle Solutions - Home">
+          <div class="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center text-white font-bold text-lg group-hover:scale-105 transition-transform">
+            RE
+          </div>
+          <span class="font-bold text-xl text-dark hidden sm:block">Royal Eagle</span>
+        </a>
+        
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+          <a href="#services" class="px-4 py-2 rounded-lg text-sm font-medium text-dark-60 hover:text-dark hover:bg-dark-10 transition-all">Services</a>
+          <a href="#work" class="px-4 py-2 rounded-lg text-sm font-medium text-dark-60 hover:text-dark hover:bg-dark-10 transition-all">Work</a>
+          <a href="#process" class="px-4 py-2 rounded-lg text-sm font-medium text-dark-60 hover:text-dark hover:bg-dark-10 transition-all">Process</a>
+          <a href="#about" class="px-4 py-2 rounded-lg text-sm font-medium text-dark-60 hover:text-dark hover:bg-dark-10 transition-all">About</a>
+        </nav>
+        
+        <!-- CTA + Hamburger -->
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex btn btn-primary text-sm">Start Your Project</a>
+          <button class="hamburger lg:hidden" id="menuBtn" onclick="openMenu()" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
+      </div>
     </div>
-    <div class="mt-[5%]">
-        <p>&nbsp;</p>
-    </div>
+  </header>
 
-    <script src="assets/timeline/assets/js/main.js"></script>
+  <main id="main-content">
+    <!-- ==================== HERO: BENTO GRID ==================== -->
+    <section class="relative pt-28 pb-16 lg:pt-32 lg:pb-24 px-4 sm:px-6 lg:px-8 overflow-hidden" aria-label="Hero section">
+      <!-- Floating background shapes -->
+      <div class="float-shape w-96 h-96 bg-primary/20 -top-48 -right-48"></div>
+      <div class="float-shape w-72 h-72 bg-secondary/15 top-1/3 -left-36"></div>
+      <div class="float-shape w-64 h-64 bg-accent/10 bottom-0 right-1/4"></div>
+      
+      <div class="max-w-7xl mx-auto">
+        <!-- Bento Grid -->
+        <div class="bento-grid">
+          <!-- Main hero card -->
+          <div class="bento-item bento-item-1 gradient-primary p-8 lg:p-12 flex flex-col justify-between text-white">
+            <div>
+              <span class="inline-block px-4 py-1.5 rounded-full bg-white/20 text-sm font-medium mb-6 backdrop-blur-sm">Web Development Agency</span>
+              <h1 class="text-display max-w-xl">We Build Websites That Drive Growth</h1>
+              <p class="mt-6 text-lg text-white/80 max-w-md leading-relaxed">Royal Eagle Solutions crafts high-performance, conversion-focused web experiences for ambitious businesses ready to scale.</p>
+            </div>
+            <div class="flex flex-wrap gap-4 mt-8">
+              <a href="#contact" class="btn btn-white">Schedule a Free Consultation</a>
+              <a href="#work" class="btn bg-white/10 text-white border border-white/20 hover:bg-white/20">View Our Work</a>
+            </div>
+          </div>
+          
+          <!-- Stats card -->
+          <div class="bento-item bento-item-2 bg-white p-6 flex flex-col justify-center items-center text-center">
+            <span class="stat-number">150+</span>
+            <p class="text-dark-60 font-medium mt-2">Projects Delivered</p>
+            <div class="mt-4 flex -space-x-2">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Client avatar" class="w-8 h-8 rounded-full border-2 border-white object-cover" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Client avatar" class="w-8 h-8 rounded-full border-2 border-white object-cover" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Client avatar" class="w-8 h-8 rounded-full border-2 border-white object-cover" loading="lazy">
+              <div class="w-8 h-8 rounded-full border-2 border-white bg-primary text-white text-xs flex items-center justify-center font-bold">+</div>
+            </div>
+          </div>
+          
+          <!-- Tech stack card -->
+          <div class="bento-item bento-item-3 bg-dark text-white p-6 flex flex-col justify-center">
+            <p class="text-xs uppercase tracking-widest text-white/50 mb-3">Tech Stack</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-white/10 text-sm">React</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-sm">Next.js</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-sm">Node</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-sm">TypeScript</span>
+              <span class="px-3 py-1 rounded-full bg-white/10 text-sm">Tailwind</span>
+            </div>
+          </div>
+          
+          <!-- Rating card -->
+          <div class="bento-item bento-item-4 gradient-accent p-6 flex flex-col justify-center items-center text-white text-center">
+            <div class="text-4xl font-bold">4.9</div>
+            <div class="flex gap-1 mt-2 text-yellow-300">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            </div>
+            <p class="text-sm text-white/80 mt-2">Clutch Rating</p>
+          </div>
+          
+          <!-- Image card -->
+          <div class="bento-item bento-item-5 relative">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Royal Eagle Solutions team collaborating on web development project" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6 text-white">
+              <p class="font-semibold text-lg">Remote-First Web Development Team</p>
+              <p class="text-white/70 text-sm">Based in Lagos, Nigeria — Working Worldwide</p>
+            </div>
+          </div>
+          
+          <!-- CTA wide card -->
+          <div class="bento-item bento-item-6 bg-white p-6 lg:p-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div>
+              <h3 class="text-title text-dark">Ready to launch your next project?</h3>
+              <p class="text-dark-60 mt-1">Get a free discovery call and project estimate.</p>
+            </div>
+            <a href="#contact" class="btn btn-primary whitespace-nowrap">Book a Free Call</a>
+          </div>
+          
+          <!-- Speed metric -->
+          <div class="bento-item bento-item-7 bg-secondary text-white p-6 flex flex-col justify-center items-center text-center">
+            <div class="text-3xl font-bold">&lt;1s</div>
+            <p class="text-white/70 text-sm mt-1">Avg. Load Time</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TRUSTED BY MARQUEE ==================== -->
+    <section class="py-12 border-y border-dark-10 overflow-hidden" aria-label="Trusted by">
+      <p class="text-center text-sm font-medium text-dark-40 uppercase tracking-widest mb-8">Trusted by innovative teams</p>
+      <div class="relative">
+        <div class="marquee-track">
+          <div class="flex items-center gap-16 min-w-max">
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Stripe</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Notion</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Linear</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Vercel</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Figma</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Shopify</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Webflow</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Framer</span>
+          </div>
+          <div class="flex items-center gap-16 min-w-max">
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Stripe</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Notion</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Linear</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Vercel</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Figma</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Shopify</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Webflow</span>
+            <span class="text-2xl font-bold text-dark-20 hover:text-dark-40 transition-colors cursor-default">Framer</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">Our Services</span>
+          <h2 class="text-headline text-dark">Everything You Need to Win Online</h2>
+          <p class="text-body-lg mt-4">From custom web applications to high-converting landing pages, we deliver digital products that perform.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Service 1 -->
+          <article class="card reveal">
+            <div class="icon-box gradient-primary text-white mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">Custom Web Development</h3>
+            <p class="text-dark-60 leading-relaxed">Bespoke websites and web applications built with modern frameworks like React, Next.js, and Node.js. Scalable architecture from day one.</p>
+          </article>
+          
+          <!-- Service 2 -->
+          <article class="card reveal">
+            <div class="icon-box bg-secondary text-white mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">E-Commerce Solutions</h3>
+            <p class="text-dark-60 leading-relaxed">High-converting online stores on Shopify, WooCommerce, or custom headless commerce. Optimized checkout flows that reduce cart abandonment.</p>
+          </article>
+          
+          <!-- Service 3 -->
+          <article class="card reveal">
+            <div class="icon-box bg-accent text-white mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">Performance Optimization</h3>
+            <p class="text-dark-60 leading-relaxed">Lighthouse 90+ scores guaranteed. We optimize Core Web Vitals, image delivery, and code splitting for blazing-fast load times.</p>
+          </article>
+          
+          <!-- Service 4 -->
+          <article class="card reveal">
+            <div class="icon-box bg-primary/90 text-white mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">Progressive Web Apps</h3>
+            <p class="text-dark-60 leading-relaxed">Installable, offline-capable web apps that feel native. Push notifications, service workers, and app-shell architecture.</p>
+          </article>
+          
+          <!-- Service 5 -->
+          <article class="card reveal">
+            <div class="icon-box bg-secondary/90 text-white mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">CMS Integration</h3>
+            <p class="text-dark-60 leading-relaxed">Headless CMS setups with Contentful, Sanity, or Strapi. Give your marketing team full content control without touching code.</p>
+          </article>
+          
+          <!-- Service 6 -->
+          <article class="card reveal">
+            <div class="icon-box bg-accent/90 text-white mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">Analytics & CRO</h3>
+            <p class="text-dark-60 leading-relaxed">Data-driven conversion rate optimization. GA4 setup, heatmaps, A/B testing, and actionable insights to grow your revenue.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== STATS ==================== -->
+    <section class="py-20 gradient-dark text-white relative overflow-hidden" aria-label="Company statistics">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary rounded-full filter blur-3xl"></div>
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-center">
+          <div class="reveal">
+            <div class="text-5xl lg:text-6xl font-bold text-white">150+</div>
+            <p class="mt-2 text-white/60">Projects Shipped</p>
+          </div>
+          <div class="reveal">
+            <div class="text-5xl lg:text-6xl font-bold text-white">98%</div>
+            <p class="mt-2 text-white/60">Client Retention</p>
+          </div>
+          <div class="reveal">
+            <div class="text-5xl lg:text-6xl font-bold text-white">&lt;1s</div>
+            <p class="mt-2 text-white/60">Average Load Time</p>
+          </div>
+          <div class="reveal">
+            <div class="text-5xl lg:text-6xl font-bold text-white">5★</div>
+            <p class="mt-2 text-white/60">Clutch Rating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WORK PORTFOLIO ==================== -->
+    <section id="work" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-16 reveal">
+          <div class="max-w-xl">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-semibold mb-4">Selected Work</span>
+            <h2 class="text-headline text-dark">Projects That Speak for Themselves</h2>
+          </div>
+          <a href="#contact" class="btn btn-secondary mt-6 lg:mt-0 self-start">View All Case Studies</a>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <article class="group reveal">
+            <div class="relative rounded-2xl overflow-hidden aspect-[16/10] mb-6">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Fintech dashboard with real-time analytics charts and data visualization" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm">View Case Study →</span>
+              </div>
+            </div>
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-dark">Nova Finance Dashboard</h3>
+                <p class="text-dark-60 mt-1">Real-time trading analytics platform with sub-second data updates.</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium whitespace-nowrap">Fintech</span>
+            </div>
+          </article>
+          
+          <!-- Project 2 -->
+          <article class="group reveal">
+            <div class="relative rounded-2xl overflow-hidden aspect-[16/10] mb-6">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80" alt="Luxury e-commerce storefront with elegant product photography" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm">View Case Study →</span>
+              </div>
+            </div>
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-dark">Maison Vélo E-Commerce</h3>
+                <p class="text-dark-60 mt-1">Headless Shopify store with 40% faster checkout and 25% higher conversion.</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary text-sm font-medium whitespace-nowrap">E-Commerce</span>
+            </div>
+          </article>
+          
+          <!-- Project 3 -->
+          <article class="group reveal">
+            <div class="relative rounded-2xl overflow-hidden aspect-[16/10] mb-6">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Healthcare patient portal with clean medical interface design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm">View Case Study →</span>
+              </div>
+            </div>
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-dark">CareBridge Patient Portal</h3>
+                <p class="text-dark-60 mt-1">HIPAA-compliant healthcare platform serving 50,000+ patients monthly.</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium whitespace-nowrap">Healthcare</span>
+            </div>
+          </article>
+          
+          <!-- Project 4 -->
+          <article class="group reveal">
+            <div class="relative rounded-2xl overflow-hidden aspect-[16/10] mb-6">
+              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="SaaS marketing website with modern gradient design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-dark/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                <span class="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm">View Case Study →</span>
+              </div>
+            </div>
+            <div class="flex items-start justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-dark">TaskFlow SaaS Platform</h3>
+                <p class="text-dark-60 mt-1">Project management tool that grew from 0 to 10,000 users in 6 months.</p>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium whitespace-nowrap">SaaS</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROCESS ==================== -->
+    <section id="process" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+          <div class="lg:sticky lg:top-32 reveal">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-4">Our Process</span>
+            <h2 class="text-headline text-dark">How We Build Digital Products That Win</h2>
+            <p class="text-body-lg mt-6">Our battle-tested process ensures every project ships on time, on budget, and above expectations. No surprises. No shortcuts.</p>
+            <a href="#contact" class="btn btn-primary mt-8">Start Your Project</a>
+          </div>
+          
+          <div class="space-y-12">
+            <!-- Step 1 -->
+            <div class="process-step reveal">
+              <div class="process-number">01</div>
+              <h3 class="text-xl font-bold text-dark mb-2">Discovery & Strategy</h3>
+              <p class="text-dark-60 leading-relaxed">We start with a deep-dive workshop to understand your business goals, users, and competitive landscape. Output: a clear roadmap and technical specification.</p>
+            </div>
+            
+            <!-- Step 2 -->
+            <div class="process-step reveal">
+              <div class="process-number">02</div>
+              <h3 class="text-xl font-bold text-dark mb-2">Design & Prototyping</h3>
+              <p class="text-dark-60 leading-relaxed">Wireframes evolve into high-fidelity prototypes in Figma. We test usability early, iterate fast, and nail the visual direction before writing a single line of code.</p>
+            </div>
+            
+            <!-- Step 3 -->
+            <div class="process-step reveal">
+              <div class="process-number">03</div>
+              <h3 class="text-xl font-bold text-dark mb-2">Development & QA</h3>
+              <p class="text-dark-60 leading-relaxed">Clean, documented code with automated testing. We use CI/CD pipelines, code reviews, and staging environments to catch issues before they reach production.</p>
+            </div>
+            
+            <!-- Step 4 -->
+            <div class="process-step reveal">
+              <div class="process-number">04</div>
+              <h3 class="text-xl font-bold text-dark mb-2">Launch & Optimize</h3>
+              <p class="text-dark-60 leading-relaxed">We handle deployment, DNS, SSL, and CDN configuration. Post-launch, we monitor performance and iterate based on real user data to maximize your ROI.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section id="testimonials" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">Testimonials</span>
+          <h2 class="text-headline text-dark">What Our Clients Say</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card reveal">
+            <div class="flex items-center gap-1 mb-4">
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            </div>
+            <p class="text-dark leading-relaxed mb-6">"Royal Eagle transformed our outdated site into a conversion machine. Our lead volume doubled in the first month, and the page loads instantly. Best investment we've made."</p>
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" alt="Marcus Chen, CEO of BrightPath" class="w-12 h-12 rounded-full object-cover" loading="lazy">
+              <div>
+                <p class="font-semibold text-dark">Marcus Chen</p>
+                <p class="text-sm text-dark-60">CEO, BrightPath Analytics</p>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card reveal">
+            <div class="flex items-center gap-1 mb-4">
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            </div>
+            <p class="text-dark leading-relaxed mb-6">"The team at Royal Eagle doesn't just write code—they think like product owners. They caught UX issues we hadn't considered and proposed solutions that saved us weeks."</p>
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80" alt="Sarah Mitchell, CTO of GreenLeaf" class="w-12 h-12 rounded-full object-cover" loading="lazy">
+              <div>
+                <p class="font-semibold text-dark">Sarah Mitchell</p>
+                <p class="text-sm text-dark-60">CTO, GreenLeaf Co.</p>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card reveal">
+            <div class="flex items-center gap-1 mb-4">
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+              <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+            </div>
+            <p class="text-dark leading-relaxed mb-6">"Our e-commerce revenue jumped 35% after Royal Eagle rebuilt our store. The headless architecture is blazing fast, and our team can manage content without developers."</p>
+            <div class="flex items-center gap-4">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="David Park, Founder of Artisan Market" class="w-12 h-12 rounded-full object-cover" loading="lazy">
+              <div>
+                <p class="font-semibold text-dark">David Park</p>
+                <p class="text-sm text-dark-60">Founder, Artisan Market</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT / TEAM ==================== -->
+    <section id="about" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="reveal">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-sm font-semibold mb-4">About Us</span>
+            <h2 class="text-headline text-dark">A Small Team With Big Ambitions</h2>
+            <p class="text-body-lg mt-6">Royal Eagle Solutions was founded in 2019 by a group of developers who were tired of seeing businesses get burned by slow, bloated, and overpriced websites.</p>
+            <p class="text-body-lg mt-4">Today, we're a tight-knit team of 3 designers and developers based in Lagos, Nigeria. We work remotely with clients across Nigeria, the US, Canada, Europe and Worldwide. No account managers. No offshore contractors. Just senior talent directly on your project.</p>
+            
+            <div class="grid grid-cols-2 gap-6 mt-10">
+              <div>
+                <div class="text-3xl font-bold text-primary">3</div>
+                <p class="text-dark-60 text-sm mt-1">Team Members</p>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-primary">6</div>
+                <p class="text-dark-60 text-sm mt-1">Years in Business</p>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-primary">All</div>
+                <p class="text-dark-60 text-sm mt-1">Countries Served</p>
+              </div>
+              <div>
+                <div class="text-3xl font-bold text-primary">0</div>
+                <p class="text-dark-60 text-sm mt-1">Offshore Contractors</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative reveal">
+            <div class="rounded-2xl overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80" alt="Royal Eagle Solutions development team working together in a modern office space" class="w-full h-auto object-cover" loading="lazy">
+            </div>
+            <div class="absolute -bottom-8 -left-8 bg-white rounded-2xl p-6 shadow-xl hidden lg:block">
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-xl gradient-primary flex items-center justify-center text-white text-2xl font-bold">RE</div>
+                <div>
+                  <p class="font-bold text-dark">Royal Eagle Solutions</p>
+                  <p class="text-sm text-dark-60">Est. 2019, Lagos, Nigeria</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA / CONTACT ==================== -->
+    <section id="contact" class="py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <div class="absolute inset-0 gradient-primary opacity-95"></div>
+      <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary rounded-full filter blur-3xl"></div>
+      </div>
+      
+      <div class="max-w-4xl mx-auto relative z-10 text-center">
+        <div class="reveal">
+          <h2 class="text-headline text-white">Ready to Build Something Great?</h2>
+          <p class="text-lg text-white/80 mt-6 max-w-2xl mx-auto">Tell us about your project. We'll respond within 24 hours with a clear plan, timeline, and transparent pricing. No pushy sales calls. No hidden fees.</p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+            <a href="mailto:royaleagle.dev@gmail.com" class="btn btn-white text-lg px-8 py-4">Email Us Your Project</a>
+            <a href="tel:+2348083673149" class="btn bg-white/10 text-white border border-white/20 hover:bg-white/20 text-lg px-8 py-4">Call +234-808-367-3149</a>
+          </div>
+          
+          <div class="mt-12 pt-12 border-t border-white/20 flex flex-col sm:flex-row justify-center gap-8 text-white/70 text-sm">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <a href="mailto:royaleagle.dev@gmail.com" class="hover:text-white transition-colors">royaleagle.dev@gmail.com</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Lagos, Nigeria — Remote Worldwide</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-dark text-white py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <!-- Brand -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center text-white font-bold text-lg">RE</div>
+            <span class="font-bold text-xl">Royal Eagle</span>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed">High-performance web development for ambitious businesses. Based in Lagos, working worldwide.</p>
+        </div>
+        
+        <!-- Services -->
+        <div>
+          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-white/40">Services</h4>
+          <ul class="space-y-3">
+            <li><a href="#services" class="text-white/60 hover:text-white transition-colors text-sm">Custom Development</a></li>
+            <li><a href="#services" class="text-white/60 hover:text-white transition-colors text-sm">E-Commerce</a></li>
+            <li><a href="#services" class="text-white/60 hover:text-white transition-colors text-sm">Performance Optimization</a></li>
+            <li><a href="#services" class="text-white/60 hover:text-white transition-colors text-sm">Progressive Web Apps</a></li>
+          </ul>
+        </div>
+        
+        <!-- Company -->
+        <div>
+          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-white/40">Company</h4>
+          <ul class="space-y-3">
+            <li><a href="#work" class="text-white/60 hover:text-white transition-colors text-sm">Our Work</a></li>
+            <li><a href="#process" class="text-white/60 hover:text-white transition-colors text-sm">Process</a></li>
+            <li><a href="#about" class="text-white/60 hover:text-white transition-colors text-sm">About</a></li>
+            <li><a href="#contact" class="text-white/60 hover:text-white transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold mb-4 text-sm uppercase tracking-wider text-white/40">Contact</h4>
+          <ul class="space-y-3">
+            <li><a href="mailto:royaleagle.dev@gmail.com" class="text-white/60 hover:text-white transition-colors text-sm">royaleagle.dev@gmail.com</a></li>
+            <li><a href="tel:+2348083673149" class="text-white/60 hover:text-white transition-colors text-sm">+234-808-367-3149</a></li>
+            <li class="text-white/60 text-sm">Lagos, Nigeria</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-white/40 text-sm">© 2026 Royal Eagle Solutions. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-white/40 hover:text-white transition-colors text-sm">Privacy Policy</a>
+          <a href="#" class="text-white/40 hover:text-white transition-colors text-sm">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ============================================
+    // Royal Eagle Solutions — Interactive Scripts
+    // ============================================
+    
+    // Mobile Menu Functions
+    function openMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const overlay = document.getElementById('menuOverlay');
+      const btn = document.getElementById('menuBtn');
+      menu.classList.add('open');
+      overlay.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const overlay = document.getElementById('menuOverlay');
+      const btn = document.getElementById('menuBtn');
+      menu.classList.remove('open');
+      overlay.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    
+    // Close menu on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+    
+    // Header scroll effect
+    const header = document.getElementById('mainHeader');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', function() {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 50) {
+        header.style.background = 'rgba(246, 244, 242, 0.95)';
+        header.style.backdropFilter = 'blur(12px)';
+        header.style.boxShadow = '0 1px 3px rgba(31, 27, 23, 0.08)';
+      } else {
+        header.style.background = 'transparent';
+        header.style.backdropFilter = 'none';
+        header.style.boxShadow = 'none';
+      }
+      
+      lastScroll = currentScroll;
+    });
+    
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+    
+    revealElements.forEach(el => revealObserver.observe(el));
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          const headerOffset = 80;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // Parallax effect for floating shapes
+    const floatShapes = document.querySelectorAll('.float-shape');
+    
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      floatShapes.forEach((shape, index) => {
+        const speed = 0.1 + (index * 0.05);
+        shape.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+  </script>
 </body>
 </html>
