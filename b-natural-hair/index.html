@@ -1,0 +1,2556 @@
+<!--
+=================================================
+GENERATION AUDIT LOG
+=================================================
+RANDOMIZATION SEEDS:
+  SEED_A (Timestamp): 48
+  SEED_B (Name ASCII): 1012
+  SEED_C (Category ×7): 217
+
+PAGE CONFIGURATION:
+  Website Type: Real Estate/Listing Sites
+  Design Style: Afrofuturism
+  Layout Structure: Asymmetric Balance
+  Hero Design: Split-Screen Divided
+  Footer Design: Dark Mode Inverted
+
+COLOR THEME:
+  Primary: HSL(294°, 85%, 45%) / #b30dbf
+  Secondary: HSL(348°, 75%, 50%) / #e0204a
+  Accent: HSL(24°, 90%, 60%) / #f5a623
+  Neutral Dark: HSL(48°, 10%, 12%) / #1f1d1a
+  Neutral Light: HSL(52°, 8%, 96%) / #f5f4f0
+
+PAGE METADATA:
+  Page Type: HOMEPAGE
+  Section Count: 8 sections
+  Business Name: B's Natural Hair Salon
+  Category: Beauty, Cosmetic & Personal Care
+
+DESIGN SYSTEM:
+  Typography Scale: 1.25
+  Base Grid: 4px
+  Border Radius: 8px
+  Shadow Depth: 0 8px 32px rgba(0,0,0,0.15)
+
+ICON LIBRARY:
+  System: Font Awesome 6 (Free)
+  CDN: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css
+  Usage: All icons via fa-* classes only
+
+FOOTER SPECIFICATIONS:
+  Layout Type: Dark Mode Inverted
+  Visual Style: High Contrast, Sleek
+  Content Density: COMPREHENSIVE
+  Special Features: Newsletter, Map, Social Links, Contact Cards
+
+RESPONSIVE BREAKPOINTS:
+  Mobile: 320px+
+  Tablet: 768px+
+  Desktop: 1024px+
+  Wide: 1440px+
+
+ACCESSIBILITY COMPLIANCE:
+  WCAG 2.1 AA: Yes
+  Keyboard Navigation: Yes
+  Screen Reader Optimized: Yes
+  Reduced Motion Support: Yes
+
+PERFORMANCE TARGETS:
+  Lighthouse Score: ≥90
+  Page Weight: <1.5MB
+  Load Time (3G): <3s
+=================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B's Natural Hair Salon | Premium Natural Hair Care in Gbagada, Lagos</title>
+  <meta name="description" content="B's Natural Hair Salon in Gbagada, Lagos offers expert natural hair styling, twists, locs, braiding, colour services & hair treatments. Book your appointment today.">
+  <meta name="keywords" content="natural hair salon, Gbagada, Lagos, hair twists, dreadlocks, braiding, hair colour, hair treatment, B's Natural Hair Salon">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="B's Natural Hair Salon | Premium Natural Hair Care in Gbagada, Lagos">
+  <meta property="og:description" content="Expert natural hair styling, twists, locs, braiding, colour services & hair treatments in Gbagada, Lagos.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bsnaturalhairsalon.com">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80">
+  <meta property="og:locale" content="en_NG">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="B's Natural Hair Salon | Premium Natural Hair Care">
+  <meta name="twitter:description" content="Expert natural hair styling in Gbagada, Lagos. Twists, locs, braiding & more.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://bsnaturalhairsalon.com">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💇</text></svg>">
+
+  <!-- Font Awesome 6 CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#b30dbf',
+            'primary-dark': '#8a0a91',
+            'primary-light': '#d946e0',
+            secondary: '#e0204a',
+            'secondary-dark': '#b51a3a',
+            'secondary-light': '#f04d70',
+            accent: '#f5a623',
+            'accent-dark': '#d48a1a',
+            'accent-light': '#f7bc4f',
+            'neutral-dark': '#1f1d1a',
+            'neutral-light': '#f5f4f0',
+            'neutral-mid': '#6b6560',
+          },
+          fontFamily: {
+            display: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          spacing: {
+            '18': '4.5rem',
+            '22': '5.5rem',
+            '30': '7.5rem',
+          },
+          borderRadius: {
+            'xl': '1rem',
+            '2xl': '1.5rem',
+            '3xl': '2rem',
+          },
+          boxShadow: {
+            'soft': '0 4px 20px rgba(0,0,0,0.08)',
+            'medium': '0 8px 32px rgba(0,0,0,0.12)',
+            'heavy': '0 16px 48px rgba(0,0,0,0.2)',
+            'glow': '0 0 40px rgba(179,13,191,0.3)',
+            'glow-accent': '0 0 40px rgba(245,166,35,0.3)',
+          },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'spin-slow': 'spin 12s linear infinite',
+            'shimmer': 'shimmer 2s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '-200% 0' },
+              '100%': { backgroundPosition: '200% 0' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <style>
+    /* CSS Custom Properties for Design System */
+    :root {
+      --color-primary: #b30dbf;
+      --color-primary-dark: #8a0a91;
+      --color-primary-light: #d946e0;
+      --color-secondary: #e0204a;
+      --color-secondary-dark: #b51a3a;
+      --color-secondary-light: #f04d70;
+      --color-accent: #f5a623;
+      --color-accent-dark: #d48a1a;
+      --color-accent-light: #f7bc4f;
+      --color-neutral-dark: #1f1d1a;
+      --color-neutral-light: #f5f4f0;
+      --color-neutral-mid: #6b6560;
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-soft: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-medium: 0 8px 32px rgba(0,0,0,0.12);
+      --shadow-heavy: 0 16px 48px rgba(0,0,0,0.2);
+      --shadow-glow: 0 0 40px rgba(179,13,191,0.3);
+      --shadow-glow-accent: 0 0 40px rgba(245,166,35,0.3);
+    }
+
+    /* Base Styles */
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-neutral-light);
+      color: var(--color-neutral-dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Typography Scale (1.25 ratio) */
+    .text-display-1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 1.05; }
+    .text-display-2 { font-size: clamp(2.25rem, 5vw, 4rem); line-height: 1.1; }
+    .text-display-3 { font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.2; }
+    .text-heading-1 { font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.3; }
+    .text-heading-2 { font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.4; }
+    .text-body-lg { font-size: 1.125rem; line-height: 1.6; }
+    .text-body { font-size: 1rem; line-height: 1.6; }
+    .text-body-sm { font-size: 0.875rem; line-height: 1.5; }
+    .text-caption { font-size: 0.75rem; line-height: 1.4; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* Afrofuturism Geometric Patterns */
+    .afro-pattern {
+      background-image: 
+        radial-gradient(circle at 20% 50%, rgba(179,13,191,0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(245,166,35,0.06) 0%, transparent 40%),
+        radial-gradient(circle at 40% 80%, rgba(224,32,74,0.05) 0%, transparent 45%);
+    }
+
+    .afro-grid {
+      background-image: 
+        linear-gradient(rgba(179,13,191,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(179,13,191,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Metallic Sheen Effect */
+    .metallic-sheen {
+      background: linear-gradient(
+        135deg,
+        rgba(245,166,35,0.1) 0%,
+        rgba(179,13,191,0.05) 25%,
+        rgba(224,32,74,0.08) 50%,
+        rgba(245,166,35,0.1) 75%,
+        rgba(179,13,191,0.05) 100%
+      );
+      background-size: 400% 400%;
+      animation: shimmer 8s ease infinite;
+    }
+
+    /* Glassmorphism Panels */
+    .glass-panel {
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .glass-panel-dark {
+      background: rgba(31,29,26,0.8);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Navigation Styles */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link:focus::after {
+      width: 100%;
+    }
+
+    /* Button Styles */
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-neutral-dark);
+      padding: 0.875rem 2rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      border: 2px solid var(--color-neutral-dark);
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-neutral-dark);
+      color: var(--color-neutral-light);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Split Screen */
+    .hero-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+    }
+
+    @media (max-width: 1023px) {
+      .hero-split {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+    }
+
+    /* Decorative Elements */
+    .deco-circle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .deco-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(179,13,191,0.15);
+      pointer-events: none;
+    }
+
+    /* Image Treatment */
+    .img-afro {
+      filter: contrast(1.05) saturate(1.1);
+      position: relative;
+    }
+
+    .img-afro::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(179,13,191,0.1) 0%,
+        transparent 50%,
+        rgba(245,166,35,0.1) 100%
+      );
+      pointer-events: none;
+    }
+
+    /* Skip to Content */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-primary);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: var(--radius-md);
+      z-index: 9999;
+      transition: top 0.3s ease;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    /* Focus Styles */
+    *:focus-visible {
+      outline: 3px solid var(--color-accent);
+      outline-offset: 2px;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--color-neutral-light);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--color-primary);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-primary-dark);
+    }
+  </style>
+
+  <!-- GA4 Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "B's Natural Hair Salon",
+    "description": "Premium natural hair care salon in Gbagada, Lagos offering twists, locs, braiding, colour services & hair treatments.",
+    "url": "https://bsnaturalhairsalon.com",
+    "telephone": "+234-907-999-9856",
+    "email": "bsnaturalhairsaloon000@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "52 Diya St",
+      "addressLocality": "Gbagada",
+      "addressRegion": "Lagos",
+      "postalCode": "105102",
+      "addressCountry": "NG"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "6.5484",
+      "longitude": "3.3841"
+    },
+    "openingHours": [
+      "Mo-Sa 09:00-19:00"
+    ],
+    "priceRange": "₦₦",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80",
+    "sameAs": [
+      "https://instagram.com/bsnaturalhairsalon",
+      "https://facebook.com/bsnaturalhairsalon"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://bsnaturalhairsalon.com"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "B's Natural Hair Salon",
+    "url": "https://bsnaturalhairsalon.com",
+    "logo": "https://bsnaturalhairsalon.com/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+234-907-999-9856",
+      "contactType": "customer service",
+      "availableLanguage": ["English"]
+    }
+  }
+  </script>
+<base target="_blank">
+</head>
+
+<body class="bg-neutral-light text-neutral-dark antialiased">
+
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
+    <div class="glass-panel border-b border-white/10">
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+        <div class="flex items-center justify-between h-20">
+
+          <!-- Logo -->
+          <a href="#" class="flex items-center gap-3 group" aria-label="B's Natural Hair Salon - Home">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-glow group-hover:shadow-glow-accent transition-shadow duration-300">
+              <i class="fas fa-wind text-white text-lg" aria-hidden="true"></i>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-display font-bold text-xl text-neutral-dark leading-tight">B's Natural</span>
+              <span class="text-caption text-neutral-mid">Hair Salon</span>
+            </div>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center gap-8">
+            <a href="#services" class="nav-link text-body font-medium text-neutral-dark hover:text-primary transition-colors">Services</a>
+            <a href="#about" class="nav-link text-body font-medium text-neutral-dark hover:text-primary transition-colors">About</a>
+            <a href="#process" class="nav-link text-body font-medium text-neutral-dark hover:text-primary transition-colors">Process</a>
+            <a href="#gallery" class="nav-link text-body font-medium text-neutral-dark hover:text-primary transition-colors">Gallery</a>
+            <a href="#testimonials" class="nav-link text-body font-medium text-neutral-dark hover:text-primary transition-colors">Reviews</a>
+            <a href="#contact" class="nav-link text-body font-medium text-neutral-dark hover:text-primary transition-colors">Contact</a>
+          </div>
+
+          <!-- CTA Button (Desktop) -->
+          <div class="hidden lg:block">
+            <a href="#contact" class="btn-primary inline-flex items-center gap-2 text-body font-semibold">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i>
+              Book Now
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button 
+            type="button" 
+            class="lg:hidden w-11 h-11 flex items-center justify-center rounded-lg hover:bg-primary/10 transition-colors"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            id="mobile-menu-btn"
+          >
+            <i class="fas fa-bars text-xl text-neutral-dark" aria-hidden="true"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Menu Panel -->
+    <div 
+      id="mobile-menu" 
+      class="lg:hidden fixed inset-0 z-40 transform translate-x-full transition-transform duration-300 ease-in-out"
+      aria-hidden="true"
+    >
+      <div class="absolute inset-0 bg-neutral-dark/50 backdrop-blur-sm" id="mobile-menu-overlay"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-80 max-w-full bg-white shadow-heavy">
+        <div class="flex flex-col h-full p-6">
+          <!-- Close Button -->
+          <div class="flex justify-end mb-8">
+            <button 
+              type="button" 
+              class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-primary/10 transition-colors"
+              aria-label="Close navigation menu"
+              id="mobile-menu-close"
+            >
+              <i class="fas fa-xmark text-xl text-neutral-dark" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Mobile Nav Links -->
+          <nav class="flex flex-col gap-2" aria-label="Mobile navigation">
+            <a href="#services" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-body font-medium text-neutral-dark transition-colors">
+              <i class="fas fa-scissors text-primary" aria-hidden="true"></i>
+              Services
+            </a>
+            <a href="#about" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-body font-medium text-neutral-dark transition-colors">
+              <i class="fas fa-heart text-primary" aria-hidden="true"></i>
+              About
+            </a>
+            <a href="#process" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-body font-medium text-neutral-dark transition-colors">
+              <i class="fas fa-list-check text-primary" aria-hidden="true"></i>
+              Process
+            </a>
+            <a href="#gallery" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-body font-medium text-neutral-dark transition-colors">
+              <i class="fas fa-images text-primary" aria-hidden="true"></i>
+              Gallery
+            </a>
+            <a href="#testimonials" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-body font-medium text-neutral-dark transition-colors">
+              <i class="fas fa-star text-primary" aria-hidden="true"></i>
+              Reviews
+            </a>
+            <a href="#contact" class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-primary/5 text-body font-medium text-neutral-dark transition-colors">
+              <i class="fas fa-phone text-primary" aria-hidden="true"></i>
+              Contact
+            </a>
+          </nav>
+
+          <!-- Mobile CTA -->
+          <div class="mt-auto pt-6 border-t border-neutral-light">
+            <a href="#contact" class="btn-primary w-full flex items-center justify-center gap-2 text-body font-semibold">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i>
+              Book Appointment
+            </a>
+
+            <!-- Contact Info -->
+            <div class="mt-6 space-y-3">
+              <a href="tel:+2349079999856" class="flex items-center gap-3 text-body-sm text-neutral-mid hover:text-primary transition-colors">
+                <i class="fas fa-phone text-primary" aria-hidden="true"></i>
+                +234 907 999 9856
+              </a>
+              <a href="mailto:bsnaturalhairsaloon000@gmail.com" class="flex items-center gap-3 text-body-sm text-neutral-mid hover:text-primary transition-colors">
+                <i class="fas fa-envelope text-primary" aria-hidden="true"></i>
+                bsnaturalhairsaloon000@gmail.com
+              </a>
+              <div class="flex items-center gap-3 text-body-sm text-neutral-mid">
+                <i class="fas fa-location-dot text-primary" aria-hidden="true"></i>
+                52 Diya St, Gbagada, Lagos
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <!-- Split-Screen Divided Hero Design -->
+    <section 
+      id="hero" 
+      class="hero-split relative overflow-hidden"
+      aria-label="Hero section - Welcome to B's Natural Hair Salon"
+    >
+
+      <!-- Left Panel: Content -->
+      <div class="relative z-10 flex items-center justify-center px-6 sm:px-12 lg:px-16 py-32 lg:py-0 bg-neutral-light">
+
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 afro-grid opacity-50"></div>
+        <div class="absolute inset-0 afro-pattern"></div>
+
+        <!-- Decorative Elements -->
+        <div class="deco-circle w-64 h-64 bg-primary/5 -top-20 -left-20 blur-3xl"></div>
+        <div class="deco-circle w-48 h-48 bg-accent/5 bottom-20 right-10 blur-2xl"></div>
+        <div class="deco-ring w-96 h-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-30"></div>
+        <div class="deco-ring w-[500px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+
+        <!-- Content Container -->
+        <div class="relative z-10 max-w-xl">
+
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+            <i class="fas fa-sparkles text-primary text-sm" aria-hidden="true"></i>
+            <span class="text-caption text-primary font-semibold">Premium Natural Hair Care</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="font-display font-bold text-display-1 text-neutral-dark mb-6">
+            Embrace Your
+            <span class="relative inline-block">
+              <span class="relative z-10 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Natural</span>
+              <svg class="absolute -bottom-2 left-0 w-full" viewBox="0 0 200 12" fill="none" aria-hidden="true">
+                <path d="M2 8C50 2 150 2 198 8" stroke="url(#underline-gradient)" stroke-width="3" stroke-linecap="round"/>
+                <defs>
+                  <linearGradient id="underline-gradient" x1="0" y1="0" x2="200" y2="0">
+                    <stop stop-color="#b30dbf"/>
+                    <stop offset="1" stop-color="#e0204a"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            Beauty
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-body-lg text-neutral-mid mb-8 max-w-md">
+            Expert natural hair styling, protective styles, and transformative care in the heart of Gbagada. Where your crown gets the royal treatment it deserves.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4 mb-12">
+            <a href="#contact" class="btn-primary inline-flex items-center gap-2 text-body font-semibold">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i>
+              Book Appointment
+            </a>
+            <a href="#services" class="btn-secondary inline-flex items-center gap-2 text-body font-semibold">
+              <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              Explore Services
+            </a>
+          </div>
+
+          <!-- Social Proof Mini -->
+          <div class="flex items-center gap-4">
+            <div class="flex -space-x-3">
+              <img 
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&q=80" 
+                alt="Happy client" 
+                class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              >
+              <img 
+                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80" 
+                alt="Happy client" 
+                class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              >
+              <img 
+                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&q=80" 
+                alt="Happy client" 
+                class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              >
+              <img 
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&q=80" 
+                alt="Happy client" 
+                class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                loading="lazy"
+              >
+            </div>
+            <div>
+              <div class="flex items-center gap-1 mb-1">
+                <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+                <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+                <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+                <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+                <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+                <span class="text-body-sm font-semibold text-neutral-dark ml-1">4.9</span>
+              </div>
+              <p class="text-caption text-neutral-mid">500+ Happy Clients</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right Panel: Image -->
+      <div class="relative z-10 hidden lg:block overflow-hidden">
+
+        <!-- Main Hero Image -->
+        <div class="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1200&q=80" 
+            alt="Beautiful natural hair styling at B's Natural Hair Salon" 
+            class="w-full h-full object-cover img-afro"
+            loading="eager"
+          >
+
+          <!-- Gradient Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-neutral-light/90"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/30 via-transparent to-transparent"></div>
+
+          <!-- Metallic Sheen Overlay -->
+          <div class="absolute inset-0 metallic-sheen opacity-30"></div>
+        </div>
+
+        <!-- Floating Info Card -->
+        <div class="absolute bottom-12 left-12 right-12 z-20">
+          <div class="glass-panel rounded-2xl p-6 shadow-medium">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-caption text-neutral-mid mb-1">Located in</p>
+                <p class="text-heading-1 font-display font-semibold text-neutral-dark">Gbagada, Lagos</p>
+              </div>
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <i class="fas fa-location-dot text-primary text-xl" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-neutral-dark/10 flex items-center gap-4">
+              <div class="flex items-center gap-2">
+                <i class="fas fa-clock text-accent" aria-hidden="true"></i>
+                <span class="text-body-sm text-neutral-mid">Mon-Sat: 9AM - 7PM</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fas fa-phone text-accent" aria-hidden="true"></i>
+                <a href="tel:+2349079999856" class="text-body-sm text-neutral-mid hover:text-primary transition-colors">+234 907 999 9856</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative Corner Elements -->
+        <div class="absolute top-8 right-8 w-20 h-20 border-t-2 border-r-2 border-accent/30 rounded-tr-3xl"></div>
+        <div class="absolute bottom-8 right-8 w-20 h-20 border-b-2 border-r-2 border-primary/30 rounded-br-3xl"></div>
+
+      </div>
+
+      <!-- Mobile Hero Image (Below Content) -->
+      <div class="lg:hidden relative h-80">
+        <img 
+          src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80" 
+          alt="Beautiful natural hair styling at B's Natural Hair Salon" 
+          class="w-full h-full object-cover"
+          loading="eager"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-neutral-light via-transparent to-transparent"></div>
+
+        <!-- Mobile Info Card -->
+        <div class="absolute bottom-4 left-4 right-4">
+          <div class="glass-panel rounded-xl p-4 shadow-medium">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                  <i class="fas fa-location-dot text-primary" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-body-sm font-semibold text-neutral-dark">Gbagada, Lagos</p>
+                  <p class="text-caption text-neutral-mid">52 Diya St</p>
+                </div>
+              </div>
+              <a href="tel:+2349079999856" class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white hover:bg-primary-dark transition-colors">
+                <i class="fas fa-phone text-sm" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- ==================== END HERO SECTION ==================== -->
+
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section 
+      id="services" 
+      class="relative py-24 lg:py-32 bg-neutral-light overflow-hidden"
+      aria-label="Services section - What we offer at B's Natural Hair Salon"
+    >
+
+      <!-- Background Elements -->
+      <div class="absolute inset-0 afro-grid opacity-30"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-accent/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+            <i class="fas fa-sparkles text-secondary text-sm" aria-hidden="true"></i>
+            <span class="text-caption text-secondary font-semibold">Our Expertise</span>
+          </div>
+          <h2 class="font-display font-bold text-display-2 text-neutral-dark mb-6">
+            Services Crafted for Your
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Crown</span>
+          </h2>
+          <p class="text-body-lg text-neutral-mid">
+            From protective styles to transformative treatments, every service is designed to celebrate and nurture your natural hair journey.
+          </p>
+        </div>
+
+        <!-- Services Grid - Asymmetric Bento Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+          <!-- Service 1: Natural Twist/Flattwist (Large Card) -->
+          <div class="lg:col-span-2 group relative bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1">
+            <div class="flex flex-col lg:flex-row h-full">
+              <div class="lg:w-1/2 relative overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" 
+                  alt="Natural twist and flattwist hairstyles" 
+                  class="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                >
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-white/20 lg:to-white/40"></div>
+              </div>
+              <div class="lg:w-1/2 p-8 lg:p-10 flex flex-col justify-center">
+                <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:shadow-glow transition-all duration-300">
+                  <i class="fas fa-wind text-primary text-2xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-display font-bold text-heading-1 text-neutral-dark mb-3">Natural Twist & Flattwist</h3>
+                <p class="text-body text-neutral-mid mb-6">
+                  Elegant twist styles that protect your hair while showcasing its natural beauty. Perfect for any occasion, from casual outings to special events.
+                </p>
+                <div class="flex items-center gap-4 mt-auto">
+                  <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-body-sm font-medium text-accent-dark">
+                    <i class="fas fa-clock text-xs" aria-hidden="true"></i>
+                    2-3 hours
+                  </span>
+                  <a href="#contact" class="inline-flex items-center gap-2 text-body font-semibold text-primary hover:text-primary-dark transition-colors group/link">
+                    Book Now
+                    <i class="fas fa-arrow-right text-sm group-hover/link:translate-x-1 transition-transform" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 2: Updos -->
+          <div class="group relative bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1">
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=600&q=80" 
+                alt="Elegant updo hairstyles" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center">
+                  <i class="fas fa-crown text-white text-xl" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-2">Updos</h3>
+              <p class="text-body-sm text-neutral-mid mb-4">
+                Sophisticated updo styles for weddings, events, and special occasions that keep you looking regal.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-caption font-medium text-accent-dark">
+                  <i class="fas fa-clock text-xs" aria-hidden="true"></i>
+                  1-2 hours
+                </span>
+                <a href="#contact" class="text-body-sm font-semibold text-primary hover:text-primary-dark transition-colors">
+                  Book <i class="fas fa-arrow-right text-xs ml-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 3: Comb Coils/Finger Coils -->
+          <div class="group relative bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1">
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80" 
+                alt="Comb coils and finger coils natural hair" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center">
+                  <i class="fas fa-fingerprint text-white text-xl" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-2">Comb Coils & Finger Coils</h3>
+              <p class="text-body-sm text-neutral-mid mb-4">
+                Define your natural curl pattern with precision coil techniques that enhance texture and volume.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-caption font-medium text-accent-dark">
+                  <i class="fas fa-clock text-xs" aria-hidden="true"></i>
+                  1.5-2.5 hours
+                </span>
+                <a href="#contact" class="text-body-sm font-semibold text-primary hover:text-primary-dark transition-colors">
+                  Book <i class="fas fa-arrow-right text-xs ml-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 4: Perm Rod -->
+          <div class="group relative bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1">
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" 
+                alt="Perm rod set hairstyles" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center">
+                  <i class="fas fa-wand-magic-sparkles text-white text-xl" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-2">Perm Rod Sets</h3>
+              <p class="text-body-sm text-neutral-mid mb-4">
+                Achieve beautiful, bouncy curls with our expert perm rod techniques for a full, defined look.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-caption font-medium text-accent-dark">
+                  <i class="fas fa-clock text-xs" aria-hidden="true"></i>
+                  2-3 hours
+                </span>
+                <a href="#contact" class="text-body-sm font-semibold text-primary hover:text-primary-dark transition-colors">
+                  Book <i class="fas fa-arrow-right text-xs ml-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service 5: Faux Loc -->
+          <div class="group relative bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1">
+            <div class="relative h-56 overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80" 
+                alt="Faux locs hairstyle" 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <div class="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-md flex items-center justify-center">
+                  <i class="fas fa-link text-white text-xl" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-2">Faux Locs</h3>
+              <p class="text-body-sm text-neutral-mid mb-4">
+                Get the loc look without the commitment. Beautiful, lightweight faux locs in various lengths and styles.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-caption font-medium text-accent-dark">
+                  <i class="fas fa-clock text-xs" aria-hidden="true"></i>
+                  4-6 hours
+                </span>
+                <a href="#contact" class="text-body-sm font-semibold text-primary hover:text-primary-dark transition-colors">
+                  Book <i class="fas fa-arrow-right text-xs ml-1" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Second Row of Services -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-6 lg:mt-8">
+
+          <!-- Service 6: Dreads -->
+          <div class="group relative bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1 border border-transparent hover:border-primary/20">
+            <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:shadow-glow transition-all duration-300">
+              <i class="fas fa-seedling text-primary text-2xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-2">Dreads & Loc Care</h3>
+            <p class="text-body-sm text-neutral-mid mb-4">
+              Fresh loc starts, relocking, maintenance, and styling for healthy, beautiful dreadlocks.
+            </p>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-clock text-accent text-xs" aria-hidden="true"></i>
+              <span class="text-caption text-neutral-mid">Varies by service</span>
+            </div>
+          </div>
+
+          <!-- Service 7: Colour Services -->
+          <div class="group relative bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1 border border-transparent hover:border-secondary/20">
+            <div class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-5 group-hover:bg-secondary group-hover:shadow-glow transition-all duration-300">
+              <i class="fas fa-palette text-secondary text-2xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-2">Colour Services</h3>
+            <p class="text-body-sm text-neutral-mid mb-4">
+              Vibrant, healthy hair colouring from subtle highlights to bold transformations using premium products.
+            </p>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-clock text-accent text-xs" aria-hidden="true"></i>
+              <span class="text-caption text-neutral-mid">2-4 hours</span>
+            </div>
+          </div>
+
+          <!-- Service 8: Hair Treatments -->
+          <div class="group relative bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1 border border-transparent hover:border-accent/20">
+            <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent group-hover:shadow-glow-accent transition-all duration-300">
+              <i class="fas fa-heart-pulse text-accent text-2xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-2">Hair Treatments</h3>
+            <p class="text-body-sm text-neutral-mid mb-4">
+              Deep conditioning, protein treatments, scalp therapy, and restorative care for healthy hair growth.
+            </p>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-clock text-accent text-xs" aria-hidden="true"></i>
+              <span class="text-caption text-neutral-mid">1-2 hours</span>
+            </div>
+          </div>
+
+          <!-- Service 9: Braiding -->
+          <div class="group relative bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1 border border-transparent hover:border-primary/20">
+            <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary group-hover:shadow-glow transition-all duration-300">
+              <i class="fas fa-hand-sparkles text-primary text-2xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+            </div>
+            <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-2">Braiding</h3>
+            <p class="text-body-sm text-neutral-mid mb-4">
+              Box braids, cornrows, Ghana weaving, and creative braided styles crafted with precision and care.
+            </p>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-clock text-accent text-xs" aria-hidden="true"></i>
+              <span class="text-caption text-neutral-mid">2-5 hours</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Retail Services Note -->
+        <div class="mt-12 lg:mt-16 text-center">
+          <div class="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-white shadow-soft border border-primary/10">
+            <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+              <i class="fas fa-bag-shopping text-accent text-xl" aria-hidden="true"></i>
+            </div>
+            <div class="text-left">
+              <p class="text-body font-semibold text-neutral-dark">Also Available In-Salon</p>
+              <p class="text-body-sm text-neutral-mid">Hair extensions, accessories, perfumes & hair care products</p>
+            </div>
+            <a href="#contact" class="ml-4 px-4 py-2 rounded-lg bg-primary/10 text-primary font-semibold text-body-sm hover:bg-primary hover:text-white transition-colors">
+              Shop Now
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==================== END SERVICES SECTION ==================== -->
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section 
+      id="about" 
+      class="relative py-24 lg:py-32 bg-neutral-dark text-neutral-light overflow-hidden"
+      aria-label="About section - Our story and mission"
+    >
+
+      <!-- Background Patterns -->
+      <div class="absolute inset-0 afro-grid opacity-10"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full border border-primary/10"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-accent/10"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+          <!-- Left: Image Composition -->
+          <div class="relative">
+            <!-- Main Image -->
+            <div class="relative rounded-2xl overflow-hidden shadow-heavy">
+              <img 
+                src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&q=80" 
+                alt="B's Natural Hair Salon interior and team" 
+                class="w-full h-[500px] object-cover"
+                loading="lazy"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/40 via-transparent to-transparent"></div>
+            </div>
+
+            <!-- Floating Accent Image -->
+            <div class="absolute -bottom-8 -right-8 w-48 h-48 rounded-2xl overflow-hidden shadow-medium border-4 border-neutral-dark">
+              <img 
+                src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80" 
+                alt="Natural hair styling detail" 
+                class="w-full h-full object-cover"
+                loading="lazy"
+              >
+            </div>
+
+            <!-- Experience Badge -->
+            <div class="absolute -top-6 -left-6 glass-panel-dark rounded-2xl p-5 shadow-glow">
+              <div class="text-center">
+                <p class="font-display font-bold text-4xl text-accent">10+</p>
+                <p class="text-caption text-neutral-light/70 mt-1">Years of<br>Excellence</p>
+              </div>
+            </div>
+
+            <!-- Decorative Corner -->
+            <div class="absolute -bottom-4 -left-4 w-24 h-24 border-l-2 border-b-2 border-accent/30 rounded-bl-3xl"></div>
+          </div>
+
+          <!-- Right: Content -->
+          <div>
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 mb-6">
+              <i class="fas fa-heart text-primary text-sm" aria-hidden="true"></i>
+              <span class="text-caption text-primary font-semibold">Our Story</span>
+            </div>
+
+            <h2 class="font-display font-bold text-display-2 text-neutral-light mb-6">
+              Where Natural Hair
+              <span class="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">Meets Artistry</span>
+            </h2>
+
+            <p class="text-body-lg text-neutral-light/70 mb-6">
+              Founded in the heart of Gbagada, B's Natural Hair Salon was born from a passion for celebrating natural hair in all its glory. We believe every strand tells a story, and our mission is to help you write yours with confidence and style.
+            </p>
+
+            <p class="text-body text-neutral-light/60 mb-8">
+              Our team of certified stylists combines traditional African hair care techniques with modern innovation, ensuring your hair receives the best treatment possible. From protective styles to colour transformations, we approach every service with precision, creativity, and deep respect for your natural texture.
+            </p>
+
+            <!-- Values -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-leaf text-primary" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-neutral-light text-body-sm">Natural First</p>
+                  <p class="text-body-sm text-neutral-light/50">We prioritize hair health</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-gem text-secondary" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-neutral-light text-body-sm">Premium Products</p>
+                  <p class="text-body-sm text-neutral-light/50">Only the best for you</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-hand-holding-heart text-accent" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-neutral-light text-body-sm">Personalized Care</p>
+                  <p class="text-body-sm text-neutral-light/50">Tailored to your needs</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-graduation-cap text-primary" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-neutral-light text-body-sm">Expert Stylists</p>
+                  <p class="text-body-sm text-neutral-light/50">Certified professionals</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <a href="#contact" class="btn-primary inline-flex items-center gap-2 text-body font-semibold">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i>
+              Book Your Visit
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==================== END ABOUT SECTION ==================== -->
+
+    <!-- ==================== PROCESS SECTION ==================== -->
+    <section 
+      id="process" 
+      class="relative py-24 lg:py-32 bg-neutral-light overflow-hidden"
+      aria-label="Process section - How we work"
+    >
+
+      <!-- Background -->
+      <div class="absolute inset-0 afro-pattern opacity-50"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
+            <i class="fas fa-list-check text-accent text-sm" aria-hidden="true"></i>
+            <span class="text-caption text-accent-dark font-semibold">Our Process</span>
+          </div>
+          <h2 class="font-display font-bold text-display-2 text-neutral-dark mb-6">
+            Your Journey to
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Gorgeous Hair</span>
+          </h2>
+          <p class="text-body-lg text-neutral-mid">
+            A seamless experience from consultation to completion, designed around your comfort and hair goals.
+          </p>
+        </div>
+
+        <!-- Process Steps - Timeline Layout -->
+        <div class="relative">
+
+          <!-- Connecting Line (Desktop) -->
+          <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary via-secondary to-accent -translate-y-1/2"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+
+            <!-- Step 1 -->
+            <div class="relative group">
+              <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-2 relative z-10">
+                <!-- Step Number -->
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-display font-bold text-lg shadow-glow">
+                  1
+                </div>
+
+                <div class="pt-4 text-center">
+                  <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:shadow-glow transition-all duration-300">
+                    <i class="fas fa-comments text-primary text-2xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-heading-1 text-neutral-dark mb-3">Consultation</h3>
+                  <p class="text-body text-neutral-mid">
+                    We discuss your hair goals, assess your hair health, and recommend the best styles and treatments for your unique texture.
+                  </p>
+                </div>
+              </div>
+              <!-- Connector Dot -->
+              <div class="hidden lg:block absolute top-1/2 -right-3 w-6 h-6 rounded-full bg-white border-4 border-primary shadow-glow -translate-y-1/2 z-20"></div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="relative group">
+              <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-2 relative z-10">
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center font-display font-bold text-lg shadow-glow">
+                  2
+                </div>
+
+                <div class="pt-4 text-center">
+                  <div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-secondary group-hover:shadow-glow transition-all duration-300">
+                    <i class="fas fa-pump-soap text-secondary text-2xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-heading-1 text-neutral-dark mb-3">Preparation</h3>
+                  <p class="text-body text-neutral-mid">
+                    Gentle cleansing, conditioning, and detangling to prepare your hair for styling while maintaining moisture and strength.
+                  </p>
+                </div>
+              </div>
+              <div class="hidden lg:block absolute top-1/2 -right-3 w-6 h-6 rounded-full bg-white border-4 border-secondary shadow-glow -translate-y-1/2 z-20"></div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="relative group">
+              <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-2 relative z-10">
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-display font-bold text-lg shadow-glow-accent">
+                  3
+                </div>
+
+                <div class="pt-4 text-center">
+                  <div class="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-accent group-hover:shadow-glow-accent transition-all duration-300">
+                    <i class="fas fa-wand-magic-sparkles text-accent text-2xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-heading-1 text-neutral-dark mb-3">Styling</h3>
+                  <p class="text-body text-neutral-mid">
+                    Expert execution of your chosen style with precision techniques, premium products, and attention to every detail.
+                  </p>
+                </div>
+              </div>
+              <div class="hidden lg:block absolute top-1/2 -right-3 w-6 h-6 rounded-full bg-white border-4 border-accent shadow-glow-accent -translate-y-1/2 z-20"></div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="relative group">
+              <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-2 relative z-10">
+                <div class="absolute -top-5 left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-display font-bold text-lg shadow-glow">
+                  4
+                </div>
+
+                <div class="pt-4 text-center">
+                  <div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:bg-primary group-hover:shadow-glow transition-all duration-300">
+                    <i class="fas fa-gift text-primary text-2xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+                  </div>
+                  <h3 class="font-display font-bold text-heading-1 text-neutral-dark mb-3">Aftercare</h3>
+                  <p class="text-body text-neutral-mid">
+                    Personalized maintenance tips, product recommendations, and styling advice to keep your hair looking flawless between visits.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-16">
+          <a href="#contact" class="btn-primary inline-flex items-center gap-2 text-body font-semibold">
+            <i class="fas fa-calendar-check" aria-hidden="true"></i>
+            Start Your Journey
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==================== END PROCESS SECTION ==================== -->
+
+
+    <!-- ==================== GALLERY SECTION ==================== -->
+    <section 
+      id="gallery" 
+      class="relative py-24 lg:py-32 bg-neutral-dark text-neutral-light overflow-hidden"
+      aria-label="Gallery section - Portfolio of our work"
+    >
+
+      <!-- Background Elements -->
+      <div class="absolute inset-0 afro-grid opacity-10"></div>
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+      <div class="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-20 w-64 h-64 bg-accent/10 rounded-full blur-3xl"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 mb-6">
+            <i class="fas fa-images text-primary text-sm" aria-hidden="true"></i>
+            <span class="text-caption text-primary font-semibold">Our Portfolio</span>
+          </div>
+          <h2 class="font-display font-bold text-display-2 text-neutral-light mb-6">
+            Styles That
+            <span class="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">Speak Volumes</span>
+          </h2>
+          <p class="text-body-lg text-neutral-light/70">
+            Browse through our collection of stunning natural hair transformations. Each style is a testament to our dedication to craft and creativity.
+          </p>
+        </div>
+
+        <!-- Gallery Grid - Masonry Style -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+
+          <!-- Gallery Item 1 - Large -->
+          <div class="col-span-2 row-span-2 group relative rounded-2xl overflow-hidden shadow-medium hover:shadow-heavy transition-all duration-500">
+            <img 
+              src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80" 
+              alt="Natural twist out hairstyle with volume and definition" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/80 via-neutral-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-caption text-primary font-semibold mb-2">
+                <i class="fas fa-wind text-xs" aria-hidden="true"></i>
+                Twist Out
+              </span>
+              <p class="text-body font-semibold text-neutral-light">Defined Twist Out</p>
+              <p class="text-body-sm text-neutral-light/70">Natural texture enhanced with twist technique</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-medium hover:shadow-heavy transition-all duration-500 aspect-square">
+            <img 
+              src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=600&q=80" 
+              alt="Faux locs protective style" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/80 via-neutral-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 text-caption text-accent font-semibold mb-1">
+                <i class="fas fa-link text-xs" aria-hidden="true"></i>
+                Faux Locs
+              </span>
+              <p class="text-body-sm font-semibold text-neutral-light">Bohemian Faux Locs</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-medium hover:shadow-heavy transition-all duration-500 aspect-square">
+            <img 
+              src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" 
+              alt="Vibrant hair colour transformation" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/80 via-neutral-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-caption text-secondary font-semibold mb-1">
+                <i class="fas fa-palette text-xs" aria-hidden="true"></i>
+                Colour
+              </span>
+              <p class="text-body-sm font-semibold text-neutral-light">Bold Colour Transform</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-medium hover:shadow-heavy transition-all duration-500 aspect-square">
+            <img 
+              src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&q=80" 
+              alt="Beautiful braided hairstyle" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/80 via-neutral-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-caption text-primary font-semibold mb-1">
+                <i class="fas fa-hand-sparkles text-xs" aria-hidden="true"></i>
+                Braids
+              </span>
+              <p class="text-body-sm font-semibold text-neutral-light">Intricate Box Braids</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-medium hover:shadow-heavy transition-all duration-500 aspect-square">
+            <img 
+              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80" 
+              alt="Elegant updo for special occasion" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/80 via-neutral-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 text-caption text-accent font-semibold mb-1">
+                <i class="fas fa-crown text-xs" aria-hidden="true"></i>
+                Updo
+              </span>
+              <p class="text-body-sm font-semibold text-neutral-light">Regal Updo Style</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-medium hover:shadow-heavy transition-all duration-500 aspect-square">
+            <img 
+              src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?w=600&q=80" 
+              alt="Natural hair with healthy shine" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/80 via-neutral-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/20 text-caption text-secondary font-semibold mb-1">
+                <i class="fas fa-heart-pulse text-xs" aria-hidden="true"></i>
+                Treatment
+              </span>
+              <p class="text-body-sm font-semibold text-neutral-light">Healthy Hair Glow</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 7 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-medium hover:shadow-heavy transition-all duration-500 aspect-square">
+            <img 
+              src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80" 
+              alt="Comb coils defined curls" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/80 via-neutral-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-caption text-primary font-semibold mb-1">
+                <i class="fas fa-fingerprint text-xs" aria-hidden="true"></i>
+                Coils
+              </span>
+              <p class="text-body-sm font-semibold text-neutral-light">Defined Finger Coils</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 8 -->
+          <div class="group relative rounded-2xl overflow-hidden shadow-medium hover:shadow-heavy transition-all duration-500 aspect-square">
+            <img 
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&q=80" 
+              alt="Perm rod set curls" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-dark/80 via-neutral-dark/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/20 text-caption text-accent font-semibold mb-1">
+                <i class="fas fa-wand-magic-sparkles text-xs" aria-hidden="true"></i>
+                Rod Set
+              </span>
+              <p class="text-body-sm font-semibold text-neutral-light">Bouncy Perm Rod Set</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- View More CTA -->
+        <div class="text-center mt-12">
+          <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white/10 border border-white/20 text-body font-semibold text-neutral-light hover:bg-white/20 transition-all duration-300">
+            <i class="fas fa-camera" aria-hidden="true"></i>
+            Book Your Transformation
+          </a>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==================== END GALLERY SECTION ==================== -->
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section 
+      id="testimonials" 
+      class="relative py-24 lg:py-32 bg-neutral-light overflow-hidden"
+      aria-label="Testimonials section - What our clients say"
+    >
+
+      <!-- Background -->
+      <div class="absolute inset-0 afro-pattern opacity-40"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+      <div class="absolute top-40 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-40 right-10 w-72 h-72 bg-accent/5 rounded-full blur-3xl"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
+            <i class="fas fa-star text-secondary text-sm" aria-hidden="true"></i>
+            <span class="text-caption text-secondary font-semibold">Client Love</span>
+          </div>
+          <h2 class="font-display font-bold text-display-2 text-neutral-dark mb-6">
+            Stories From Our
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Happy Clients</span>
+          </h2>
+          <p class="text-body-lg text-neutral-mid">
+            Real experiences from real people. See why our clients keep coming back and bringing their friends.
+          </p>
+        </div>
+
+        <!-- Stats Bar -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 lg:mb-20">
+          <div class="bg-white rounded-2xl p-6 text-center shadow-soft hover:shadow-medium transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <i class="fas fa-users text-primary text-xl" aria-hidden="true"></i>
+            </div>
+            <p class="font-display font-bold text-3xl text-neutral-dark">500+</p>
+            <p class="text-caption text-neutral-mid mt-1">Happy Clients</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-soft hover:shadow-medium transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center mx-auto mb-3">
+              <i class="fas fa-scissors text-secondary text-xl" aria-hidden="true"></i>
+            </div>
+            <p class="font-display font-bold text-3xl text-neutral-dark">2,000+</p>
+            <p class="text-caption text-neutral-mid mt-1">Styles Created</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-soft hover:shadow-medium transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-3">
+              <i class="fas fa-award text-accent text-xl" aria-hidden="true"></i>
+            </div>
+            <p class="font-display font-bold text-3xl text-neutral-dark">10+</p>
+            <p class="text-caption text-neutral-mid mt-1">Years Experience</p>
+          </div>
+          <div class="bg-white rounded-2xl p-6 text-center shadow-soft hover:shadow-medium transition-all duration-300">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-3">
+              <i class="fas fa-heart text-primary text-xl" aria-hidden="true"></i>
+            </div>
+            <p class="font-display font-bold text-3xl text-neutral-dark">4.9</p>
+            <p class="text-caption text-neutral-mid mt-1">Average Rating</p>
+          </div>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+          <!-- Testimonial 1 -->
+          <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1 relative">
+            <div class="absolute -top-4 left-8 w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-glow">
+              <i class="fas fa-quote-left text-white text-sm" aria-hidden="true"></i>
+            </div>
+            <div class="flex items-center gap-1 mb-4">
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+            </div>
+            <p class="text-body text-neutral-mid mb-6">
+              "B's Natural Hair Salon completely transformed my hair journey. The stylists understood exactly what my 4C hair needed. My twist outs have never looked better!"
+            </p>
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-light">
+              <img 
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&q=80" 
+                alt="Chioma A. - Client" 
+                class="w-12 h-12 rounded-full object-cover"
+                loading="lazy"
+              >
+              <div>
+                <p class="font-semibold text-neutral-dark text-body">Chioma A.</p>
+                <p class="text-caption text-neutral-mid">Regular Client · 2 Years</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1 relative">
+            <div class="absolute -top-4 left-8 w-8 h-8 rounded-full bg-secondary flex items-center justify-center shadow-glow">
+              <i class="fas fa-quote-left text-white text-sm" aria-hidden="true"></i>
+            </div>
+            <div class="flex items-center gap-1 mb-4">
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+            </div>
+            <p class="text-body text-neutral-mid mb-6">
+              "The faux locs I got here lasted for months and looked incredibly natural. The attention to detail is unmatched. This is now my go-to salon in Gbagada!"
+            </p>
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-light">
+              <img 
+                src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80" 
+                alt="Amara K. - Client" 
+                class="w-12 h-12 rounded-full object-cover"
+                loading="lazy"
+              >
+              <div>
+                <p class="font-semibold text-neutral-dark text-body">Amara K.</p>
+                <p class="text-caption text-neutral-mid">Faux Locs Client · 1 Year</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1 relative">
+            <div class="absolute -top-4 left-8 w-8 h-8 rounded-full bg-accent flex items-center justify-center shadow-glow-accent">
+              <i class="fas fa-quote-left text-white text-sm" aria-hidden="true"></i>
+            </div>
+            <div class="flex items-center gap-1 mb-4">
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star-half-stroke text-accent text-sm" aria-hidden="true"></i>
+            </div>
+            <p class="text-body text-neutral-mid mb-6">
+              "I was nervous about colouring my natural hair, but the team walked me through everything. The results were stunning and my hair remained healthy and strong."
+            </p>
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-light">
+              <img 
+                src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&q=80" 
+                alt="Tolu O. - Client" 
+                class="w-12 h-12 rounded-full object-cover"
+                loading="lazy"
+              >
+              <div>
+                <p class="font-semibold text-neutral-dark text-body">Tolu O.</p>
+                <p class="text-caption text-neutral-mid">Colour Client · 6 Months</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1 relative">
+            <div class="absolute -top-4 left-8 w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-glow">
+              <i class="fas fa-quote-left text-white text-sm" aria-hidden="true"></i>
+            </div>
+            <div class="flex items-center gap-1 mb-4">
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+            </div>
+            <p class="text-body text-neutral-mid mb-6">
+              "The deep conditioning treatment saved my hair! After years of breakage, I finally have length and strength. The stylists really know natural hair care."
+            </p>
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-light">
+              <img 
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=100&q=80" 
+                alt="Ngozi M. - Client" 
+                class="w-12 h-12 rounded-full object-cover"
+                loading="lazy"
+              >
+              <div>
+                <p class="font-semibold text-neutral-dark text-body">Ngozi M.</p>
+                <p class="text-caption text-neutral-mid">Treatment Client · 3 Years</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1 relative">
+            <div class="absolute -top-4 left-8 w-8 h-8 rounded-full bg-secondary flex items-center justify-center shadow-glow">
+              <i class="fas fa-quote-left text-white text-sm" aria-hidden="true"></i>
+            </div>
+            <div class="flex items-center gap-1 mb-4">
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+            </div>
+            <p class="text-body text-neutral-mid mb-6">
+              "My wedding updo was absolutely perfect! The team understood my vision and executed it flawlessly. I felt like a queen on my special day."
+            </p>
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-light">
+              <img 
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80" 
+                alt="Zainab I. - Client" 
+                class="w-12 h-12 rounded-full object-cover"
+                loading="lazy"
+              >
+              <div>
+                <p class="font-semibold text-neutral-dark text-body">Zainab I.</p>
+                <p class="text-caption text-neutral-mid">Bridal Client · 1 Visit</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-500 hover:-translate-y-1 relative">
+            <div class="absolute -top-4 left-8 w-8 h-8 rounded-full bg-accent flex items-center justify-center shadow-glow-accent">
+              <i class="fas fa-quote-left text-white text-sm" aria-hidden="true"></i>
+            </div>
+            <div class="flex items-center gap-1 mb-4">
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+              <i class="fas fa-star text-accent text-sm" aria-hidden="true"></i>
+            </div>
+            <p class="text-body text-neutral-mid mb-6">
+              "The braiding technique here is top-notch. My Ghana weaving lasted for weeks without any loosening. Clean parts, neat lines, and zero tension headaches!"
+            </p>
+            <div class="flex items-center gap-4 pt-4 border-t border-neutral-light">
+              <img 
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" 
+                alt="Funmi R. - Client" 
+                class="w-12 h-12 rounded-full object-cover"
+                loading="lazy"
+              >
+              <div>
+                <p class="font-semibold text-neutral-dark text-body">Funmi R.</p>
+                <p class="text-caption text-neutral-mid">Braiding Client · 2 Years</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- ==================== END TESTIMONIALS SECTION ==================== -->
+
+    <!-- ==================== NEWSLETTER / LEAD CAPTURE SECTION ==================== -->
+    <section 
+      id="newsletter" 
+      class="relative py-20 lg:py-24 overflow-hidden"
+      aria-label="Newsletter section - Stay updated with B's Natural Hair Salon"
+    >
+
+      <!-- Background with Gradient -->
+      <div class="absolute inset-0 bg-gradient-to-br from-primary via-primary-dark to-secondary"></div>
+      <div class="absolute inset-0 afro-grid opacity-10"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+
+      <!-- Decorative Rings -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full border border-white/10"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full border border-white/5"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
+          <i class="fas fa-bell text-accent text-sm" aria-hidden="true"></i>
+          <span class="text-caption text-white/90 font-semibold">Stay in the Loop</span>
+        </div>
+
+        <h2 class="font-display font-bold text-display-2 text-white mb-6">
+          Get Hair Tips & Exclusive Offers
+        </h2>
+        <p class="text-body-lg text-white/80 mb-10 max-w-2xl mx-auto">
+          Subscribe to our newsletter for natural hair care tips, styling inspiration, and exclusive discounts delivered straight to your inbox.
+        </p>
+
+        <!-- Newsletter Form -->
+        <form class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing! We will be in touch soon.');">
+          <div class="flex-1 relative">
+            <div class="absolute left-4 top-1/2 -translate-y-1/2 text-white/50">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </div>
+            <input 
+              type="email" 
+              placeholder="Enter your email address" 
+              class="w-full pl-12 pr-4 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all"
+              required
+              aria-label="Email address for newsletter subscription"
+            >
+          </div>
+          <button 
+            type="submit" 
+            class="px-8 py-4 rounded-xl bg-white text-primary font-semibold text-body hover:bg-neutral-light transition-colors shadow-heavy flex items-center justify-center gap-2"
+          >
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            Subscribe
+          </button>
+        </form>
+
+        <p class="text-body-sm text-white/50 mt-4">
+          <i class="fas fa-shield-halved text-xs mr-1" aria-hidden="true"></i>
+          We respect your privacy. Unsubscribe anytime.
+        </p>
+
+        <!-- Social Proof -->
+        <div class="flex items-center justify-center gap-6 mt-10">
+          <div class="flex items-center gap-2 text-white/70">
+            <i class="fas fa-users text-accent" aria-hidden="true"></i>
+            <span class="text-body-sm">500+ Subscribers</span>
+          </div>
+          <div class="w-px h-4 bg-white/20"></div>
+          <div class="flex items-center gap-2 text-white/70">
+            <i class="fas fa-paper-plane text-accent" aria-hidden="true"></i>
+            <span class="text-body-sm">Weekly Tips</span>
+          </div>
+          <div class="w-px h-4 bg-white/20"></div>
+          <div class="flex items-center gap-2 text-white/70">
+            <i class="fas fa-tag text-accent" aria-hidden="true"></i>
+            <span class="text-body-sm">Exclusive Deals</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==================== END NEWSLETTER SECTION ==================== -->
+
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section 
+      id="contact" 
+      class="relative py-24 lg:py-32 bg-neutral-light overflow-hidden"
+      aria-label="Contact section - Get in touch with B's Natural Hair Salon"
+    >
+
+      <!-- Background -->
+      <div class="absolute inset-0 afro-pattern opacity-40"></div>
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+      <div class="absolute top-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <i class="fas fa-paper-plane text-primary text-sm" aria-hidden="true"></i>
+            <span class="text-caption text-primary font-semibold">Get In Touch</span>
+          </div>
+          <h2 class="font-display font-bold text-display-2 text-neutral-dark mb-6">
+            Visit Us at
+            <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">52 Diya Street</span>
+          </h2>
+          <p class="text-body-lg text-neutral-mid">
+            Ready to transform your hair? Book an appointment, visit our salon, or reach out with any questions. We can't wait to meet you!
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-8 lg:gap-12">
+
+          <!-- Left: Contact Info Cards -->
+          <div class="lg:col-span-2 space-y-6">
+
+            <!-- Address Card -->
+            <div class="bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 group">
+              <div class="flex items-start gap-4">
+                <div class="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:shadow-glow transition-all duration-300">
+                  <i class="fas fa-location-dot text-primary text-xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-1">Visit Our Salon</h3>
+                  <p class="text-body text-neutral-mid">52 Diya Street</p>
+                  <p class="text-body text-neutral-mid">Gbagada, Lagos 105102</p>
+                  <p class="text-body text-neutral-mid">Lagos, Nigeria</p>
+                  <a 
+                    href="https://maps.google.com/?q=52+Diya+St+Gbagada+Lagos" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 mt-3 text-body-sm font-semibold text-primary hover:text-primary-dark transition-colors"
+                  >
+                    <i class="fas fa-map" aria-hidden="true"></i>
+                    Get Directions
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 group">
+              <div class="flex items-start gap-4">
+                <div class="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-secondary group-hover:shadow-glow transition-all duration-300">
+                  <i class="fas fa-phone text-secondary text-xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-1">Call Us</h3>
+                  <a href="tel:+2349079999856" class="text-body text-neutral-mid hover:text-primary transition-colors block">
+                    +234 907 999 9856
+                  </a>
+                  <p class="text-body-sm text-neutral-mid mt-2">
+                    <i class="fas fa-clock text-accent text-xs mr-1" aria-hidden="true"></i>
+                    Mon-Sat: 9:00 AM - 7:00 PM
+                  </p>
+                  <p class="text-body-sm text-neutral-mid">
+                    <i class="fas fa-clock text-accent text-xs mr-1" aria-hidden="true"></i>
+                    Sunday: Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 group">
+              <div class="flex items-start gap-4">
+                <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent group-hover:shadow-glow-accent transition-all duration-300">
+                  <i class="fas fa-envelope text-accent text-xl group-hover:text-white transition-colors" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-1">Email Us</h3>
+                  <a href="mailto:bsnaturalhairsaloon000@gmail.com" class="text-body text-neutral-mid hover:text-primary transition-colors break-all">
+                    bsnaturalhairsaloon000@gmail.com
+                  </a>
+                  <p class="text-body-sm text-neutral-mid mt-2">We typically respond within 24 hours</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="bg-white rounded-2xl p-6 shadow-soft">
+              <h3 class="font-display font-bold text-heading-2 text-neutral-dark mb-4">Follow Us</h3>
+              <div class="flex gap-3">
+                <a href="#" class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300" aria-label="Follow us on Instagram">
+                  <i class="fab fa-instagram text-xl" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary hover:bg-secondary hover:text-white transition-all duration-300" aria-label="Follow us on Facebook">
+                  <i class="fab fa-facebook-f text-xl" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-all duration-300" aria-label="Follow us on Twitter">
+                  <i class="fab fa-x-twitter text-xl" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300" aria-label="Follow us on TikTok">
+                  <i class="fab fa-tiktok text-xl" aria-hidden="true"></i>
+                </a>
+                <a href="https://wa.me/2349079999856" class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-600 hover:bg-green-500 hover:text-white transition-all duration-300" aria-label="Chat with us on WhatsApp">
+                  <i class="fab fa-whatsapp text-xl" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="lg:col-span-3">
+            <div class="bg-white rounded-2xl p-8 lg:p-10 shadow-medium">
+              <h3 class="font-display font-bold text-heading-1 text-neutral-dark mb-2">Book an Appointment</h3>
+              <p class="text-body text-neutral-mid mb-8">Fill out the form below and we'll get back to you to confirm your booking.</p>
+
+              <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for your booking request! We will contact you shortly to confirm your appointment.');">
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <!-- Name -->
+                  <div>
+                    <label for="contact-name" class="block text-body-sm font-semibold text-neutral-dark mb-2">
+                      Full Name <span class="text-secondary">*</span>
+                    </label>
+                    <div class="relative">
+                      <div class="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-mid/50">
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                      </div>
+                      <input 
+                        type="text" 
+                        id="contact-name" 
+                        name="name"
+                        placeholder="Your full name" 
+                        class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-neutral-light border border-neutral-light focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all text-body"
+                        required
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Phone -->
+                  <div>
+                    <label for="contact-phone" class="block text-body-sm font-semibold text-neutral-dark mb-2">
+                      Phone Number <span class="text-secondary">*</span>
+                    </label>
+                    <div class="relative">
+                      <div class="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-mid/50">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                      </div>
+                      <input 
+                        type="tel" 
+                        id="contact-phone" 
+                        name="phone"
+                        placeholder="+234 XXX XXX XXXX" 
+                        class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-neutral-light border border-neutral-light focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all text-body"
+                        required
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label for="contact-email" class="block text-body-sm font-semibold text-neutral-dark mb-2">
+                    Email Address
+                  </label>
+                  <div class="relative">
+                    <div class="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-mid/50">
+                      <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <input 
+                      type="email" 
+                      id="contact-email" 
+                      name="email"
+                      placeholder="your@email.com" 
+                      class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-neutral-light border border-neutral-light focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all text-body"
+                    >
+                  </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                  <!-- Service -->
+                  <div>
+                    <label for="contact-service" class="block text-body-sm font-semibold text-neutral-dark mb-2">
+                      Service Interested In <span class="text-secondary">*</span>
+                    </label>
+                    <div class="relative">
+                      <div class="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-mid/50">
+                        <i class="fas fa-scissors" aria-hidden="true"></i>
+                      </div>
+                      <select 
+                        id="contact-service" 
+                        name="service"
+                        class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-neutral-light border border-neutral-light focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all text-body appearance-none cursor-pointer"
+                        required
+                      >
+                        <option value="" disabled selected>Select a service</option>
+                        <option value="twist">Natural Twist / Flattwist</option>
+                        <option value="updo">Updos</option>
+                        <option value="coils">Comb Coils / Finger Coils</option>
+                        <option value="perm-rod">Perm Rod Set</option>
+                        <option value="faux-locs">Faux Locs</option>
+                        <option value="dreads">Dreads / Loc Care</option>
+                        <option value="colour">Colour Services</option>
+                        <option value="treatment">Hair Treatments</option>
+                        <option value="braiding">Braiding</option>
+                        <option value="other">Other / Not Sure</option>
+                      </select>
+                      <div class="absolute right-4 top-1/2 -translate-y-1/2 text-neutral-mid pointer-events-none">
+                        <i class="fas fa-chevron-down text-xs" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Preferred Date -->
+                  <div>
+                    <label for="contact-date" class="block text-body-sm font-semibold text-neutral-dark mb-2">
+                      Preferred Date
+                    </label>
+                    <div class="relative">
+                      <div class="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-mid/50">
+                        <i class="fas fa-calendar" aria-hidden="true"></i>
+                      </div>
+                      <input 
+                        type="date" 
+                        id="contact-date" 
+                        name="date"
+                        class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-neutral-light border border-neutral-light focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all text-body"
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Message -->
+                <div>
+                  <label for="contact-message" class="block text-body-sm font-semibold text-neutral-dark mb-2">
+                    Additional Notes
+                  </label>
+                  <div class="relative">
+                    <div class="absolute left-4 top-4 text-neutral-mid/50">
+                      <i class="fas fa-message" aria-hidden="true"></i>
+                    </div>
+                    <textarea 
+                      id="contact-message" 
+                      name="message"
+                      rows="4" 
+                      placeholder="Tell us about your hair goals, any allergies, or special requests..." 
+                      class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-neutral-light border border-neutral-light focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all text-body resize-none"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Submit -->
+                <button 
+                  type="submit" 
+                  class="w-full btn-primary py-4 text-body font-semibold flex items-center justify-center gap-2"
+                >
+                  <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                  Request Appointment
+                </button>
+
+                <p class="text-center text-body-sm text-neutral-mid">
+                  <i class="fas fa-shield-halved text-accent text-xs mr-1" aria-hidden="true"></i>
+                  Your information is secure and will never be shared.
+                </p>
+
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Map Embed -->
+        <div class="mt-12 lg:mt-16">
+          <div class="rounded-2xl overflow-hidden shadow-medium">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.6!2d3.3841!3d6.5484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzInNTQuMiJOIDPCsDIzJzAyLjgiRQ!5e0!3m2!1sen!2sng!4v1" 
+              width="100%" 
+              height="400" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="B's Natural Hair Salon location map - 52 Diya Street, Gbagada, Lagos"
+              class="grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+            ></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- ==================== END CONTACT SECTION ==================== -->
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <!-- Footer Design: Dark Mode Inverted -->
+  <footer 
+    class="relative bg-neutral-dark text-neutral-light overflow-hidden"
+    aria-label="Footer - B's Natural Hair Salon"
+  >
+
+    <!-- Background Elements -->
+    <div class="absolute inset-0 afro-grid opacity-5"></div>
+    <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+    <div class="absolute top-20 right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10">
+
+      <!-- Main Footer Content -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+
+          <!-- Brand Column -->
+          <div class="lg:col-span-4">
+            <a href="#" class="flex items-center gap-3 mb-6 group" aria-label="B's Natural Hair Salon - Home">
+              <div class="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center shadow-glow group-hover:shadow-glow-accent transition-shadow duration-300">
+                <i class="fas fa-wind text-white text-xl" aria-hidden="true"></i>
+              </div>
+              <div class="flex flex-col">
+                <span class="font-display font-bold text-2xl text-neutral-light leading-tight">B's Natural</span>
+                <span class="text-caption text-neutral-light/50">Hair Salon</span>
+              </div>
+            </a>
+            <p class="text-body text-neutral-light/60 mb-6 max-w-sm">
+              Premium natural hair care in the heart of Gbagada, Lagos. Celebrating natural beauty through expert styling and transformative treatments since 2014.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex gap-3">
+              <a href="#" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-light/60 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" aria-label="Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-light/60 hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-300" aria-label="Facebook">
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-light/60 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300" aria-label="Twitter">
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-light/60 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300" aria-label="TikTok">
+                <i class="fab fa-tiktok" aria-hidden="true"></i>
+              </a>
+              <a href="https://wa.me/2349079999856" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-neutral-light/60 hover:bg-green-500 hover:text-white hover:border-green-500 transition-all duration-300" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="lg:col-span-2">
+            <h4 class="font-display font-bold text-heading-2 text-neutral-light mb-6">Quick Links</h4>
+            <nav aria-label="Footer navigation">
+              <ul class="space-y-3">
+                <li><a href="#services" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-primary/50" aria-hidden="true"></i> Services</a></li>
+                <li><a href="#about" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-primary/50" aria-hidden="true"></i> About Us</a></li>
+                <li><a href="#process" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-primary/50" aria-hidden="true"></i> Our Process</a></li>
+                <li><a href="#gallery" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-primary/50" aria-hidden="true"></i> Gallery</a></li>
+                <li><a href="#testimonials" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-primary/50" aria-hidden="true"></i> Reviews</a></li>
+                <li><a href="#contact" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-chevron-right text-xs text-primary/50" aria-hidden="true"></i> Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Services -->
+          <div class="lg:col-span-3">
+            <h4 class="font-display font-bold text-heading-2 text-neutral-light mb-6">Our Services</h4>
+            <ul class="space-y-3">
+              <li><a href="#services" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-wind text-xs text-primary/50" aria-hidden="true"></i> Natural Twist & Flattwist</a></li>
+              <li><a href="#services" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-crown text-xs text-primary/50" aria-hidden="true"></i> Updos & Bridal</a></li>
+              <li><a href="#services" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-link text-xs text-primary/50" aria-hidden="true"></i> Faux Locs & Dreads</a></li>
+              <li><a href="#services" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-palette text-xs text-primary/50" aria-hidden="true"></i> Colour Services</a></li>
+              <li><a href="#services" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-heart-pulse text-xs text-primary/50" aria-hidden="true"></i> Hair Treatments</a></li>
+              <li><a href="#services" class="text-body text-neutral-light/60 hover:text-primary transition-colors inline-flex items-center gap-2"><i class="fas fa-hand-sparkles text-xs text-primary/50" aria-hidden="true"></i> Braiding</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="lg:col-span-3">
+            <h4 class="font-display font-bold text-heading-2 text-neutral-light mb-6">Contact Us</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-location-dot text-primary text-sm" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-body text-neutral-light/80">52 Diya Street</p>
+                  <p class="text-body text-neutral-light/80">Gbagada, Lagos 105102</p>
+                  <p class="text-body-sm text-neutral-light/50">Lagos, Nigeria</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-phone text-secondary text-sm" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <a href="tel:+2349079999856" class="text-body text-neutral-light/80 hover:text-primary transition-colors">+234 907 999 9856</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-envelope text-accent text-sm" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <a href="mailto:bsnaturalhairsaloon000@gmail.com" class="text-body text-neutral-light/80 hover:text-primary transition-colors break-all">bsnaturalhairsaloon000@gmail.com</a>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <i class="fas fa-clock text-primary text-sm" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <p class="text-body text-neutral-light/80">Mon - Sat: 9:00 AM - 7:00 PM</p>
+                  <p class="text-body text-neutral-light/50">Sunday: Closed</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Newsletter Mini (Footer) -->
+        <div class="mt-16 pt-10 border-t border-white/10">
+          <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+            <div>
+              <h4 class="font-display font-bold text-heading-2 text-neutral-light mb-1">Stay Updated</h4>
+              <p class="text-body text-neutral-light/50">Get hair tips and exclusive offers in your inbox.</p>
+            </div>
+            <form class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+              <div class="relative flex-1 lg:w-72">
+                <div class="absolute left-4 top-1/2 -translate-y-1/2 text-neutral-light/30">
+                  <i class="fas fa-envelope" aria-hidden="true"></i>
+                </div>
+                <input 
+                  type="email" 
+                  placeholder="Your email" 
+                  class="w-full pl-12 pr-4 py-3 rounded-xl bg-white/5 border border-white/10 text-neutral-light placeholder-neutral-light/30 focus:outline-none focus:border-primary/50 focus:bg-white/10 transition-all text-body"
+                  required
+                  aria-label="Email for footer newsletter"
+                >
+              </div>
+              <button 
+                type="submit" 
+                class="px-6 py-3 rounded-xl bg-primary text-white font-semibold text-body hover:bg-primary-light transition-colors flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-body-sm text-neutral-light/40 text-center md:text-left">
+              <i class="fas fa-copyright text-xs mr-1" aria-hidden="true"></i>
+              2024 B's Natural Hair Salon. All rights reserved.
+            </p>
+            <div class="flex items-center gap-6">
+              <a href="#" class="text-body-sm text-neutral-light/40 hover:text-primary transition-colors">Privacy Policy</a>
+              <a href="#" class="text-body-sm text-neutral-light/40 hover:text-primary transition-colors">Terms of Service</a>
+              <button 
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+                class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-light/40 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+                aria-label="Back to top"
+              >
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <!-- ==================== END FOOTER ==================== -->
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // Mobile Menu Toggle
+    (function() {
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      const menuClose = document.getElementById('mobile-menu-close');
+      const overlay = document.getElementById('mobile-menu-overlay');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      function openMenu() {
+        menu.classList.remove('translate-x-full');
+        menu.setAttribute('aria-hidden', 'false');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeMenu() {
+        menu.classList.add('translate-x-full');
+        menu.setAttribute('aria-hidden', 'true');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      menuBtn.addEventListener('click', openMenu);
+      menuClose.addEventListener('click', closeMenu);
+      overlay.addEventListener('click', closeMenu);
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+        }
+      });
+    })();
+
+    // Header Scroll Effect
+    (function() {
+      const header = document.getElementById('main-header');
+      let lastScroll = 0;
+
+      window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+          header.classList.add('shadow-medium');
+        } else {
+          header.classList.remove('shadow-medium');
+        }
+
+        lastScroll = currentScroll;
+      });
+    })();
+
+    // Smooth Scroll for Anchor Links
+    (function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            e.preventDefault();
+            const headerOffset = 80;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    })();
+
+    // Intersection Observer for Scroll Animations
+    (function() {
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe sections for animation
+      document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(section);
+      });
+
+      // Add animate-in class styles
+      const style = document.createElement('style');
+      style.textContent = `
+        .animate-in {
+          opacity: 1 !important;
+          transform: translateY(0) !important;
+        }
+      `;
+      document.head.appendChild(style);
+    })();
+
+    // Set minimum date for booking form (today)
+    (function() {
+      const dateInput = document.getElementById('contact-date');
+      if (dateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.setAttribute('min', today);
+      }
+    })();
+
+    // Active Navigation Link on Scroll
+    (function() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('scroll', function() {
+        let current = '';
+
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          if (window.pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('text-primary');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('text-primary');
+          }
+        });
+      });
+    })();
+  </script>
+  <!-- ==================== END JAVASCRIPT ==================== -->
+
+</body>
+</html>
