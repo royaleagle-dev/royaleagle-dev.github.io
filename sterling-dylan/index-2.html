@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sterling & Dylan | October 24, 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'gothic': ['"UnifrakturMaguntia"', 'cursive'],
+                        'cinzel': ['"Cinzel Decorative"', 'serif'],
+                        'cormorant': ['"Cormorant Garamond"', 'serif'],
+                    },
+                    colors: {
+                        'bone': '#f5f5f0',
+                        'ink': '#1a1a1a',
+                        'charcoal': '#2d2d2d',
+                        'aged': '#e8e6e1',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1.5s ease-out forwards',
+                        'slide-up': 'slideUp 1s ease-out forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a1a1a; }
+        ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #666; }
+
+        .text-shadow-glow {
+            text-shadow: 0 0 20px rgba(255,255,255,0.1), 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .ornate-border {
+            position: relative;
+        }
+        .ornate-border::before {
+            content: '';
+            position: absolute;
+            top: -10px; left: -10px; right: -10px; bottom: -10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            pointer-events: none;
+        }
+
+        .hover-lift {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .grain-overlay::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.05'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.4;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        }
+
+        .input-ornate {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        .input-ornate:focus {
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.5);
+            outline: none;
+            box-shadow: 0 0 20px rgba(255,255,255,0.05);
+        }
+
+        /* Smooth scroll behavior */
+        html { scroll-behavior: smooth; }
+
+        /* Reveal animation classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-ink text-bone font-cormorant overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-ink/80 backdrop-blur-md border-b border-white/10 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="font-gothic text-2xl tracking-wider text-bone hover:text-white transition-colors">S & D</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#lore" class="font-cinzel text-sm tracking-widest uppercase hover:text-white/80 transition-colors relative group">
+                    The Lore
+                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-white/50 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#plan" class="font-cinzel text-sm tracking-widest uppercase hover:text-white/80 transition-colors relative group">
+                    The Plan
+                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-white/50 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#rsvp" class="font-cinzel text-sm tracking-widest uppercase hover:text-white/80 transition-colors relative group">
+                    RSVP
+                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-white/50 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#honeymoon" class="font-cinzel text-sm tracking-widest uppercase hover:text-white/80 transition-colors relative group">
+                    Honeymoon Fund
+                    <span class="absolute -bottom-1 left-0 w-0 h-px bg-white/50 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </div>
+            <!-- Mobile menu button -->
+            <button class="md:hidden text-bone" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-ink/95 border-t border-white/10">
+            <div class="px-6 py-4 space-y-4">
+                <a href="#lore" class="block font-cinzel text-sm tracking-widest uppercase">The Lore</a>
+                <a href="#plan" class="block font-cinzel text-sm tracking-widest uppercase">The Plan</a>
+                <a href="#rsvp" class="block font-cinzel text-sm tracking-widest uppercase">RSVP</a>
+                <a href="#honeymoon" class="block font-cinzel text-sm tracking-widest uppercase">Honeymoon Fund</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden grain-overlay">
+        <!-- Background with artwork -->
+        <div class="absolute inset-0 z-0">
+            <img src="248444.jpg" alt="Wedding Frame" class="w-full h-full object-contain opacity-40 scale-110 animate-float">
+            <div class="absolute inset-0 bg-gradient-to-b from-ink via-ink/50 to-ink"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto animate-fade-in">
+            <div class="mb-8">
+                <img src="248434.jpg" alt="For The Traveler" class="w-64 md:w-80 mx-auto opacity-90 invert brightness-200">
+            </div>
+
+            <p class="font-cinzel text-sm md:text-base tracking-[0.3em] uppercase text-white/60 mb-6">The Wedding Of</p>
+
+            <h1 class="font-gothic text-6xl md:text-8xl lg:text-9xl mb-4 text-shadow-glow leading-tight">
+                Sterling<br><span class="text-4xl md:text-6xl font-cinzel italic">&</span> Dylan
+            </h1>
+
+            <div class="w-24 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent mx-auto my-8"></div>
+
+            <p class="font-cinzel text-xl md:text-2xl tracking-widest text-white/80 mb-2">OCTOBER 24TH, 2026</p>
+            <p class="font-cormorant text-lg md:text-xl text-white/50 italic">Press Street Station, New Orleans</p>
+
+            <div class="mt-12">
+                <a href="#lore" class="inline-block border border-white/30 px-8 py-3 font-cinzel text-sm tracking-widest uppercase hover:bg-white/10 hover:border-white/50 transition-all duration-300">
+                    Enter Our Tale
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <svg class="w-6 h-6 text-white/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </div>
+    </section>
+
+    <!-- The Lore Section -->
+    <section id="lore" class="relative py-24 md:py-32 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Artwork -->
+                <div class="reveal relative">
+                    <img src="248432.jpg" alt="The Lore" class="w-full max-w-md mx-auto hover-lift rounded-sm">
+                </div>
+
+                <!-- Text Content -->
+                <div class="reveal space-y-6">
+                    <h2 class="font-gothic text-5xl md:text-6xl mb-6">The Lore</h2>
+                    <div class="w-16 h-px bg-white/30 mb-6"></div>
+
+                    <div class="space-y-4 text-lg leading-relaxed text-white/80">
+                        <p>Sterling and Dylan first locked eyes at NOCCA (New Orleans Center for Creative Arts) in the visual art departments' roll call room — full circle as they now get married in the NOCCA culinary arts building.</p>
+
+                        <p>They met again when Sterling joined Dylan's first band, Royal T, as their new bass player; though both were seeing other people, they had an immediate connection writing music together.</p>
+
+                        <p>After that band dissolved, they both went their separate ways for 2 years until they happened to reconnect. Now both single, the chemistry was obvious and it all fell into place.</p>
+
+                        <p class="text-white/60 italic">It's been 8 years of music, art, the adventure of growing up together, and building a life from their love of it all.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- The Plan / Schedule Section -->
+    <section id="plan" class="relative py-24 md:py-32 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <img src="248441.jpg" alt="The Plan" class="w-48 md:w-64 mx-auto mb-8 opacity-90 invert brightness-200">
+                <h2 class="font-gothic text-5xl md:text-6xl">The Plan</h2>
+                <p class="font-cormorant text-xl text-white/50 mt-4 italic">600 Homer Plessy Way, New Orleans, LA</p>
+            </div>
+
+            <!-- Timeline using the artwork -->
+            <div class="reveal">
+                <img src="248437.jpg" alt="Wedding Schedule" class="w-full max-w-4xl mx-auto hover-lift">
+            </div>
+
+            <!-- Mobile-friendly text version -->
+            <div class="md:hidden mt-12 space-y-8 reveal">
+                <div class="border-l-2 border-white/20 pl-6 py-2">
+                    <p class="font-cinzel text-lg text-white/90">5:30 PM — CEREMONY</p>
+                    <p class="text-white/60 italic">The official part, words will be said</p>
+                </div>
+                <div class="border-l-2 border-white/20 pl-6 py-2">
+                    <p class="font-cinzel text-lg text-white/90">6:00 PM — RECEPTION</p>
+                    <p class="text-white/60 italic">Taco bar, pupusas, and other Nicaraguan food, toasts and flan cutting</p>
+                </div>
+                <div class="border-l-2 border-white/20 pl-6 py-2">
+                    <p class="font-cinzel text-lg text-white/90">9:30 PM — AFTERS</p>
+                    <p class="text-white/60 italic">Live show featuring The Nancies (and possible Garguts and Fiend appearance), the dance floor will be hit</p>
+                </div>
+                <div class="border-l-2 border-white/20 pl-6 py-2">
+                    <p class="font-cinzel text-lg text-white/90">10:30 PM — OPEN JAM</p>
+                    <p class="text-white/60 italic">All are welcome, we rock together</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Portrait Section -->
+    <section class="relative py-24 md:py-32 overflow-hidden">
+        <div class="max-w-3xl mx-auto px-6 text-center reveal">
+            <img src="248443.jpg" alt="Sterling and Dylan Portrait" class="w-full max-w-lg mx-auto hover-lift mb-8">
+            <p class="font-cormorant text-2xl md:text-3xl italic text-white/70 leading-relaxed">
+                "Eight years of music, art, and growing up together."
+            </p>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- RSVP Section -->
+    <section id="rsvp" class="relative py-24 md:py-32 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+                <!-- RSVP Artwork -->
+                <div class="reveal">
+                    <img src="248439.jpg" alt="RSVP" class="w-full max-w-md mx-auto hover-lift">
+                    <div class="text-center mt-6">
+                        <p class="font-cinzel text-sm tracking-widest text-white/60">Please RSVP By</p>
+                        <p class="font-gothic text-3xl mt-2">September 15th, 2026</p>
+                    </div>
+                </div>
+
+                <!-- RSVP Form -->
+                <div class="reveal">
+                    <h2 class="font-gothic text-5xl md:text-6xl mb-8">RSVP</h2>
+                    <div class="w-16 h-px bg-white/30 mb-8"></div>
+
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for your RSVP! We will send you a confirmation email shortly.');">
+                        <div>
+                            <label class="block font-cinzel text-sm tracking-widest uppercase text-white/60 mb-2">Full Name(s)</label>
+                            <input type="text" required class="w-full px-4 py-3 input-ornate font-cormorant text-lg text-bone placeholder-white/20" placeholder="Enter your full name">
+                        </div>
+
+                        <div>
+                            <label class="block font-cinzel text-sm tracking-widest uppercase text-white/60 mb-2">Email Address</label>
+                            <input type="email" required class="w-full px-4 py-3 input-ornate font-cormorant text-lg text-bone placeholder-white/20" placeholder="your@email.com">
+                        </div>
+
+                        <div>
+                            <label class="block font-cinzel text-sm tracking-widest uppercase text-white/60 mb-2">Number of Guests</label>
+                            <select class="w-full px-4 py-3 input-ornate font-cormorant text-lg text-bone bg-ink">
+                                <option value="1">1 Guest</option>
+                                <option value="2">2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block font-cinzel text-sm tracking-widest uppercase text-white/60 mb-2">Will You Attend?</label>
+                            <div class="flex gap-6">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input type="radio" name="attending" value="yes" class="accent-white/50" required>
+                                    <span class="font-cormorant text-lg group-hover:text-white transition-colors">Joyfully Accept</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input type="radio" name="attending" value="no" class="accent-white/50">
+                                    <span class="font-cormorant text-lg group-hover:text-white transition-colors">Regretfully Decline</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block font-cinzel text-sm tracking-widest uppercase text-white/60 mb-2">Dietary Restrictions or Notes</label>
+                            <textarea rows="3" class="w-full px-4 py-3 input-ornate font-cormorant text-lg text-bone placeholder-white/20 resize-none" placeholder="Any allergies, dietary needs, or sweet notes..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full border border-white/30 px-8 py-4 font-cinzel text-sm tracking-widest uppercase hover:bg-white/10 hover:border-white/50 transition-all duration-300 mt-4">
+                            Send RSVP
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Honeymoon Fund Section -->
+    <section id="honeymoon" class="relative py-24 md:py-32 overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="reveal order-2 md:order-1 space-y-6">
+                    <h2 class="font-gothic text-5xl md:text-6xl">Honeymoon Fund</h2>
+                    <div class="w-16 h-px bg-white/30 mb-6"></div>
+
+                    <div class="space-y-4 text-lg leading-relaxed text-white/80">
+                        <p class="font-cormorant italic text-xl text-white/60">All those who wish to give, your presence at their celebration is the greatest gift of all.</p>
+
+                        <p>Sterling and Dylan are planning a honeymoon to Mexico! For those who wish to contribute, they have set up a Honeymoon Fund for their next adventure together.</p>
+                    </div>
+
+                    <div class="pt-6">
+                        <a href="#" class="inline-flex items-center gap-3 border border-white/30 px-8 py-4 font-cinzel text-sm tracking-widest uppercase hover:bg-white/10 hover:border-white/50 transition-all duration-300 group">
+                            <span>Contribute to the Adventure</span>
+                            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="pt-4">
+                        <p class="font-cormorant text-sm text-white/40 italic">Secure payment via Stripe or PayPal</p>
+                    </div>
+                </div>
+
+                <!-- Artwork -->
+                <div class="reveal order-1 md:order-2">
+                    <img src="248440.jpg" alt="Honeymoon Fund" class="w-full max-w-md mx-auto hover-lift">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-16 border-t border-white/10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <img src="248434.jpg" alt="For The Traveler" class="w-32 mx-auto mb-8 opacity-60 invert brightness-200">
+            <p class="font-gothic text-4xl md:text-5xl mb-4">Sterling & Dylan</p>
+            <p class="font-cinzel text-sm tracking-widest text-white/40 mb-8">OCTOBER 24, 2026 • NEW ORLEANS</p>
+            <div class="w-24 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mx-auto mb-8"></div>
+            <p class="font-cormorant text-white/30 text-sm">Made with love for the travelers</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for scroll animations and navbar -->
+    <script>
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                navbar.classList.add('bg-ink/95', 'shadow-lg');
+                navbar.classList.remove('bg-ink/80');
+            } else {
+                navbar.classList.remove('bg-ink/95', 'shadow-lg');
+                navbar.classList.add('bg-ink/80');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
