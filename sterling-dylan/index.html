@@ -1,884 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sterling & Dylan | October 24, 2026</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=UnifrakturMaguntia&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'gothic': ['"UnifrakturMaguntia"', 'cursive'],
-                        'cinzel': ['"Cinzel Decorative"', 'serif'],
-                        'cormorant': ['"Cormorant Garamond"', 'serif'],
-                        'fell': ['"IM Fell English"', 'serif'],
-                    },
-                    colors: {
-                        'parchment': '#f7f3e9',
-                        'parchment-dark': '#ebe5d5',
-                        'ink': '#1a1a1a',
-                        'ink-light': '#2d2d2d',
-                        'aged-gold': '#c4a35a',
-                        'sepia': '#5c4a32',
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 1.5s ease-out forwards',
-                        'fade-in-slow': 'fadeIn 2.5s ease-out forwards',
-                        'slide-up': 'slideUp 1.2s ease-out forwards',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s ease-in-out infinite',
-                        'shimmer': 'shimmer 3s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { opacity: '0', transform: 'translateY(40px)' },
-                            '100%': { opacity: '1', transform: 'translateY(0)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-12px)' },
-                        },
-                        shimmer: {
-                            '0%, 100%': { opacity: '0.4' },
-                            '50%': { opacity: '1' },
-                        }
-                    }
-                }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sterling & Dylan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=IM+Fell+English:ital@0;1&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            fontFamily: {
+                'gothic': ['"UnifrakturMaguntia"', 'cursive'],
+                'cormorant': ['"Cormorant Garamond"', 'serif'],
+                'fell': ['"IM Fell English"', 'serif'],
+                'grotesk': ['"Space Grotesk"', 'sans-serif'],
+            },
+            colors: {
+                'ink': '#080808',
+                'char': '#111111',
+                'ash': '#1a1a1a',
+                'smoke': '#2a2a2a',
+                'bone': '#e8e4dc',
+                'dust': '#b8b0a4',
+                'rust': '#a0522d',
+                'rust-dim': '#5c2e1a',
             }
         }
-    </script>
-    <style>
-        /* Parchment texture background */
-        body {
-            background-color: #f7f3e9;
-            background-image: 
-                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"),
-                linear-gradient(180deg, #f7f3e9 0%, #f0ead8 50%, #f7f3e9 100%);
-            background-attachment: fixed;
-        }
+    }
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#080808;color:#e8e4dc;font-family:'Cormorant Garamond',serif;overflow-x:hidden;cursor:none}
+::selection{background:#a0522d;color:#080808}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:#080808}
+::-webkit-scrollbar-thumb{background:#2a2a2a}
+::-webkit-scrollbar-thumb:hover{background:#a0522d}
 
-        /* Custom scrollbar */
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: #f0ead8; }
-        ::-webkit-scrollbar-thumb { background: #5c4a32; border-radius: 5px; border: 2px solid #f0ead8; }
-        ::-webkit-scrollbar-thumb:hover { background: #1a1a1a; }
+/* Custom cursor */
+.cursor-dot{width:8px;height:8px;background:#a0522d;border-radius:50%;position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .15s ease}
+.cursor-ring{width:40px;height:40px;border:1px solid rgba(160,82,45,.3);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transition:all .3s ease}
+.cursor-ring.hover{width:60px;height:60px;border-color:rgba(160,82,45,.6);background:rgba(160,82,45,.05)}
 
-        .text-shadow-soft {
-            text-shadow: 0 2px 10px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
-        }
+/* Noise overlay */
+.noise{position:fixed;inset:0;pointer-events:none;z-index:9000;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
-        .ornate-divider {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .ornate-divider::before,
-        .ornate-divider::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #5c4a32, transparent);
-        }
+/* Text reveal */
+.reveal-text{overflow:hidden}
+.reveal-text span{display:inline-block;transform:translateY(100%);transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.reveal-text.active span{transform:translateY(0)}
 
-        .hover-lift {
-            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s ease;
-        }
-        .hover-lift:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-        }
+/* Image reveal */
+.img-reveal{overflow:hidden;position:relative}
+.img-reveal::after{content:'';position:absolute;inset:0;background:#080808;transform:translateX(0);transition:transform 1.4s cubic-bezier(.77,0,.175,1)}
+.img-reveal.active::after{transform:translateX(101%)}
+.img-reveal img{transform:scale(1.2);transition:transform 1.8s cubic-bezier(.16,1,.3,1)}
+.img-reveal.active img{transform:scale(1)}
 
-        /* Ink bleed effect for images */
-        .ink-bleed {
-            filter: contrast(1.1) brightness(0.95);
-            transition: filter 0.5s ease;
-        }
-        .ink-bleed:hover {
-            filter: contrast(1.2) brightness(1);
-        }
+/* Horizontal scroll section */
+.horizontal-scroll{display:flex;flex-wrap:nowrap;gap:4rem;padding:0 8vw}
+.horizontal-scroll > *{flex-shrink:0}
 
-        /* Reveal animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
+/* Editorial type */
+.display-giant{font-family:'UnifrakturMaguntia',cursive;font-size:clamp(4rem,15vw,14rem);line-height:.85;letter-spacing:-.02em}
+.display-large{font-family:'UnifrakturMaguntia',cursive;font-size:clamp(3rem,10vw,9rem);line-height:.9;letter-spacing:-.02em}
+.label{font-family:'Space Grotesk',sans-serif;font-size:.65rem;letter-spacing:.25em;text-transform:uppercase;font-weight:300}
+.body-editorial{font-size:clamp(1.1rem,1.5vw,1.4rem);line-height:1.7;font-weight:300}
 
-        /* Stagger children */
-        .stagger-children > * {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .stagger-children.active > *:nth-child(1) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
-        .stagger-children.active > *:nth-child(2) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
-        .stagger-children.active > *:nth-child(3) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
-        .stagger-children.active > *:nth-child(4) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
-        .stagger-children.active > *:nth-child(5) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
-        .stagger-children.active > *:nth-child(6) { transition-delay: 0.6s; opacity: 1; transform: translateY(0); }
+/* Vertical text */
+.vertical-text{writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg)}
 
-        /* Countdown styling */
-        .countdown-box {
-            background: rgba(255,255,255,0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(92,74,50,0.2);
-        }
+/* Line animations */
+.line-draw{height:1px;background:linear-gradient(90deg,transparent,#2a2a2a,transparent);transform:scaleX(0);transform-origin:left;transition:transform 1.5s cubic-bezier(.16,1,.3,1)}
+.line-draw.active{transform:scaleX(1)}
+.line-draw-right{transform-origin:right}
 
-        /* Input styling */
-        .input-ornate {
-            background: rgba(255,255,255,0.7);
-            border: 1px solid rgba(92,74,50,0.3);
-            transition: all 0.4s ease;
-            color: #1a1a1a;
-        }
-        .input-ornate:focus {
-            background: rgba(255,255,255,0.9);
-            border-color: #5c4a32;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(92,74,50,0.1), 0 4px 20px rgba(0,0,0,0.08);
-        }
-        .input-ornate::placeholder {
-            color: rgba(92,74,50,0.5);
-            font-style: italic;
-        }
+/* Stagger children */
+.stagger > *{opacity:0;transform:translateY(40px);transition:all 1s cubic-bezier(.16,1,.3,1)}
+.stagger.active > *:nth-child(1){transition-delay:.1s;opacity:1;transform:translateY(0)}
+.stagger.active > *:nth-child(2){transition-delay:.2s;opacity:1;transform:translateY(0)}
+.stagger.active > *:nth-child(3){transition-delay:.3s;opacity:1;transform:translateY(0)}
+.stagger.active > *:nth-child(4){transition-delay:.4s;opacity:1;transform:translateY(0)}
+.stagger.active > *:nth-child(5){transition-delay:.5s;opacity:1;transform:translateY(0)}
 
-        /* Button styling */
-        .btn-ornate {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s ease;
-        }
-        .btn-ornate::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.6s ease;
-        }
-        .btn-ornate:hover::before {
-            left: 100%;
-        }
+/* Input */
+input,select,textarea{background:transparent;border:none;border-bottom:1px solid #2a2a2a;color:#e8e4dc;font-family:'Cormorant Garamond',serif;font-size:1.1rem;padding:.75rem 0;width:100%;outline:none;transition:border-color .4s ease}
+input:focus,select:focus,textarea:focus{border-color:#a0522d}
+input::placeholder,textarea::placeholder{color:#2a2a2a;font-style:italic}
 
-        /* Section spacing with decorative elements */
-        .section-spacing {
-            position: relative;
-        }
-        .section-spacing::after {
-            content: '❦';
-            position: absolute;
-            bottom: -2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 1.5rem;
-            color: #5c4a32;
-            opacity: 0.4;
-        }
+/* Button */
+.btn-submit{position:relative;display:inline-block;padding:1rem 3rem;border:1px solid #2a2a2a;font-family:'Space Grotesk',sans-serif;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#e8e4dc;background:transparent;cursor:none;overflow:hidden;transition:all .5s ease}
+.btn-submit::before{content:'';position:absolute;inset:0;background:#a0522d;transform:translateY(101%);transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.btn-submit:hover::before{transform:translateY(0)}
+.btn-submit span{position:relative;z-index:1;transition:color .5s ease}
+.btn-submit:hover span{color:#080808}
 
-        /* Timeline styling */
-        .timeline-line {
-            position: relative;
-        }
-        .timeline-line::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 1px;
-            background: linear-gradient(to bottom, transparent, #5c4a32, transparent);
-            transform: translateX(-50%);
-        }
-
-        /* Card hover effect */
-        .card-story {
-            background: rgba(255,255,255,0.5);
-            border: 1px solid rgba(92,74,50,0.15);
-            transition: all 0.5s ease;
-        }
-        .card-story:hover {
-            background: rgba(255,255,255,0.8);
-            border-color: rgba(92,74,50,0.3);
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-
-        /* Navigation pill */
-        .nav-pill {
-            background: rgba(247,243,233,0.9);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(92,74,50,0.15);
-            box-shadow: 0 4px 30px rgba(0,0,0,0.08);
-        }
-
-        /* Mobile menu */
-        .mobile-menu {
-            background: rgba(247,243,233,0.98);
-            backdrop-filter: blur(20px);
-        }
-
-        html { scroll-behavior: smooth; }
-    </style>
+/* Mobile cursor hide */
+@media(pointer:coarse){.cursor-dot,.cursor-ring{display:none}body{cursor:auto}}
+</style>
 </head>
-<body class="text-ink font-cormorant antialiased">
+<body>
 
-    <!-- Floating Navigation -->
-    <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 nav-pill rounded-full px-2 py-2 hidden md:flex items-center gap-1 transition-all duration-500" id="navbar">
-        <a href="#hero" class="px-4 py-2 rounded-full font-cinzel text-xs tracking-widest uppercase hover:bg-ink/5 transition-all duration-300">Home</a>
-        <a href="#lore" class="px-4 py-2 rounded-full font-cinzel text-xs tracking-widest uppercase hover:bg-ink/5 transition-all duration-300">The Lore</a>
-        <a href="#plan" class="px-4 py-2 rounded-full font-cinzel text-xs tracking-widest uppercase hover:bg-ink/5 transition-all duration-300">The Plan</a>
-        <a href="#travelers" class="px-4 py-2 rounded-full font-cinzel text-xs tracking-widest uppercase hover:bg-ink/5 transition-all duration-300">Travelers</a>
-        <a href="#timeline" class="px-4 py-2 rounded-full font-cinzel text-xs tracking-widest uppercase hover:bg-ink/5 transition-all duration-300">Timeline</a>
-        <a href="#party" class="px-4 py-2 rounded-full font-cinzel text-xs tracking-widest uppercase hover:bg-ink/5 transition-all duration-300">Party</a>
-        <a href="#honeymoon" class="px-4 py-2 rounded-full font-cinzel text-xs tracking-widest uppercase hover:bg-ink/5 transition-all duration-300">Fund</a>
-        <a href="#rsvp" class="px-5 py-2 rounded-full bg-ink text-parchment font-cinzel text-xs tracking-widest uppercase hover:bg-ink-light transition-all duration-300">RSVP</a>
-    </nav>
+<div class="noise"></div>
+<div class="cursor-dot" id="cursor-dot"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
 
-    <!-- Mobile Navigation -->
-    <nav class="fixed top-4 right-4 z-50 md:hidden">
-        <button onclick="toggleMobileMenu()" class="nav-pill rounded-full p-3 shadow-lg">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-    </nav>
-    <div id="mobile-menu" class="fixed inset-0 z-40 mobile-menu hidden flex-col items-center justify-center gap-6">
-        <button onclick="toggleMobileMenu()" class="absolute top-4 right-4 p-3"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg></button>
-        <a href="#hero" onclick="toggleMobileMenu()" class="font-cinzel text-lg tracking-widest uppercase">Home</a>
-        <a href="#lore" onclick="toggleMobileMenu()" class="font-cinzel text-lg tracking-widest uppercase">The Lore</a>
-        <a href="#plan" onclick="toggleMobileMenu()" class="font-cinzel text-lg tracking-widest uppercase">The Plan</a>
-        <a href="#travelers" onclick="toggleMobileMenu()" class="font-cinzel text-lg tracking-widest uppercase">Travelers</a>
-        <a href="#timeline" onclick="toggleMobileMenu()" class="font-cinzel text-lg tracking-widest uppercase">Timeline</a>
-        <a href="#party" onclick="toggleMobileMenu()" class="font-cinzel text-lg tracking-widest uppercase">Party</a>
-        <a href="#honeymoon" onclick="toggleMobileMenu()" class="font-cinzel text-lg tracking-widest uppercase">Fund</a>
-        <a href="#rsvp" onclick="toggleMobileMenu()" class="font-cinzel text-lg tracking-widest uppercase text-aged-gold">RSVP</a>
+<!-- ═══════════════════════════════════════════════
+     OPENING — FULL BLEED
+═══════════════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-end pb-16 md:pb-24 px-6 md:px-12" style="background:linear-gradient(180deg,#080808 0%,#0f0f0f 100%)">
+    <div class="absolute inset-0 overflow-hidden">
+        <img src="assets/main.jpeg" alt="" class="w-full h-full object-cover opacity-[0.15]" style="filter:grayscale(1) contrast(1.3)">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 30%,#080808 100%)"></div>
     </div>
-
-    <!-- Hero Section -->
-    <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20 pb-16 overflow-hidden">
-        <!-- Decorative corners -->
-        <div class="absolute top-8 left-8 w-16 h-16 border-l-2 border-t-2 border-sepia/20"></div>
-        <div class="absolute top-8 right-8 w-16 h-16 border-r-2 border-t-2 border-sepia/20"></div>
-        <div class="absolute bottom-8 left-8 w-16 h-16 border-l-2 border-b-2 border-sepia/20"></div>
-        <div class="absolute bottom-8 right-8 w-16 h-16 border-r-2 border-b-2 border-sepia/20"></div>
-
-        <div class="max-w-4xl mx-auto text-center animate-fade-in">
-            <!-- Sword ornament -->
-            <div class="mb-8 animate-float">
-                <img src="assets/traveler.jpeg" alt="For The Traveler" class="w-48 md:w-72 mx-auto ink-bleed opacity-90">
+    <div class="relative z-10 w-full max-w-[1800px] mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+            <div>
+                <p class="label text-dust/40 mb-6 reveal-text"><span>October 24, 2026</span></p>
+                <h1 class="display-giant text-bone reveal-text" style="transition-delay:.2s"><span>Sterling</span></h1>
+                <h1 class="display-giant text-bone/30 reveal-text" style="transition-delay:.3s"><span>& Dylan</span></h1>
             </div>
-
-            <p class="font-cinzel text-xs md:text-sm tracking-[0.4em] uppercase text-sepia/70 mb-6">The Wedding Of</p>
-
-            <h1 class="font-gothic text-6xl md:text-8xl lg:text-9xl mb-2 text-shadow-soft leading-none">
-                Sterling
-            </h1>
-            <p class="font-cinzel text-3xl md:text-5xl italic text-sepia/60 mb-2">&</p>
-            <h1 class="font-gothic text-6xl md:text-8xl lg:text-9xl mb-8 text-shadow-soft leading-none">
-                Dylan
-            </h1>
-
-            <div class="ornate-divider max-w-xs mx-auto mb-8 text-sepia/40">
-                <span class="text-2xl">❦</span>
-            </div>
-
-            <p class="font-cinzel text-xl md:text-2xl tracking-[0.2em] text-ink-light mb-2">OCTOBER 24<span class="text-sm align-top">TH</span>, 2026</p>
-            <p class="font-cormorant text-lg md:text-xl text-sepia/70 italic">Press Street Station, New Orleans, Louisiana</p>
-
-            <!-- Countdown -->
-            <div class="mt-12 grid grid-cols-4 gap-3 max-w-md mx-auto">
-                <div class="countdown-box rounded-lg p-3 text-center">
-                    <p class="font-cinzel text-2xl md:text-3xl font-bold text-ink" id="days">000</p>
-                    <p class="font-cormorant text-xs uppercase tracking-wider text-sepia/60">Days</p>
-                </div>
-                <div class="countdown-box rounded-lg p-3 text-center">
-                    <p class="font-cinzel text-2xl md:text-3xl font-bold text-ink" id="hours">00</p>
-                    <p class="font-cormorant text-xs uppercase tracking-wider text-sepia/60">Hours</p>
-                </div>
-                <div class="countdown-box rounded-lg p-3 text-center">
-                    <p class="font-cinzel text-2xl md:text-3xl font-bold text-ink" id="minutes">00</p>
-                    <p class="font-cormorant text-xs uppercase tracking-wider text-sepia/60">Mins</p>
-                </div>
-                <div class="countdown-box rounded-lg p-3 text-center">
-                    <p class="font-cinzel text-2xl md:text-3xl font-bold text-ink" id="seconds">00</p>
-                    <p class="font-cormorant text-xs uppercase tracking-wider text-sepia/60">Secs</p>
-                </div>
-            </div>
-
-            <div class="mt-10">
-                <a href="#rsvp" class="btn-ornate inline-block bg-ink text-parchment px-10 py-4 rounded-full font-cinzel text-sm tracking-[0.2em] uppercase hover:shadow-xl hover:scale-105 transition-all duration-300">
-                    RSVP Now
-                </a>
+            <div class="md:text-right md:pb-4">
+                <p class="label text-dust/30 mb-2 reveal-text" style="transition-delay:.4s"><span>Press Street Station</span></p>
+                <p class="label text-dust/30 reveal-text" style="transition-delay:.5s"><span>New Orleans, Louisiana</span></p>
             </div>
         </div>
-
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <svg class="w-5 h-5 text-sepia/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        <div class="mt-16 md:mt-24 line-draw"></div>
+        <div class="mt-8 flex justify-between items-end">
+            <p class="label text-dust/20 reveal-text" style="transition-delay:.6s"><span>Scroll to enter</span></p>
+            <p class="label text-dust/20 reveal-text" style="transition-delay:.7s"><span>Invite only</span></p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- The Lore Section -->
-    <section id="lore" class="section-spacing py-24 md:py-32 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-5 gap-12 items-center">
-                <!-- Artwork - takes 2 columns -->
-                <div class="md:col-span-2 reveal">
-                    <div class="relative">
-                        <img src="assets/main.jpeg" alt="The Lore" class="w-full ink-bleed hover-lift rounded-sm shadow-2xl">
-                        <div class="absolute -inset-4 border border-sepia/10 rounded-sm pointer-events-none"></div>
-                    </div>
+<!-- ═══════════════════════════════════════════════
+     THE LORE — ASYMMETRIC SPLIT
+═══════════════════════════════════════════════ -->
+<section class="relative py-32 md:py-48 px-6 md:px-12">
+    <div class="max-w-[1800px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-4 items-start">
+            <!-- Left: Giant number -->
+            <div class="md:col-span-2 md:sticky md:top-32">
+                <p class="display-large text-char reveal-text"><span>01</span></p>
+            </div>
+            <!-- Center: Image -->
+            <div class="md:col-span-5 md:col-start-4">
+                <div class="img-reveal aspect-[3/4] mb-8">
+                    <img src="assets/main.jpeg" alt="The Lore" class="w-full h-full object-cover" style="filter:grayscale(.6) contrast(1.2)">
                 </div>
+                <p class="label text-dust/30">The Lore</p>
+            </div>
+            <!-- Right: Text -->
+            <div class="md:col-span-4 md:col-start-9 md:pt-32">
+                <div class="stagger">
+                    <p class="body-editorial text-dust/70 mb-6">Sterling and Dylan first locked eyes at NOCCA — the New Orleans Center for Creative Arts — in the visual art department's roll call room. Full circle, as they now wed in the NOCCA culinary arts building.</p>
+                    <p class="body-editorial text-dust/70 mb-6">They met again when Sterling joined Dylan's first band, <em class="font-fell italic text-bone/80">Royal T</em>, as their new bass player. Though both were seeing other people, they had an immediate connection writing music together.</p>
+                    <p class="body-editorial text-dust/70 mb-8">After that band dissolved, they went their separate ways for two years until they happened to reconnect. Now both single, the chemistry was obvious and it all fell into place.</p>
+                    <p class="font-fell italic text-bone/50 text-lg">It's been eight years of music, art, the adventure of growing up together, and building a life from their love of it all.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <!-- Text - takes 3 columns -->
-                <div class="md:col-span-3 reveal space-y-6">
-                    <div class="flex items-center gap-4 mb-2">
-                        <div class="h-px flex-1 bg-gradient-to-r from-transparent to-sepia/30"></div>
-                        <span class="font-cinzel text-xs tracking-[0.3em] uppercase text-sepia/60">Chapter I</span>
-                        <div class="h-px flex-1 bg-gradient-to-l from-transparent to-sepia/30"></div>
-                    </div>
-
-                    <h2 class="font-gothic text-5xl md:text-6xl lg:text-7xl text-shadow-soft">The Lore</h2>
-
-                    <div class="space-y-5 text-lg md:text-xl leading-relaxed text-ink-light">
-                        <p class="first-letter:text-5xl first-letter:font-gothic first-letter:float-left first-letter:mr-3 first-letter:leading-none">
-                            Sterling and Dylan first locked eyes at NOCCA (New Orleans Center for Creative Arts) in the visual art departments' roll call room — full circle as they now get married in the NOCCA culinary arts building.
-                        </p>
-
-                        <p>They met again when Sterling joined Dylan's first band, <em class="font-fell italic text-sepia">Royal T</em>, as their new bass player; though both were seeing other people, they had an immediate connection writing music together.</p>
-
-                        <p>After that band dissolved, they both went their separate ways for two years until they happened to reconnect. Now both single, the chemistry was obvious and it all fell into place.</p>
-
-                        <p class="font-fell italic text-sepia text-xl">It's been eight years of music, art, the adventure of growing up together, and building a life from their love of it all.</p>
+<!-- ═══════════════════════════════════════════════
+     THE PLAN — FULL WIDTH IMAGE + OVERLAY TEXT
+═══════════════════════════════════════════════ -->
+<section class="relative" id="plan">
+    <div class="relative h-[70vh] md:h-[85vh] overflow-hidden">
+        <img src="assets/plan.jpeg" alt="The Plan" class="w-full h-full object-cover" style="filter:grayscale(.7) contrast(1.3) brightness(.6)">
+        <div class="absolute inset-0" style="background:linear-gradient(90deg,#080808 0%,transparent 50%)"></div>
+        <div class="absolute inset-0 flex items-center px-6 md:px-12">
+            <div class="max-w-[1800px] mx-auto w-full">
+                <div class="max-w-xl">
+                    <p class="label text-dust/40 mb-4 reveal-text"><span>02 — The Plan</span></p>
+                    <h2 class="display-large text-bone mb-8 reveal-text" style="transition-delay:.1s"><span>The Plan</span></h2>
+                    <div class="stagger">
+                        <p class="body-editorial text-dust/60 mb-4">600 Homer Plessy Way<br>New Orleans, LA</p>
+                        <div class="flex gap-12 mt-8">
+                            <div>
+                                <p class="label text-rust mb-2">Ceremony</p>
+                                <p class="font-grotesk text-2xl text-bone/80 font-light">5:30 PM</p>
+                            </div>
+                            <div>
+                                <p class="label text-rust mb-2">Reception</p>
+                                <p class="font-grotesk text-2xl text-bone/80 font-light">6:00 PM</p>
+                            </div>
+                        </div>
+                        <p class="body-editorial text-dust/50 mt-8 max-w-sm">Creative Black Tie. Express yourself. Comfortable footwear recommended for dancing.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- The Plan Section -->
-    <section id="plan" class="section-spacing py-24 md:py-32 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <div class="flex items-center gap-4 mb-4 justify-center">
-                    <div class="h-px w-16 bg-gradient-to-r from-transparent to-sepia/30"></div>
-                    <span class="font-cinzel text-xs tracking-[0.3em] uppercase text-sepia/60">Chapter II</span>
-                    <div class="h-px w-16 bg-gradient-to-l from-transparent to-sepia/30"></div>
-                </div>
-                <img src="assets/plan.jpeg" alt="The Plan" class="w-40 md:w-56 mx-auto mb-6 ink-bleed opacity-90">
-                <h2 class="font-gothic text-5xl md:text-6xl lg:text-7xl text-shadow-soft mb-4">The Plan</h2>
-                <p class="font-cormorant text-xl md:text-2xl text-sepia/70 italic">600 Homer Plessy Way, New Orleans, LA</p>
+<!-- ═══════════════════════════════════════════════
+     TRAVELERS — MINIMAL LIST
+═══════════════════════════════════════════════ -->
+<section class="py-32 md:py-48 px-6 md:px-12" id="travelers">
+    <div class="max-w-[1800px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-3">
+                <p class="display-large text-char reveal-text"><span>03</span></p>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-8 reveal">
-                <div class="card-story rounded-xl p-8 md:p-10">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="font-cinzel text-3xl text-aged-gold">01</span>
-                        <div class="h-px flex-1 bg-sepia/20"></div>
-                    </div>
-                    <h3 class="font-cinzel text-2xl mb-3">The Ceremony</h3>
-                    <p class="font-cormorant text-lg text-ink-light leading-relaxed">
-                        The ceremony will take place at <strong class="font-semibold">Press Street Station</strong>, a historic venue in the heart of New Orleans. Guests should arrive by 5:00 PM for a 5:30 PM start. The ceremony will be held in the main hall with its beautiful exposed brick and industrial charm.
-                    </p>
-                    <div class="mt-4 flex items-center gap-2 text-sepia/60">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <span class="font-cinzel text-xs tracking-wider">5:30 PM</span>
-                    </div>
-                </div>
-
-                <div class="card-story rounded-xl p-8 md:p-10">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="font-cinzel text-3xl text-aged-gold">02</span>
-                        <div class="h-px flex-1 bg-sepia/20"></div>
-                    </div>
-                    <h3 class="font-cinzel text-2xl mb-3">The Reception</h3>
-                    <p class="font-cormorant text-lg text-ink-light leading-relaxed">
-                        Immediately following the ceremony, we'll celebrate with a taco bar, pupusas, and other Nicaraguan delicacies. Toasts will be made, flan will be cut, and the dance floor will await. The reception includes an open bar with signature cocktails inspired by the couple's favorite New Orleans spirits.
-                    </p>
-                    <div class="mt-4 flex items-center gap-2 text-sepia/60">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                        <span class="font-cinzel text-xs tracking-wider">6:00 PM</span>
-                    </div>
-                </div>
-
-                <div class="card-story rounded-xl p-8 md:p-10 md:col-span-2">
-                    <div class="flex items-center gap-3 mb-4">
-                        <span class="font-cinzel text-3xl text-aged-gold">03</span>
-                        <div class="h-px flex-1 bg-sepia/20"></div>
-                    </div>
-                    <h3 class="font-cinzel text-2xl mb-3">Dress Code</h3>
-                    <p class="font-cormorant text-lg text-ink-light leading-relaxed">
-                        <strong class="font-semibold">Creative Black Tie</strong> — We encourage you to express yourself! Think elegant with a touch of artistic flair. The venue has both indoor and outdoor spaces, so consider comfortable footwear for dancing. New Orleans evenings in October are mild and pleasant.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Venue Image -->
-            <div class="mt-12 reveal">
-                <img src="assets/invitation.jpeg" alt="Wedding Invitation Frame" class="w-full max-w-2xl mx-auto ink-bleed hover-lift">
-            </div>
-        </div>
-    </section>
-
-    <!-- Travelers Section -->
-    <section id="travelers" class="section-spacing py-24 md:py-32 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <div class="flex items-center gap-4 mb-4 justify-center">
-                    <div class="h-px w-16 bg-gradient-to-r from-transparent to-sepia/30"></div>
-                    <span class="font-cinzel text-xs tracking-[0.3em] uppercase text-sepia/60">Chapter III</span>
-                    <div class="h-px w-16 bg-gradient-to-l from-transparent to-sepia/30"></div>
-                </div>
-                <h2 class="font-gothic text-5xl md:text-6xl lg:text-7xl text-shadow-soft mb-4">For The Travelers</h2>
-                <p class="font-cormorant text-xl md:text-2xl text-sepia/70 italic max-w-2xl mx-auto">Everything you need to know for your journey to New Orleans</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-6 stagger-children">
-                <div class="card-story rounded-xl p-8 text-center">
-                    <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-parchment-dark flex items-center justify-center">
-                        <svg class="w-6 h-6 text-sepia" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                    </div>
-                    <h3 class="font-cinzel text-xl mb-3">Accommodations</h3>
-                    <p class="font-cormorant text-ink-light leading-relaxed">
-                        We have reserved a block of rooms at <strong>The Pontchartrain Hotel</strong> (2031 St Charles Ave) at a discounted rate. Use code <em class="font-fell">STERDYLAN24</em> when booking. Alternative options include The Old No. 77 and The Quisby.
-                    </p>
-                </div>
-
-                <div class="card-story rounded-xl p-8 text-center">
-                    <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-parchment-dark flex items-center justify-center">
-                        <svg class="w-6 h-6 text-sepia" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
-                    </div>
-                    <h3 class="font-cinzel text-xl mb-3">Getting There</h3>
-                    <p class="font-cormorant text-ink-light leading-relaxed">
-                        Fly into <strong>Louis Armstrong New Orleans International Airport (MSY)</strong>. The venue is a 25-minute drive from the airport. Uber/Lyft are readily available. Street parking is limited near Press Street — we recommend rideshare or the hotel shuttle.
-                    </p>
-                </div>
-
-                <div class="card-story rounded-xl p-8 text-center">
-                    <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-parchment-dark flex items-center justify-center">
-                        <svg class="w-6 h-6 text-sepia" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-                    </div>
-                    <h3 class="font-cinzel text-xl mb-3">Things to Do</h3>
-                    <p class="font-cormorant text-ink-light leading-relaxed">
-                        Make a weekend of it! Visit the French Quarter, catch live jazz on Frenchmen Street, explore the Bywater neighborhood, or take a steamboat cruise on the Mississippi. The wedding falls during the New Orleans Film Festival — perfect for art lovers.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Timeline Section -->
-    <section id="timeline" class="section-spacing py-24 md:py-32 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <div class="flex items-center gap-4 mb-4 justify-center">
-                    <div class="h-px w-16 bg-gradient-to-r from-transparent to-sepia/30"></div>
-                    <span class="font-cinzel text-xs tracking-[0.3em] uppercase text-sepia/60">Chapter IV</span>
-                    <div class="h-px w-16 bg-gradient-to-l from-transparent to-sepia/30"></div>
-                </div>
-                <h2 class="font-gothic text-5xl md:text-6xl lg:text-7xl text-shadow-soft mb-4">The Timeline</h2>
-                <p class="font-cormorant text-xl text-sepia/70 italic">A day of celebration, music, and love</p>
-            </div>
-
-            <!-- Timeline Artwork -->
-            <div class="reveal mb-12">
-                <img src="assets/timeline.jpeg" alt="Wedding Timeline" class="w-full max-w-4xl mx-auto ink-bleed hover-lift">
-            </div>
-
-            <!-- Text timeline for mobile/accessibility -->
-            <div class="md:hidden space-y-6 stagger-children">
-                <div class="card-story rounded-xl p-6 flex gap-4 items-start">
-                    <div class="font-cinzel text-2xl text-aged-gold shrink-0">5:30</div>
+            <div class="md:col-span-9 md:pt-8">
+                <p class="label text-dust/30 mb-12 reveal-text"><span>For The Travelers</span></p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-16 stagger">
                     <div>
-                        <h4 class="font-cinzel text-lg mb-1">Ceremony</h4>
-                        <p class="font-cormorant text-ink-light">The official part, words will be said</p>
+                        <p class="label text-rust mb-6">Stay</p>
+                        <p class="body-editorial text-dust/60">The Pontchartrain Hotel<br>2031 St Charles Ave</p>
+                        <p class="body-editorial text-dust/40 mt-2 italic">Code: STERDYLAN24</p>
                     </div>
-                </div>
-                <div class="card-story rounded-xl p-6 flex gap-4 items-start">
-                    <div class="font-cinzel text-2xl text-aged-gold shrink-0">6:00</div>
                     <div>
-                        <h4 class="font-cinzel text-lg mb-1">Reception</h4>
-                        <p class="font-cormorant text-ink-light">Taco bar, pupusas, and other Nicaraguan food, toasts and flan cutting</p>
+                        <p class="label text-rust mb-6">Arrive</p>
+                        <p class="body-editorial text-dust/60">MSY Airport<br>25 min to venue</p>
+                        <p class="body-editorial text-dust/40 mt-2 italic">Uber/Lyft recommended</p>
                     </div>
-                </div>
-                <div class="card-story rounded-xl p-6 flex gap-4 items-start">
-                    <div class="font-cinzel text-2xl text-aged-gold shrink-0">9:30</div>
                     <div>
-                        <h4 class="font-cinzel text-lg mb-1">Afters</h4>
-                        <p class="font-cormorant text-ink-light">Live show featuring The Nancies (and possible Garguts and Fiend appearance), the dance floor will be hit</p>
-                    </div>
-                </div>
-                <div class="card-story rounded-xl p-6 flex gap-4 items-start">
-                    <div class="font-cinzel text-2xl text-aged-gold shrink-0">10:30</div>
-                    <div>
-                        <h4 class="font-cinzel text-lg mb-1">Open Jam</h4>
-                        <p class="font-cormorant text-ink-light">All are welcome, we rock together</p>
+                        <p class="label text-rust mb-6">Explore</p>
+                        <p class="body-editorial text-dust/60">French Quarter<br>Frenchmen Street jazz<br>Bywater neighborhood</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Wedding Party Section -->
-    <section id="party" class="section-spacing py-24 md:py-32 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 reveal">
-                <div class="flex items-center gap-4 mb-4 justify-center">
-                    <div class="h-px w-16 bg-gradient-to-r from-transparent to-sepia/30"></div>
-                    <span class="font-cinzel text-xs tracking-[0.3em] uppercase text-sepia/60">Chapter V</span>
-                    <div class="h-px w-16 bg-gradient-to-l from-transparent to-sepia/30"></div>
-                </div>
-                <h2 class="font-gothic text-5xl md:text-6xl lg:text-7xl text-shadow-soft mb-4">The Wedding Party</h2>
-                <p class="font-cormorant text-xl text-sepia/70 italic">The family and friends standing by our side</p>
+<!-- ═══════════════════════════════════════════════
+     TIMELINE — HORIZONTAL SCROLL
+═══════════════════════════════════════════════ -->
+<section class="py-32 md:py-48 overflow-hidden" id="timeline">
+    <div class="px-6 md:px-12 mb-16">
+        <div class="max-w-[1800px] mx-auto flex justify-between items-end">
+            <div>
+                <p class="display-large text-char reveal-text"><span>04</span></p>
+                <p class="label text-dust/30 mt-4 reveal-text"><span>The Timeline</span></p>
             </div>
+            <p class="label text-dust/20 hidden md:block">October 24, 2026</p>
+        </div>
+    </div>
+    <div class="horizontal-scroll overflow-x-auto pb-8" id="timeline-scroll">
+        <div class="w-[85vw] md:w-[60vw] flex-shrink-0">
+            <img src="assets/timeline.jpeg" alt="Timeline" class="w-full" style="filter:grayscale(.5) contrast(1.2)">
+        </div>
+        <div class="flex-shrink-0 flex flex-col justify-center px-8 md:px-16 min-w-[300px]">
+            <p class="label text-rust mb-4">5:30 PM</p>
+            <p class="font-grotesk text-3xl text-bone/80 font-light mb-2">Ceremony</p>
+            <p class="body-editorial text-dust/50">The official part. Words will be said.</p>
+        </div>
+        <div class="flex-shrink-0 flex flex-col justify-center px-8 md:px-16 min-w-[300px] border-l border-smoke">
+            <p class="label text-rust mb-4">6:00 PM</p>
+            <p class="font-grotesk text-3xl text-bone/80 font-light mb-2">Reception</p>
+            <p class="body-editorial text-dust/50">Taco bar, pupusas, Nicaraguan food. Toasts and flan cutting.</p>
+        </div>
+        <div class="flex-shrink-0 flex flex-col justify-center px-8 md:px-16 min-w-[300px] border-l border-smoke">
+            <p class="label text-rust mb-4">9:30 PM</p>
+            <p class="font-grotesk text-3xl text-bone/80 font-light mb-2">Afters</p>
+            <p class="body-editorial text-dust/50">Live show featuring The Nancies. The dance floor will be hit.</p>
+        </div>
+        <div class="flex-shrink-0 flex flex-col justify-center px-8 md:px-16 min-w-[300px] border-l border-smoke pr-[8vw]">
+            <p class="label text-rust mb-4">10:30 PM</p>
+            <p class="font-grotesk text-3xl text-bone/80 font-light mb-2">Open Jam</p>
+            <p class="body-editorial text-dust/50">All are welcome. We rock together.</p>
+        </div>
+    </div>
+</section>
 
-            <!-- Portrait -->
-            <div class="reveal mb-16 max-w-md mx-auto">
-                <img src="assets/main.jpeg" alt="Sterling and Dylan Portrait" class="w-full ink-bleed hover-lift rounded-sm">
+<!-- ═══════════════════════════════════════════════
+     WEDDING PARTY — MASONRY GRID
+═══════════════════════════════════════════════ -->
+<section class="py-32 md:py-48 px-6 md:px-12" id="party">
+    <div class="max-w-[1800px] mx-auto">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-end mb-20 gap-8">
+            <div>
+                <p class="display-large text-char reveal-text"><span>05</span></p>
+                <p class="label text-dust/30 mt-4 reveal-text"><span>The Wedding Party</span></p>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-8 stagger-children">
-                <div class="card-story rounded-xl p-8">
-                    <h3 class="font-cinzel text-2xl mb-6 text-center">Sterling's Side</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4 pb-4 border-b border-sepia/10">
-                            <div class="w-10 h-10 rounded-full bg-parchment-dark flex items-center justify-center font-cinzel text-sm text-sepia">M</div>
-                            <div>
-                                <p class="font-cormorant font-semibold text-lg">Margaret Sterling</p>
-                                <p class="font-cormorant text-sm text-sepia/60">Mother of the Bride</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 pb-4 border-b border-sepia/10">
-                            <div class="w-10 h-10 rounded-full bg-parchment-dark flex items-center justify-center font-cinzel text-sm text-sepia">J</div>
-                            <div>
-                                <p class="font-cormorant font-semibold text-lg">James Sterling</p>
-                                <p class="font-cormorant text-sm text-sepia/60">Father of the Bride</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 pb-4 border-b border-sepia/10">
-                            <div class="w-10 h-10 rounded-full bg-parchment-dark flex items-center justify-center font-cinzel text-sm text-sepia">L</div>
-                            <div>
-                                <p class="font-cormorant font-semibold text-lg">Luna Reyes</p>
-                                <p class="font-cormorant text-sm text-sepia/60">Maid of Honor</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 pb-4 border-b border-sepia/10">
-                            <div class="w-10 h-10 rounded-full bg-parchment-dark flex items-center justify-center font-cinzel text-sm text-sepia">A</div>
-                            <div>
-                                <p class="font-cormorant font-semibold text-lg">Aria Chen</p>
-                                <p class="font-cormorant text-sm text-sepia/60">Bridesmaid</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full bg-parchment-dark flex items-center justify-center font-cinzel text-sm text-sepia">S</div>
-                            <div>
-                                <p class="font-cormorant font-semibold text-lg">Sofia Martinez</p>
-                                <p class="font-cormorant text-sm text-sepia/60">Bridesmaid</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-story rounded-xl p-8">
-                    <h3 class="font-cinzel text-2xl mb-6 text-center">Dylan's Side</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4 pb-4 border-b border-sepia/10">
-                            <div class="w-10 h-10 rounded-full bg-parchment-dark flex items-center justify-center font-cinzel text-sm text-sepia">E</div>
-                            <div>
-                                <p class="font-cormorant font-semibold text-lg">Eleanor Dylan</p>
-                                <p class="font-cormorant text-sm text-sepia/60">Mother of the Groom</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 pb-4 border-b border-sepia/10">
-                            <div class="w-10 h-10 rounded-full bg-parchment-dark flex items-center justify-center font-cinzel text-sm text-sepia">R</div>
-                            <div>
-                                <p class="font-cormorant font-semibold text-lg">Robert Dylan</p>
-                                <p class="font-cormorant text-sm text-sepia/60">Father of the Groom</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 pb-4 border-b border-sepia/10">
-                            <div class="w-10 h-10 rounded-full bg-parchment-dark flex items-center justify-center font-cinzel text-sm text-sepia">M</div>
-                            <div>
-                                <p class="font-cormorant font-semibold text-lg">Miles Johnson</p>
-                                <p class="font-cormorant text-sm text-sepia/60">Best Man</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 pb-4 border-b border-sepia/10">
-                            <div class="w-10 h-10 rounded-full bg-parchment-dark flex items-center justify-center font-cinzel text-sm text-sepia">T</div>
-                            <div>
-                                <p class="font-cormorant font-semibold text-lg">Theo Barnes</p>
-                                <p class="font-cormorant text-sm text-sepia/60">Groomsman</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-full bg-parchment-dark flex items-center justify-center font-cinzel text-sm text-sepia">K</div>
-                            <div>
-                                <p class="font-cormorant font-semibold text-lg">Kai Nakamura</p>
-                                <p class="font-cormorant text-sm text-sepia/60">Groomsman</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-8 text-center reveal">
-                <div class="card-story rounded-xl p-8 max-w-2xl mx-auto">
-                    <h3 class="font-cinzel text-2xl mb-3">Officiant</h3>
-                    <p class="font-cormorant text-xl text-ink-light">Reverend Amara Okafor</p>
-                    <p class="font-cormorant text-sepia/60 italic mt-2">Longtime family friend and spiritual guide</p>
-                </div>
+            <div class="img-reveal w-full md:w-72 aspect-square">
+                <img src="assets/main.jpeg" alt="Portrait" class="w-full h-full object-cover" style="filter:grayscale(.8) contrast(1.3)">
             </div>
         </div>
-    </section>
+        <div class="line-draw mb-16"></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 stagger">
+            <div>
+                <p class="label text-rust/60 mb-3">Mother of the Bride</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">Margaret Sterling</p>
+            </div>
+            <div>
+                <p class="label text-rust/60 mb-3">Father of the Bride</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">James Sterling</p>
+            </div>
+            <div>
+                <p class="label text-rust/60 mb-3">Mother of the Groom</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">Eleanor Dylan</p>
+            </div>
+            <div>
+                <p class="label text-rust/60 mb-3">Father of the Groom</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">Robert Dylan</p>
+            </div>
+            <div>
+                <p class="label text-rust/60 mb-3">Maid of Honor</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">Luna Reyes</p>
+            </div>
+            <div>
+                <p class="label text-rust/60 mb-3">Best Man</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">Miles Johnson</p>
+            </div>
+            <div>
+                <p class="label text-rust/60 mb-3">Bridesmaids</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">Aria Chen</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">Sofia Martinez</p>
+            </div>
+            <div>
+                <p class="label text-rust/60 mb-3">Groomsmen</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">Theo Barnes</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">Kai Nakamura</p>
+            </div>
+            <div class="col-span-2 md:col-span-4 mt-8 pt-8 border-t border-smoke">
+                <p class="label text-rust/60 mb-3">Officiant</p>
+                <p class="font-grotesk text-lg text-bone/80 font-light">Reverend Amara Okafor</p>
+                <p class="body-editorial text-dust/40 mt-2 italic">Longtime family friend and spiritual guide</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Honeymoon Fund Section -->
-    <section id="honeymoon" class="section-spacing py-24 md:py-32 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Artwork -->
-                <div class="reveal order-1 md:order-1">
-                    <div class="relative">
-                        <img src="assets/honeymoon-fund.jpeg" alt="Honeymoon Fund" class="w-full ink-bleed hover-lift rounded-sm">
-                        <div class="absolute -inset-4 border border-sepia/10 rounded-sm pointer-events-none"></div>
-                    </div>
+<!-- ═══════════════════════════════════════════════
+     HONEYMOON — MASSIVE TYPOGRAPHY + IMAGE
+═══════════════════════════════════════════════ -->
+<section class="relative py-32 md:py-48" id="honeymoon">
+    <div class="px-6 md:px-12 mb-16">
+        <div class="max-w-[1800px] mx-auto flex justify-between items-start">
+            <p class="display-large text-char reveal-text"><span>06</span></p>
+            <p class="label text-dust/30 mt-8 reveal-text"><span>Honeymoon Fund</span></p>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="img-reveal aspect-[4/5] md:aspect-auto md:h-[80vh]">
+            <img src="assets/honeymoon-fund.jpeg" alt="Honeymoon Fund" class="w-full h-full object-cover" style="filter:grayscale(.5) contrast(1.2)">
+        </div>
+        <div class="flex items-center px-6 md:px-16 py-16 md:py-0">
+            <div class="max-w-md stagger">
+                <p class="font-fell italic text-bone/40 text-xl mb-8">All those who wish to give, your presence at their celebration is the greatest gift of all.</p>
+                <p class="body-editorial text-dust/60 mb-6">Sterling and Dylan are planning a honeymoon to <strong class="text-bone/80 font-normal">Mexico</strong> — a journey of art, music, and adventure.</p>
+                <p class="body-editorial text-dust/60 mb-10">For those who wish to contribute, they have set up a Honeymoon Fund for their next chapter together.</p>
+                <a href="#" class="btn-submit"><span>Contribute</span></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     RSVP — MINIMAL FORM
+═══════════════════════════════════════════════ -->
+<section class="py-32 md:py-48 px-6 md:px-12" id="rsvp">
+    <div class="max-w-[1800px] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-16">
+            <div class="md:col-span-4">
+                <p class="display-large text-char reveal-text"><span>07</span></p>
+                <p class="label text-dust/30 mt-4 mb-8 reveal-text"><span>RSVP</span></p>
+                <div class="img-reveal aspect-[3/4] hidden md:block">
+                    <img src="assets/rsvp.jpeg" alt="RSVP" class="w-full h-full object-cover" style="filter:grayscale(.6) contrast(1.2)">
                 </div>
-
-                <!-- Content -->
-                <div class="reveal order-2 md:order-2 space-y-6">
-                    <div class="flex items-center gap-4 mb-2">
-                        <div class="h-px flex-1 bg-gradient-to-r from-transparent to-sepia/30"></div>
-                        <span class="font-cinzel text-xs tracking-[0.3em] uppercase text-sepia/60">Chapter VI</span>
-                        <div class="h-px flex-1 bg-gradient-to-l from-transparent to-sepia/30"></div>
+                <p class="label text-dust/20 mt-8">Please respond by<br>September 15, 2026</p>
+            </div>
+            <div class="md:col-span-6 md:col-start-6 md:pt-24">
+                <form class="space-y-8" onsubmit="handleRSVP(event)">
+                    <div>
+                        <label class="label text-dust/30 block mb-3">Full Name(s)</label>
+                        <input type="text" required placeholder="Enter your full name">
                     </div>
-
-                    <h2 class="font-gothic text-5xl md:text-6xl text-shadow-soft">Honeymoon Fund</h2>
-
-                    <div class="space-y-4 text-lg leading-relaxed text-ink-light">
-                        <p class="font-fell italic text-xl text-sepia">All those who wish to give, your presence at their celebration is the greatest gift of all.</p>
-
-                        <p>Sterling and Dylan are planning a honeymoon to <strong class="font-semibold">Mexico</strong> — a journey of art, music, and adventure. For those who wish to contribute, they have set up a Honeymoon Fund for their next chapter together.</p>
-
-                        <p>Your generosity will help fund:</p>
-                        <ul class="space-y-2 ml-4">
-                            <li class="flex items-center gap-2">
-                                <span class="text-aged-gold">✦</span>
-                                <span>Exploring Oaxaca's art and culinary scene</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-aged-gold">✦</span>
-                                <span>Live music experiences in Mexico City</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-aged-gold">✦</span>
-                                <span>Beach retreats on the Pacific coast</span>
-                            </li>
-                            <li class="flex items-center gap-2">
-                                <span class="text-aged-gold">✦</span>
-                                <span>Creating memories to last a lifetime</span>
-                            </li>
-                        </ul>
+                    <div>
+                        <label class="label text-dust/30 block mb-3">Email Address</label>
+                        <input type="email" required placeholder="your@email.com">
                     </div>
-
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <label class="label text-dust/30 block mb-3">Guests</label>
+                            <select>
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3 Guests</option>
+                                <option>4 Guests</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="label text-dust/30 block mb-3">Attending</label>
+                            <select>
+                                <option>Joyfully Accept</option>
+                                <option>Regretfully Decline</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label text-dust/30 block mb-3">Notes</label>
+                        <textarea rows="3" placeholder="Any allergies, dietary needs, or sweet notes..."></textarea>
+                    </div>
                     <div class="pt-4">
-                        <a href="#" class="btn-ornate inline-flex items-center gap-3 bg-ink text-parchment px-8 py-4 rounded-full font-cinzel text-sm tracking-[0.15em] uppercase hover:shadow-xl hover:scale-105 transition-all duration-300">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                            <span>Contribute to the Adventure</span>
-                        </a>
+                        <button type="submit" class="btn-submit"><span>Send RSVP</span></button>
                     </div>
-
-                    <p class="font-cormorant text-sm text-sepia/50 italic">Secure payment via Stripe or PayPal</p>
-                </div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- RSVP Section -->
-    <section id="rsvp" class="section-spacing py-24 md:py-32 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12 items-start">
-                <!-- RSVP Artwork -->
-                <div class="reveal">
-                    <div class="relative">
-                        <img src="assets/rsvp.jpeg" alt="RSVP" class="w-full ink-bleed hover-lift rounded-sm">
-                        <div class="absolute -inset-4 border border-sepia/10 rounded-sm pointer-events-none"></div>
-                    </div>
-                    <div class="text-center mt-8">
-                        <p class="font-cinzel text-sm tracking-[0.2em] text-sepia/60">Please Respond By</p>
-                        <p class="font-gothic text-4xl mt-2">September 15<span class="text-2xl align-top">th</span>, 2026</p>
-                    </div>
-                </div>
+<!-- ═══════════════════════════════════════════════
+     CLOSING — FULL BLEED
+═══════════════════════════════════════════════ -->
+<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+    <img src="assets/traveler.jpeg" alt="For The Traveler" class="absolute inset-0 w-full h-full object-cover opacity-[0.08]" style="filter:grayscale(1)">
+    <div class="relative z-10 text-center px-6">
+        <p class="display-giant text-bone/10 reveal-text"><span>S & D</span></p>
+        <p class="label text-dust/20 mt-8">October 24, 2026</p>
+    </div>
+</section>
 
-                <!-- RSVP Form -->
-                <div class="reveal">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="h-px flex-1 bg-gradient-to-r from-transparent to-sepia/30"></div>
-                        <span class="font-cinzel text-xs tracking-[0.3em] uppercase text-sepia/60">Chapter VII</span>
-                        <div class="h-px flex-1 bg-gradient-to-l from-transparent to-sepia/30"></div>
-                    </div>
+<script>
+// Custom cursor
+const dot = document.getElementById('cursor-dot');
+const ring = document.getElementById('cursor-ring');
+let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.left = mouseX - 4 + 'px';
+    dot.style.top = mouseY - 4 + 'px';
+});
+function animateRing() {
+    ringX += (mouseX - ringX) * 0.15;
+    ringY += (mouseY - ringY) * 0.15;
+    ring.style.left = ringX - 20 + 'px';
+    ring.style.top = ringY - 20 + 'px';
+    requestAnimationFrame(animateRing);
+}
+animateRing();
+document.querySelectorAll('a, button, input, select, textarea, .img-reveal').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+});
 
-                    <h2 class="font-gothic text-5xl md:text-6xl text-shadow-soft mb-2">RSVP</h2>
-                    <p class="font-cormorant text-lg text-sepia/70 italic mb-8">We eagerly await your reply</p>
+// Intersection Observer for reveals
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal-text, .img-reveal, .line-draw, .stagger').forEach(el => observer.observe(el));
 
-                    <form class="space-y-5" onsubmit="handleRSVP(event)">
-                        <div>
-                            <label class="block font-cinzel text-xs tracking-[0.2em] uppercase text-sepia/70 mb-2">Full Name(s)</label>
-                            <input type="text" required class="w-full px-5 py-3 rounded-lg input-ornate font-cormorant text-lg" placeholder="Enter your full name">
-                        </div>
+// Trigger hero animations on load
+window.addEventListener('load', () => {
+    document.querySelectorAll('#hero .reveal-text, #hero .line-draw').forEach(el => el.classList.add('active'));
+});
 
-                        <div>
-                            <label class="block font-cinzel text-xs tracking-[0.2em] uppercase text-sepia/70 mb-2">Email Address</label>
-                            <input type="email" required class="w-full px-5 py-3 rounded-lg input-ornate font-cormorant text-lg" placeholder="your@email.com">
-                        </div>
-
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block font-cinzel text-xs tracking-[0.2em] uppercase text-sepia/70 mb-2">Number of Guests</label>
-                                <select class="w-full px-5 py-3 rounded-lg input-ornate font-cormorant text-lg bg-parchment">
-                                    <option value="1">1 Guest</option>
-                                    <option value="2">2 Guests</option>
-                                    <option value="3">3 Guests</option>
-                                    <option value="4">4 Guests</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block font-cinzel text-xs tracking-[0.2em] uppercase text-sepia/70 mb-2">Will You Attend?</label>
-                                <select class="w-full px-5 py-3 rounded-lg input-ornate font-cormorant text-lg bg-parchment">
-                                    <option value="yes">Joyfully Accept</option>
-                                    <option value="no">Regretfully Decline</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block font-cinzel text-xs tracking-[0.2em] uppercase text-sepia/70 mb-2">Dietary Restrictions or Notes</label>
-                            <textarea rows="3" class="w-full px-5 py-3 rounded-lg input-ornate font-cormorant text-lg resize-none" placeholder="Any allergies, dietary needs, or sweet notes..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn-ornate w-full bg-ink text-parchment px-8 py-4 rounded-full font-cinzel text-sm tracking-[0.2em] uppercase hover:shadow-xl hover:scale-[1.02] transition-all duration-300 mt-2">
-                            Send RSVP
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="relative py-20 px-6 border-t border-sepia/10">
-        <!-- Decorative corners -->
-        <div class="absolute top-4 left-4 w-12 h-12 border-l border-t border-sepia/10"></div>
-        <div class="absolute top-4 right-4 w-12 h-12 border-r border-t border-sepia/10"></div>
-
-        <div class="max-w-4xl mx-auto text-center">
-            <img src="assets/traveler.jpeg" alt="For The Traveler" class="w-24 mx-auto mb-8 opacity-60 ink-bleed">
-
-            <p class="font-gothic text-4xl md:text-5xl mb-3">Sterling & Dylan</p>
-            <p class="font-cinzel text-sm tracking-[0.3em] text-sepia/60 mb-6">OCTOBER 24, 2026 • NEW ORLEANS</p>
-
-            <div class="ornate-divider max-w-xs mx-auto mb-8 text-sepia/30">
-                <span class="text-xl">❦</span>
-            </div>
-
-            <p class="font-cormorant text-sepia/50 text-lg italic mb-8">"For the travelers, the dreamers, the lovers of art and music —<br>we can't wait to celebrate with you."</p>
-
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="#hero" class="font-cinzel text-xs tracking-widest uppercase text-sepia/50 hover:text-ink transition-colors">Home</a>
-                <span class="text-sepia/20">|</span>
-                <a href="#lore" class="font-cinzel text-xs tracking-widest uppercase text-sepia/50 hover:text-ink transition-colors">The Lore</a>
-                <span class="text-sepia/20">|</span>
-                <a href="#rsvp" class="font-cinzel text-xs tracking-widest uppercase text-sepia/50 hover:text-ink transition-colors">RSVP</a>
-            </div>
-
-            <p class="font-cormorant text-sepia/30 text-sm">Made with love for the travelers</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // Countdown Timer
-        function updateCountdown() {
-            const weddingDate = new Date('October 24, 2026 17:30:00').getTime();
-            const now = new Date().getTime();
-            const distance = weddingDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('days').textContent = String(days).padStart(3, '0');
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-        // Mobile menu toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-        }
-
-        // RSVP handler
-        function handleRSVP(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button[type="submit"]');
-            btn.textContent = 'Sending...';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                btn.textContent = 'RSVP Received!';
-                btn.classList.add('bg-green-700');
-                alert('Thank you for your RSVP! We will send you a confirmation email shortly. We can\'t wait to celebrate with you!');
-            }, 1500);
-        }
-
-        // Intersection Observer for reveal animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -50px 0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal, .stagger-children').forEach(el => observer.observe(el));
-
-        // Navbar show/hide on scroll
-        let lastScroll = 0;
-        const navbar = document.getElementById('navbar');
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 100) {
-                navbar.classList.add('shadow-lg');
-            } else {
-                navbar.classList.remove('shadow-lg');
-            }
-
-            lastScroll = currentScroll;
-        });
-    </script>
+// RSVP handler
+function handleRSVP(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-submit span');
+    btn.textContent = 'Sending...';
+    setTimeout(() => {
+        btn.textContent = 'Received';
+        btn.parentElement.style.borderColor = '#a0522d';
+        btn.parentElement.style.background = '#a0522d';
+        btn.style.color = '#080808';
+    }, 1500);
+}
+</script>
 </body>
 </html>
