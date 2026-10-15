@@ -1,0 +1,1240 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Harvest of Hope | Faith in Action | Communities Transformed.</title>
+<meta name="description" content="A Texas 501(c)(3) nonprofit Christian ministry bringing clean water, food security, sustainable agriculture, and lasting hope to underserved communities in Africa — and serving families in Texas through food pantries, housing support, education, kids programs, and advocacy against domestic violence." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest: '#173F2A',
+          'forest-dark': '#0F2D1F',
+          'forest-light': '#2A5C42',
+          gold: '#C79A3B',
+          'gold-light': '#D9B565',
+          'gold-dark': '#A67E2A',
+          cream: '#F7F1E5',
+          'cream-dark': '#EDE3CC',
+          earth: '#6B4A2B',
+          'earth-light': '#8A6238'
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['Manrope', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', sans-serif; background-color: #F7F1E5; color: #173F2A; }
+  .font-display { font-family: 'Fraunces', serif; font-optical-sizing: auto; }
+
+  /* Scroll reveal */
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(0.16,1,0.3,1), transform 1s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+  .reveal-stagger > * { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+  .reveal-stagger.in-view > * { opacity: 1; transform: translateY(0); }
+  .reveal-stagger.in-view > *:nth-child(1){transition-delay:.05s}
+  .reveal-stagger.in-view > *:nth-child(2){transition-delay:.12s}
+  .reveal-stagger.in-view > *:nth-child(3){transition-delay:.19s}
+  .reveal-stagger.in-view > *:nth-child(4){transition-delay:.26s}
+  .reveal-stagger.in-view > *:nth-child(5){transition-delay:.33s}
+  .reveal-stagger.in-view > *:nth-child(6){transition-delay:.4s}
+  .reveal-stagger.in-view > *:nth-child(7){transition-delay:.47s}
+
+  /* Hero */
+  .hero-img { animation: kenburns 30s ease-in-out infinite alternate; }
+  @keyframes kenburns {
+    0% { transform: scale(1.05) translate(0,0); }
+    100% { transform: scale(1.18) translate(-2%, -2%); }
+  }
+  /* .hero-overlay { background: linear-gradient(180deg, rgba(15,45,31,0.55) 0%, rgba(15,45,31,0.45) 40%, rgba(15,45,31,0.92) 100%); } */
+  .hero-overlay { background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.92) 100%); }
+
+  /* Grain */
+  .grain::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    opacity: 0.5; mix-blend-mode: overlay; pointer-events: none;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    background: #C79A3B; color: #173F2A;
+    transition: all .3s ease; position: relative; overflow: hidden;
+  }
+  .btn-primary:hover { background: #D9B565; transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(199,154,59,.55); }
+  .btn-primary::before {
+    content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+    transition: left .6s ease;
+  }
+  .btn-primary:hover::before { left: 100%; }
+
+  .btn-outline {
+    background: transparent; color: #F7F1E5;
+    border: 2px solid rgba(247,241,229,.4);
+    transition: all .3s ease;
+  }
+  .btn-outline:hover { background: rgba(247,241,229,.08); border-color: #C79A3B; color: #C79A3B; }
+
+  /* Pillar cards */
+  .pillar-card { transition: all .4s cubic-bezier(0.16,1,0.3,1); }
+  .pillar-card:hover { transform: translateY(-8px); }
+  .pillar-card .pillar-img { transition: transform .6s cubic-bezier(0.16,1,0.3,1); }
+  .pillar-card:hover .pillar-img { transform: scale(1.08); }
+  .pillar-card .pillar-arrow { transition: transform .3s ease; }
+  .pillar-card:hover .pillar-arrow { transform: translateX(6px); }
+
+  /* Pathway steps */
+  .path-step .path-num { transition: all .4s ease; }
+  .path-step:hover .path-num { transform: scale(1.1); }
+
+  /* Counters */
+  .counter { font-variant-numeric: tabular-nums; }
+
+  /* Map markers */
+  .map-marker { cursor: pointer; }
+  .map-marker:hover circle.marker-dot { fill: #D9B565; r: 8; }
+  .map-marker.active circle.marker-dot { fill: #C79A3B; r: 8; }
+  .marker-dot { transition: r .25s ease, fill .25s ease; }
+  .map-pulse { transform-origin: center; transform-box: fill-box; animation: pulse 2.6s ease-out infinite; }
+  @keyframes pulse {
+    0% { r: 8; opacity: 0.55; }
+    70% { r: 22; opacity: 0; }
+    100% { r: 8; opacity: 0; }
+  }
+
+  /* Mobile nav */
+  .mobile-menu { transition: max-height .4s ease; max-height: 0; overflow: hidden; }
+  .mobile-menu.open { max-height: 600px; }
+
+  /* Sponsor cards */
+  .sponsor-card { transition: all .4s cubic-bezier(0.16,1,0.3,1); }
+  .sponsor-card:hover { transform: translateY(-6px); border-color: #C79A3B; }
+  .sponsor-card.featured { background: #173F2A; color: #F7F1E5; border-color: #C79A3B; }
+  .sponsor-card.featured:hover { background: #0F2D1F; }
+
+  /* Patterns */
+  .pattern-bg { background-image: radial-gradient(circle, rgba(199,154,59,.08) 1px, transparent 1px); background-size: 24px 24px; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #F7F1E5; }
+  ::-webkit-scrollbar-thumb { background: #173F2A; border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover { background: #2A5C42; }
+
+  /* Focus */
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid #C79A3B; outline-offset: 2px;
+  }
+
+  /* Floating ripple */
+  .ripple { animation: ripple 2.4s infinite; }
+  @keyframes ripple {
+    0% { box-shadow: 0 0 0 0 rgba(199,154,59,.5); }
+    100% { box-shadow: 0 0 0 14px rgba(199,154,59,0); }
+  }
+
+  /* Nav shadow on scroll */
+  .nav-scrolled { box-shadow: 0 8px 30px -10px rgba(0,0,0,.4); }
+
+  /* Impact card hover */
+  .impact-card { transition: all .35s ease; }
+  .impact-card:hover { background-color: rgba(42,92,66,0.25); }
+  .impact-card:hover .impact-icon { background-color: rgba(199,154,59,0.25); border-color: rgba(199,154,59,0.6); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-img, .map-pulse, .ripple { animation: none; }
+    .reveal, .reveal-stagger > * { transition: none; opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============== NAV ============== -->
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-forest/95 backdrop-blur-md border-b border-gold/20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="#" class="flex items-center gap-3 group">
+        <!-- <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
+          <i class="fas fa-seedling text-forest text-lg"></i>
+        </div> -->
+        <img src="assets/images/logo.jpeg" style="width:80px;height:auto;">
+        <div class="flex flex-col leading-none">
+          <span class="font-display font-bold text-cream text-lg tracking-wide">Tent of Worship</span>
+          <span class="text-cream/60 text-[10px] tracking-[0.2em] uppercase mt-0.5">& Restoration of Souls</span>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-8 text-sm">
+        <a href="#about" class="text-cream/80 hover:text-gold transition">About</a>
+        <a href="#what-we-do" class="text-cream/80 hover:text-gold transition">What We Do</a>
+        <a href="#where" class="text-cream/80 hover:text-gold transition">Where We Work</a>
+        <a href="#impact" class="text-cream/80 hover:text-gold transition">Impact</a>
+        <a href="#projects" class="text-cream/80 hover:text-gold transition">Projects</a>
+        <a href="#stories" class="text-cream/80 hover:text-gold transition">Stories</a>
+        <a href="#donate" class="btn-primary px-5 py-2.5 rounded-sm font-semibold tracking-wide uppercase text-xs flex items-center gap-2">
+          <i class="fas fa-heart"></i>Donate
+        </a>
+      </div>
+      <button id="mobile-toggle" class="lg:hidden text-cream p-2" aria-label="Open menu">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden">
+      <div class="flex flex-col gap-4 py-6 text-cream/80">
+        <a href="#about" class="hover:text-gold">About</a>
+        <a href="#what-we-do" class="hover:text-gold">What We Do</a>
+        <a href="#where" class="hover:text-gold">Where We Work</a>
+        <a href="#impact" class="hover:text-gold">Impact</a>
+        <a href="#projects" class="hover:text-gold">Projects</a>
+        <a href="#stories" class="hover:text-gold">Stories</a>
+        <a href="#donate" class="btn-primary px-5 py-3 rounded-sm font-semibold uppercase text-sm text-center">Donate Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============== HERO ============== -->
+<!-- <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1610733376381-010db4468779" alt="" class="absolute inset-0 w-full h-full object-cover hero-img" />
+  <div class="absolute inset-0 hero-overlay"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 w-full py-20">
+    <div class="max-w-4xl">
+      <div class="reveal inline-flex items-center gap-2 bg-black/15  px-4 py-3 rounded-full mb-8 backdrop-blur-sm">
+        <span class="text-cream text-xs tracking-[0.2em] uppercase font-semibold">Texas 501(c)(3) Christian Ministry</span>
+      </div>
+
+      <h1 class="reveal font-display font-bold text-cream text-5xl sm:text-6xl lg:text-8xl leading-[0.95] tracking-tight mb-8">
+        Faith in Action.<br/>
+        <span class="text-gold italic">Lives</span> Transformed.
+      </h1>
+
+      <p class="reveal text-cream/90 text-lg md:text-xl max-w-2xl mb-4 leading-relaxed">
+        Bringing clean water, food security, sustainable agriculture, and lasting hope to underserved rural communities across Africa — and serving families right here in Texas.
+      </p>
+      <p class="reveal text-cream/70 text-base md:text-lg max-w-2xl mb-10 leading-relaxed">
+        We partner with local churches and community leaders to equip farmers, feed families, protect the vulnerable, and build pathways out of poverty — both overseas and in our own neighborhoods.
+      </p>
+
+      <div class="reveal flex flex-col sm:flex-row gap-4 mb-16">
+        <a href="#donate" class="btn-primary px-8 py-4 rounded-sm font-bold tracking-wide uppercase text-sm text-center">
+          Transform a Community
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+        <a href="#impact" class="btn-outline px-8 py-4 rounded-sm font-bold tracking-wide uppercase text-sm text-center">
+          See Our Impact
+        </a>
+      </div>
+
+      <div class="reveal max-w-xl border-l-2 border-gold/60 pl-6">
+        <p class="font-display italic text-cream/90 text-lg leading-relaxed">
+          “The Spirit of the Lord is on me, because he has anointed me to proclaim good news to the poor. He has sent me to proclaim freedom for the prisoners and recovery of sight for the blind, to set the oppressed free, to proclaim the year of the Lord’s favor.”
+        </p>
+        <p class="text-gold text-sm tracking-wider mt-2 uppercase font-semibold">— Luke 4:18–19</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-cream/60">
+    <span class="text-xs tracking-[0.3em] uppercase">Scroll</span>
+    <div class="w-px h-12 bg-gradient-to-b from-gold to-transparent"></div>
+  </div>
+</section> -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+  <!-- Replaced <img> with <video> -->
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    poster="https://images.unsplash.com/photo-1610733376381-010db4468779" 
+    class="absolute inset-0 w-full h-full object-cover hero-video"
+  >
+    <source src="assets/images/235014.mp4" type="video/mp4">
+    <!-- Optional: Add an .ogv or .webm fallback source for older browsers -->
+    <!-- <source src="PATH_TO_YOUR_VIDEO.webm" type="video/webm"> -->
+  </video>
+  
+  <div class="absolute inset-0 hero-overlay"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 w-full py-20">
+    <div class="max-w-4xl">
+      <div class="reveal inline-flex items-center gap-2 bg-black/15  px-4 py-3 rounded-full mb-8 backdrop-blur-sm">
+        <!-- <span class="w-1.5 h-1.5 rounded-full bg-gold ripple"></span> -->
+        <span class="text-cream text-xs tracking-[0.2em] uppercase font-semibold">Texas 501(c)(3) Christian Ministry</span>
+      </div>
+
+      <h1 class="reveal font-display font-bold text-cream text-5xl sm:text-6xl lg:text-8xl leading-[0.95] tracking-tight mb-8">
+        Faith in Action.<br/>
+        <span class="text-gold italic">Lives</span> Transformed.
+      </h1>
+
+      <p class="reveal text-cream/90 text-lg md:text-xl max-w-2xl mb-4 leading-relaxed">
+        Bringing clean water, food security, sustainable agriculture, and lasting hope to underserved rural communities across Africa — and serving families right here in Texas.
+      </p>
+      <p class="reveal text-cream/70 text-base md:text-lg max-w-2xl mb-10 leading-relaxed">
+        We partner with local churches and community leaders to equip farmers, feed families, protect the vulnerable, and build pathways out of poverty — both overseas and in our own neighborhoods.
+      </p>
+
+      <div class="reveal flex flex-col sm:flex-row gap-4 mb-16">
+        <a href="#donate" class="btn-primary px-8 py-4 rounded-sm font-bold tracking-wide uppercase text-sm text-center">
+          Transform a Community
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+        <a href="#impact" class="btn-outline px-8 py-4 rounded-sm font-bold tracking-wide uppercase text-sm text-center">
+          See Our Impact
+        </a>
+      </div>
+
+      <div class="reveal max-w-xl border-l-2 border-gold/60 pl-6">
+        <p class="font-display italic text-cream/90 text-lg leading-relaxed">
+          “The Spirit of the Lord is on me, because he has anointed me to proclaim good news to the poor. He has sent me to proclaim freedom for the prisoners and recovery of sight for the blind, to set the oppressed free, to proclaim the year of the Lord’s favor.”
+        </p>
+        <p class="text-gold text-sm tracking-wider mt-2 uppercase font-semibold">— Luke 4:18–19</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-cream/60">
+    <span class="text-xs tracking-[0.3em] uppercase">Scroll</span>
+    <div class="w-px h-12 bg-gradient-to-b from-gold to-transparent"></div>
+  </div>
+</section>
+
+<!-- ============== THE REALITY ============== -->
+<section id="about" class="py-24 lg:py-32 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal">
+        <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">The Reality</span>
+        <h2 class="font-display font-bold text-forest text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-8">
+          Imagine having land — but no tools to cultivate it.
+        </h2>
+        <div class="space-y-5 text-forest/80 text-lg leading-relaxed">
+          <p>
+            In many remote African communities, families wake up every day facing challenges most of us rarely consider. Clean drinking water may be miles away. Parents may have land but lack the seeds, tools, irrigation, and farming knowledge needed to feed their families and generate income.
+          </p>
+          <p>
+            Children may go to bed hungry. Communities may have the desire to change their future but lack the resources to make that change possible. That is why sustainable agriculture sits at the heart of our work abroad: equipping farmers with seeds, tools, training, and market pathways so harvest becomes lasting security.
+          </p>
+          <p>
+            Closer to home in Texas, families face different but equally urgent needs — empty pantries, unstable housing, educational gaps, and the hidden crisis of domestic violence. We serve here too: operating food pantries, supporting housing and schooling, running programs for children, campaigning against domestic violence, and walking alongside single mothers with practical help and dignity.
+          </p>
+          <p class="font-display italic text-forest text-xl pt-4 border-l-2 border-gold pl-6">
+            We believe poverty and oppression should never determine a person's future. Our mission is not simply to give — our mission is to empower.
+          </p>
+        </div>
+      </div>
+
+      <div class="reveal grid grid-cols-2 gap-4">
+        <div class="space-y-4">
+          <img src="assets/images/burundi/232258.jpg" alt="A mother and her children" class="w-full h-64 object-cover rounded-sm shadow-lg" loading="lazy" />
+          <img src="assets/images/cote/232290.jpg" alt="Water project" class="w-full h-48 object-cover rounded-sm shadow-lg" loading="lazy" />
+        </div>
+        <div class="space-y-4 pt-12">
+          <img src="assets/images/togo/232333.webp" alt="Farmland" class="w-full h-48 object-cover rounded-sm shadow-lg" loading="lazy" />
+          <img src="assets/images/togo/232343.webp" alt="Community gathering" class="w-full h-64 object-cover rounded-sm shadow-lg" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOUR PILLARS ============== -->
+<section id="what-we-do" class="py-24 lg:py-32 bg-cream-dark/40">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mb-16 text-center mx-auto">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Ministry Pillars</span>
+      <h2 class="font-display font-bold text-forest text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-6">
+        Practical solutions. <span class="italic text-gold">Lasting</span> transformation.
+      </h2>
+      <p class="text-forest/70 text-lg leading-relaxed">
+        From fields in Africa to neighborhoods in Texas, we work across interconnected areas that create pathways out of poverty, protect the vulnerable, and restore dignity — with sustainable agriculture at the center of long-term change abroad.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
+      <div class="pillar-card bg-cream border border-forest/10 rounded-sm overflow-hidden shadow-sm hover:shadow-2xl">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="assets/images/burundi/232267.jpg" alt="Clean water flowing from a well" class="pillar-img w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-display text-gold text-3xl font-bold">01</span>
+            <i class="fas fa-droplet text-gold/40 text-xl"></i>
+          </div>
+          <h3 class="font-display font-bold text-forest text-xl mb-2">Clean Water</h3>
+          <p class="text-forest/70 text-sm leading-relaxed mb-5">Water changes everything. Wells, boreholes, water storage, filtration, and sustainable access to safe water.</p>
+          <a href="#donate" class="inline-flex items-center gap-2 text-gold font-semibold text-xs tracking-wider uppercase border-b border-gold/40 pb-1 hover:border-gold transition">
+            Give Water <i class="fas fa-arrow-right pillar-arrow text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pillar-card bg-cream border border-forest/10 rounded-sm overflow-hidden shadow-sm hover:shadow-2xl">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="assets/images/togo/232337.webp" alt="Hands holding seeds" class="pillar-img w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-display text-gold text-3xl font-bold">02</span>
+            <i class="fas fa-seedling text-gold/40 text-xl"></i>
+          </div>
+          <h3 class="font-display font-bold text-forest text-xl mb-2">Sustainable Agriculture</h3>
+          <p class="text-forest/70 text-sm leading-relaxed mb-5">The core of lasting change. Quality seeds, tools, irrigation, soil care, training, and market pathways so families move from survival farming to secure harvests and income.</p>
+          <a href="#donate" class="inline-flex items-center gap-2 text-gold font-semibold text-xs tracking-wider uppercase border-b border-gold/40 pb-1 hover:border-gold transition">
+            Empower a Farmer <i class="fas fa-arrow-right pillar-arrow text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pillar-card bg-cream border border-forest/10 rounded-sm overflow-hidden shadow-sm hover:shadow-2xl">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="assets/images/togo/232331.webp" alt="Food assistance" class="pillar-img w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-display text-gold text-3xl font-bold">03</span>
+            <i class="fas fa-hand-holding-heart text-gold/40 text-xl"></i>
+          </div>
+          <h3 class="font-display font-bold text-forest text-xl mb-2">Food & Relief</h3>
+          <p class="text-forest/70 text-sm leading-relaxed mb-5">Meet today's hunger with dignity while building tomorrow's harvest. Emergency food alongside seeds, tools, and training that lead to lasting food security.</p>
+          <a href="#donate" class="inline-flex items-center gap-2 text-gold font-semibold text-xs tracking-wider uppercase border-b border-gold/40 pb-1 hover:border-gold transition">
+            Feed a Family <i class="fas fa-arrow-right pillar-arrow text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="pillar-card bg-cream border border-forest/10 rounded-sm overflow-hidden shadow-sm hover:shadow-2xl">
+        <div class="aspect-[4/3] overflow-hidden">
+          <img src="assets/images/ethopia/232245.jpg" alt="Faith community" class="pillar-img w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="font-display text-gold text-3xl font-bold">04</span>
+            <i class="fas fa-people-group text-gold/40 text-xl"></i>
+          </div>
+          <h3 class="font-display font-bold text-forest text-xl mb-2">Faith & Community</h3>
+          <p class="text-forest/70 text-sm leading-relaxed mb-5">Transforming communities spiritually and practically. Working alongside local churches and leaders to strengthen dignity, hope, and lasting partnership.</p>
+          <a href="#donate" class="inline-flex items-center gap-2 text-gold font-semibold text-xs tracking-wider uppercase border-b border-gold/40 pb-1 hover:border-gold transition">
+            Partner With Us <i class="fas fa-arrow-right pillar-arrow text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Local Texas & Protection work -->
+    <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+      <div class="pillar-card bg-cream border border-forest/10 rounded-sm overflow-hidden shadow-sm hover:shadow-2xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <span class="font-display text-gold text-3xl font-bold">05</span>
+          <i class="fas fa-house-chimney text-gold/40 text-xl"></i>
+        </div>
+        <h3 class="font-display font-bold text-forest text-xl mb-2">Texas Local Outreach</h3>
+        <p class="text-forest/70 text-sm leading-relaxed mb-5">Food pantries, housing assistance, school support, and kids programs right here in Texas. Meeting practical needs in our own communities with the same heart of service.</p>
+        <a href="#donate" class="inline-flex items-center gap-2 text-gold font-semibold text-xs tracking-wider uppercase border-b border-gold/40 pb-1 hover:border-gold transition">
+          Support Local Families <i class="fas fa-arrow-right pillar-arrow text-[10px]"></i>
+        </a>
+      </div>
+
+      <div class="pillar-card bg-cream border border-forest/10 rounded-sm overflow-hidden shadow-sm hover:shadow-2xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <span class="font-display text-gold text-3xl font-bold">06</span>
+          <i class="fas fa-shield-heart text-gold/40 text-xl"></i>
+        </div>
+        <h3 class="font-display font-bold text-forest text-xl mb-2">Against Domestic Violence</h3>
+        <p class="text-forest/70 text-sm leading-relaxed mb-5">We campaign against domestic violence in our communities and walk with survivors toward safety, healing, and restored dignity — because freedom for the oppressed is part of the gospel we live.</p>
+        <a href="#donate" class="inline-flex items-center gap-2 text-gold font-semibold text-xs tracking-wider uppercase border-b border-gold/40 pb-1 hover:border-gold transition">
+          Stand With Survivors <i class="fas fa-arrow-right pillar-arrow text-[10px]"></i>
+        </a>
+      </div>
+
+      <div class="pillar-card bg-cream border border-forest/10 rounded-sm overflow-hidden shadow-sm hover:shadow-2xl p-6">
+        <div class="flex items-center justify-between mb-4">
+          <span class="font-display text-gold text-3xl font-bold">07</span>
+          <i class="fas fa-hands-holding-child text-gold/40 text-xl"></i>
+        </div>
+        <h3 class="font-display font-bold text-forest text-xl mb-2">Single Mothers & Children</h3>
+        <p class="text-forest/70 text-sm leading-relaxed mb-5">Practical help, mentoring, food support, and educational programs for single mothers and their children — so no family has to face hardship alone.</p>
+        <a href="#donate" class="inline-flex items-center gap-2 text-gold font-semibold text-xs tracking-wider uppercase border-b border-gold/40 pb-1 hover:border-gold transition">
+          Help a Mother & Child <i class="fas fa-arrow-right pillar-arrow text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== IMPACT (RESTRUCTURED) ============== -->
+<section id="impact" class="py-24 lg:py-32 bg-forest relative overflow-hidden">
+  <div class="absolute inset-0 pattern-bg opacity-50"></div>
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent"></div>
+  <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-gold/5 blur-3xl"></div>
+  <div class="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-gold/5 blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+    <!-- Split header -->
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 mb-16 items-end">
+      <div class="reveal lg:col-span-7">
+        <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Impact at a Glance</span>
+        <h2 class="font-display font-bold text-cream text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
+          1 Village at a time.<br/>
+          1 Family at a time.<br/>
+          <span class="text-gold italic">1 Life at a time.</span>
+        </h2>
+      </div>
+      <div class="reveal lg:col-span-5">
+        <p class="text-cream/70 text-lg leading-relaxed mb-6">
+          Every number represents real families, real communities, and real transformation — documented, verified, and reported with integrity.
+        </p>
+        <a href="#" class="group inline-flex items-center gap-2 text-gold font-semibold text-xs tracking-wider uppercase border-b border-gold/40 hover:border-gold pb-1 transition">
+          View Annual Impact Report
+          <i class="fas fa-arrow-right text-[10px] group-hover:translate-x-1 transition"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Unified metrics grid (single container, hairline dividers) -->
+    <div class="reveal-stagger grid grid-cols-2 lg:grid-cols-3 gap-px bg-cream/10 border border-cream/10 rounded-sm overflow-hidden">
+      <div class="impact-card bg-forest p-6 lg:p-8">
+        <div class="flex items-start justify-between mb-5">
+          <div class="impact-icon w-12 h-12 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center transition">
+            <i class="fas fa-house-flag text-gold text-lg"></i>
+          </div>
+          <span class="text-cream/30 text-xs tracking-[0.2em] uppercase font-display">01</span>
+        </div>
+        <div class="counter font-display text-gold text-5xl lg:text-6xl font-bold mb-2 leading-none" data-target="47">0</div>
+        <div class="text-cream/80 text-sm tracking-wider uppercase mb-1">Rural Communities Reached</div>
+        <div class="text-cream/40 text-xs">Across 6 African nations</div>
+      </div>
+
+      <div class="impact-card bg-forest p-6 lg:p-8">
+        <div class="flex items-start justify-between mb-5">
+          <div class="impact-icon w-12 h-12 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center transition">
+            <i class="fas fa-people-group text-gold text-lg"></i>
+          </div>
+          <span class="text-cream/30 text-xs tracking-[0.2em] uppercase font-display">02</span>
+        </div>
+        <div class="counter font-display text-gold text-5xl lg:text-6xl font-bold mb-2 leading-none" data-target="28000" data-suffix="+">0</div>
+        <div class="text-cream/80 text-sm tracking-wider uppercase mb-1">People Impacted</div>
+        <div class="text-cream/40 text-xs">Verified through local partners</div>
+      </div>
+
+      <div class="impact-card bg-forest p-6 lg:p-8">
+        <div class="flex items-start justify-between mb-5">
+          <div class="impact-icon w-12 h-12 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center transition">
+            <i class="fas fa-droplet text-gold text-lg"></i>
+          </div>
+          <span class="text-cream/30 text-xs tracking-[0.2em] uppercase font-display">03</span>
+        </div>
+        <div class="counter font-display text-gold text-5xl lg:text-6xl font-bold mb-2 leading-none" data-target="23">0</div>
+        <div class="text-cream/80 text-sm tracking-wider uppercase mb-1">Water Projects Completed</div>
+        <div class="text-cream/40 text-xs">Wells, boreholes & filtration</div>
+      </div>
+
+      <div class="impact-card bg-forest p-6 lg:p-8">
+        <div class="flex items-start justify-between mb-5">
+          <div class="impact-icon w-12 h-12 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center transition">
+            <i class="fas fa-house-user text-gold text-lg"></i>
+          </div>
+          <span class="text-cream/30 text-xs tracking-[0.2em] uppercase font-display">04</span>
+        </div>
+        <div class="counter font-display text-gold text-5xl lg:text-6xl font-bold mb-2 leading-none" data-target="1200" data-suffix="+">0</div>
+        <div class="text-cream/80 text-sm tracking-wider uppercase mb-1">Families Supported</div>
+        <div class="text-cream/40 text-xs">Direct, long-term partnership</div>
+      </div>
+
+      <div class="impact-card bg-forest p-6 lg:p-8">
+        <div class="flex items-start justify-between mb-5">
+          <div class="impact-icon w-12 h-12 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center transition">
+            <i class="fas fa-tractor text-gold text-lg"></i>
+          </div>
+          <span class="text-cream/30 text-xs tracking-[0.2em] uppercase font-display">05</span>
+        </div>
+        <div class="counter font-display text-gold text-5xl lg:text-6xl font-bold mb-2 leading-none" data-target="850" data-suffix="+">0</div>
+        <div class="text-cream/80 text-sm tracking-wider uppercase mb-1">Farmers Equipped</div>
+        <div class="text-cream/40 text-xs">Tools, seeds & training</div>
+      </div>
+
+      <div class="impact-card bg-forest p-6 lg:p-8">
+        <div class="flex items-start justify-between mb-5">
+          <div class="impact-icon w-12 h-12 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center transition">
+            <i class="fas fa-wheat-awn text-gold text-lg"></i>
+          </div>
+          <span class="text-cream/30 text-xs tracking-[0.2em] uppercase font-display">06</span>
+        </div>
+        <div class="counter font-display text-gold text-5xl lg:text-6xl font-bold mb-2 leading-none" data-target="1500" data-suffix="+">0</div>
+        <div class="text-cream/80 text-sm tracking-wider uppercase mb-1">Acres & Farms Supported</div>
+        <div class="text-cream/40 text-xs">Cultivated with new resources</div>
+      </div>
+    </div>
+
+    <!-- Accountability bar -->
+    <div class="reveal mt-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 p-6 lg:p-8 border border-gold/20 rounded-sm bg-gradient-to-r from-forest-light/20 to-transparent">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-full bg-gold/15 border border-gold/30 flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-shield-halved text-gold"></i>
+        </div>
+        <div>
+          <div class="text-cream font-semibold text-sm mb-1">Verified. Documented. Accountable.</div>
+          <p class="text-cream/60 text-sm leading-relaxed">Every figure reflects documented outcomes — we never publish statistics we cannot verify.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-6 flex-shrink-0">
+        <a href="#" class="text-gold font-semibold text-xs tracking-wider uppercase hover:underline whitespace-nowrap">Annual Report</a>
+        <a href="#" class="text-gold font-semibold text-xs tracking-wider uppercase hover:underline whitespace-nowrap">Financial Transparency</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SELF-SUFFICIENCY PATHWAY ============== -->
+<section class="py-24 lg:py-32 bg-cream relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mb-16">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">From Relief to Self-Sufficiency</span>
+      <h2 class="font-display font-bold text-forest text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-6">
+        We don't want families to depend on aid <span class="italic text-gold">forever.</span>
+      </h2>
+      <p class="text-forest/70 text-lg leading-relaxed">
+        Sustainable agriculture is the bridge. We help communities develop the seeds, tools, knowledge, and market opportunities they need to grow food, generate income, and create change that lasts for generations.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 lg:gap-3 reveal-stagger">
+      <div class="path-step text-center">
+        <div class="path-num w-16 h-16 mx-auto mb-4 rounded-full bg-forest text-cream flex items-center justify-center font-display text-2xl font-bold">1</div>
+        <i class="fas fa-hand-holding-heart text-gold text-2xl mb-3 block"></i>
+        <h3 class="font-display font-bold text-forest text-sm mb-2">Emergency Food</h3>
+        <p class="text-forest/60 text-xs leading-relaxed">Meet immediate hunger needs with dignity</p>
+      </div>
+      <div class="path-step text-center">
+        <div class="path-num w-16 h-16 mx-auto mb-4 rounded-full bg-forest text-cream flex items-center justify-center font-display text-2xl font-bold">2</div>
+        <i class="fas fa-droplet text-gold text-2xl mb-3 block"></i>
+        <h3 class="font-display font-bold text-forest text-sm mb-2">Clean Water</h3>
+        <p class="text-forest/60 text-xs leading-relaxed">Wells, boreholes & safe water access</p>
+      </div>
+      <div class="path-step text-center">
+        <div class="path-num w-16 h-16 mx-auto mb-4 rounded-full bg-forest text-cream flex items-center justify-center font-display text-2xl font-bold">3</div>
+        <i class="fas fa-tools text-gold text-2xl mb-3 block"></i>
+        <h3 class="font-display font-bold text-forest text-sm mb-2">Farming Tools</h3>
+        <p class="text-forest/60 text-xs leading-relaxed">Seeds, equipment & basic resources</p>
+      </div>
+      <div class="path-step text-center">
+        <div class="path-num w-16 h-16 mx-auto mb-4 rounded-full bg-forest text-cream flex items-center justify-center font-display text-2xl font-bold">4</div>
+        <i class="fas fa-graduation-cap text-gold text-2xl mb-3 block"></i>
+        <h3 class="font-display font-bold text-forest text-sm mb-2">Training</h3>
+        <p class="text-forest/60 text-xs leading-relaxed">Agricultural skills & knowledge transfer</p>
+      </div>
+      <div class="path-step text-center">
+        <div class="path-num w-16 h-16 mx-auto mb-4 rounded-full bg-gold text-forest flex items-center justify-center font-display text-2xl font-bold">5</div>
+        <i class="fas fa-wheat-awn text-forest text-2xl mb-3 block"></i>
+        <h3 class="font-display font-bold text-forest text-sm mb-2">Harvest</h3>
+        <p class="text-forest/60 text-xs leading-relaxed">Sustainable food production & security</p>
+      </div>
+      <div class="path-step text-center">
+        <div class="path-num w-16 h-16 mx-auto mb-4 rounded-full bg-gold text-forest flex items-center justify-center font-display text-2xl font-bold">6</div>
+        <i class="fas fa-coins text-forest text-2xl mb-3 block"></i>
+        <h3 class="font-display font-bold text-forest text-sm mb-2">Income</h3>
+        <p class="text-forest/60 text-xs leading-relaxed">Surplus sold for family stability</p>
+      </div>
+      <div class="path-step text-center">
+        <div class="path-num w-16 h-16 mx-auto mb-4 rounded-full bg-gold text-forest flex items-center justify-center font-display text-2xl font-bold">7</div>
+        <i class="fas fa-people-group text-forest text-2xl mb-3 block"></i>
+        <h3 class="font-display font-bold text-forest text-sm mb-2">Stronger Community</h3>
+        <p class="text-forest/60 text-xs leading-relaxed">Generational change, dignity, hope</p>
+      </div>
+    </div>
+
+    <div class="reveal mt-16 max-w-3xl">
+      <p class="font-display italic text-forest text-2xl md:text-3xl leading-relaxed">
+        "When a community moves from needing help to feeding themselves through their own harvest, everything changes — for this generation and the next."
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== SPONSOR A VILLAGE ============== -->
+<section id="projects" class="py-24 lg:py-32 bg-forest-dark relative overflow-hidden">
+  <div class="absolute inset-0 grain"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mb-16">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Sponsor a Village / Fund a Project</span>
+      <h2 class="font-display font-bold text-cream text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-6">
+        Give with <span class="italic text-gold">tangible</span> impact.
+      </h2>
+      <p class="text-cream/70 text-lg leading-relaxed">
+        Every gift is tied to a real outcome. Choose a level that fits your generosity — and see exactly what your support makes possible.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal-stagger">
+      <div class="sponsor-card bg-forest border border-cream/10 rounded-sm p-6">
+        <div class="font-display text-gold text-4xl font-bold mb-1">$25</div>
+        <div class="text-cream/60 text-xs tracking-wider uppercase mb-4">Seeds for a Family</div>
+        <p class="text-cream/80 text-sm leading-relaxed">Provides quality, climate-suited seeds for a farming family to plant a season of hope and begin the path to food security.</p>
+      </div>
+      <div class="sponsor-card bg-forest border border-cream/10 rounded-sm p-6">
+        <div class="font-display text-gold text-4xl font-bold mb-1">$50</div>
+        <div class="text-cream/60 text-xs tracking-wider uppercase mb-4">Basic Farming Tools</div>
+        <p class="text-cream/80 text-sm leading-relaxed">Equips a farmer with essential hand tools so they can cultivate their land productively and reduce post-harvest loss.</p>
+      </div>
+      <div class="sponsor-card featured rounded-sm p-6">
+        <div class="font-display text-gold text-4xl font-bold mb-1">$100</div>
+        <div class="text-cream/60 text-xs tracking-wider uppercase mb-4">Food Support</div>
+        <p class="text-cream/80 text-sm leading-relaxed">Nutritious food assistance for a vulnerable family during transition.</p>
+      </div>
+      <div class="sponsor-card bg-forest border border-cream/10 rounded-sm p-6">
+        <div class="font-display text-gold text-4xl font-bold mb-1">$250</div>
+        <div class="text-cream/60 text-xs tracking-wider uppercase mb-4">Agricultural Starter</div>
+        <p class="text-cream/80 text-sm leading-relaxed">A complete starter package: quality seeds, tools, training, and key inputs so a family can plant, grow, and harvest with confidence.</p>
+      </div>
+      <div class="sponsor-card bg-forest border border-cream/10 rounded-sm p-6">
+        <div class="font-display text-gold text-4xl font-bold mb-1">$500</div>
+        <div class="text-cream/60 text-xs tracking-wider uppercase mb-4">Community Farming</div>
+        <p class="text-cream/80 text-sm leading-relaxed">Resources and training that lift an entire community farming cooperative toward shared harvests and income.</p>
+      </div>
+      <div class="sponsor-card bg-forest border border-cream/10 rounded-sm p-6">
+        <div class="font-display text-gold text-4xl font-bold mb-1">$1K+</div>
+        <div class="text-cream/60 text-xs tracking-wider uppercase mb-4">Village Development</div>
+        <p class="text-cream/80 text-sm leading-relaxed">Supports broader village-level development initiatives.</p>
+      </div>
+      <div class="sponsor-card bg-forest border border-cream/10 rounded-sm p-6 sm:col-span-2 lg:col-span-2">
+        <div class="font-display text-gold text-4xl font-bold mb-1">$5,000 — $10,000+</div>
+        <div class="text-cream/60 text-xs tracking-wider uppercase mb-4">Major Project or Clean-Water Sponsorship</div>
+        <p class="text-cream/80 text-sm leading-relaxed">Sponsor an entire water project or major community initiative. We'll connect you directly with the community you're transforming.</p>
+      </div>
+    </div>
+
+    <div class="reveal mt-12 flex flex-col sm:flex-row items-center gap-6">
+      <a href="#donate" class="btn-primary px-8 py-4 rounded-sm font-bold tracking-wide uppercase text-sm">
+        Sponsor a Project <i class="fas fa-arrow-right ml-2"></i>
+      </a>
+      <p class="text-cream/60 text-sm">All gifts are tax-deductible. 501(c)(3) verified.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHY WE SERVE ============== -->
+<section class="py-24 lg:py-32 bg-cream relative">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal order-2 lg:order-1">
+        <div class="relative">
+          <img src="assets/images/cote/232288.jpg" alt="Faith community" class="w-full h-[600px] object-cover rounded-sm shadow-2xl" loading="lazy" />
+          <div class="absolute -bottom-6 -right-6 bg-forest text-cream p-6 max-w-xs rounded-sm hidden md:block">
+            <p class="font-display italic text-gold text-lg leading-snug mb-2">"Faith should become action."</p>
+            <p class="text-cream/70 text-xs">— Our ministry commitment</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal order-1 lg:order-2">
+        <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Why We Serve</span>
+        <h2 class="font-display font-bold text-forest text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-8">
+          Our faith calls us to <span class="italic text-gold">serve.</span>
+        </h2>
+        <div class="space-y-5 text-forest/80 text-lg leading-relaxed">
+          <p>
+            Jesus taught us to care for the hungry, the thirsty, the poor, and the oppressed. That calling is at the heart of everything we do — whether equipping farmers in Africa or standing with single mothers and survivors of domestic violence here in Texas.
+          </p>
+          <p>
+            We work alongside churches, community leaders, families and partners to bring practical solutions: clean water, seeds and tools, food pantries, housing and school support, kids programs, and advocacy that protects the vulnerable — while demonstrating the love, dignity and compassion of Christ.
+          </p>
+          <p class="font-display italic text-forest text-xl pt-6 border-l-2 border-gold pl-6">
+            We believe faith should be more than words. Faith should become action.
+          </p>
+        </div>
+
+        <div class="mt-8 p-6 bg-forest/5 border border-gold/30 rounded-sm">
+          <p class="font-display italic text-forest/90 text-lg leading-relaxed mb-3">
+            "For I was hungry and you gave me something to eat, I was thirsty and you gave me something to drink."
+          </p>
+          <p class="text-gold text-sm tracking-wider uppercase font-semibold">— Matthew 25:35</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHERE WE WORK (REBUILT MAP) ============== -->
+<section id="where" class="py-24 lg:py-32 bg-cream-dark/40">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mb-16">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Where We Work</span>
+      <h2 class="font-display font-bold text-forest text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-6">
+        Communities across <span class="italic text-gold">Africa</span> — and right here in Texas.
+      </h2>
+      <p class="text-forest/70 text-lg leading-relaxed">
+        Select a marker to meet the communities we serve overseas, see active projects, and learn what each location needs next. At the same time, our local Texas outreach continues through food pantries, housing and school support, kids programs, and care for families facing domestic violence.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-5 gap-8 reveal">
+      <div class="lg:col-span-3 bg-cream rounded-sm p-6 lg:p-8 border border-forest/10">
+        <svg viewBox="0 0 600 700" class="w-full h-auto" id="africa-map" role="img" aria-label="Map of project locations across Africa">
+          <defs>
+            <pattern id="africaPattern" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+              <rect width="2" height="2" fill="#173F2A" fill-opacity="0.04"/>
+            </pattern>
+          </defs>
+
+          <!-- Decorative latitude lines -->
+          <line x1="40" y1="369.2" x2="560" y2="369.2" stroke="#C79A3B" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="3 6" />
+          <line x1="40" y1="191.1" x2="560" y2="191.1" stroke="#C79A3B" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="3 6" />
+          <text x="50" y="187.1" font-family="Manrope" font-size="9" fill="#173F2A" fill-opacity="0.4" letter-spacing="2">TROPIC OF CANCER</text>
+          <text x="50" y="365.2" font-family="Manrope" font-size="9" fill="#173F2A" fill-opacity="0.4" letter-spacing="2">EQUATOR</text>
+
+          <!-- Africa silhouette: geographically accurate coastline (equirectangular projection from lon/lat) -->
+          <path d="M 128.9 97.2 L 133.5 96.4 L 133.5 99.4 L 140.3 101.7 L 151.7 101.7 L 158.6 102.5 L 166.2 99.4 L 168.8 97.5 L 177.6 93.4 L 187.4 91.5 L 196.6 89.6 L 208.0 88.8 L 212.5 89.9 L 219.4 89.2 L 226.2 88.8 L 233.0 88.8 L 239.9 88.4 L 248.2 85.8 L 252.0 86.1 L 257.4 87.3 L 254.3 92.6 L 254.3 97.2 L 258.1 101.7 L 255.8 105.5 L 250.5 111.6 L 256.6 113.1 L 261.2 117.3 L 269.5 120.0 L 274.1 119.2 L 281.7 120.7 L 288.5 123.0 L 294.6 123.0 L 299.9 132.1 L 309.8 135.9 L 318.2 139.0 L 322.7 138.2 L 326.5 133.6 L 326.5 125.3 L 332.6 120.7 L 341.0 119.2 L 345.5 121.5 L 349.3 123.0 L 356.2 125.3 L 364.5 129.1 L 375.2 129.8 L 380.5 131.0 L 393.4 134.4 L 401.0 132.1 L 404.8 129.8 L 409.4 129.1 L 415.4 129.8 L 419.2 131.4 L 421.1 141.2 L 420.0 144.3 L 423.8 154.2 L 429.1 161.0 L 431.4 166.3 L 435.2 173.2 L 439.0 178.5 L 443.6 186.1 L 445.8 187.6 L 454.2 200.5 L 456.5 209.6 L 456.5 220.3 L 457.2 224.1 L 459.5 232.4 L 465.6 241.6 L 470.2 248.4 L 474.0 250.7 L 479.3 255.2 L 486.9 262.1 L 493.0 267.4 L 498.3 270.4 L 502.1 272.7 L 502.8 278.8 L 501.3 281.1 L 508.2 286.4 L 515.8 290.2 L 527.2 287.9 L 537.0 284.1 L 546.2 283.4 L 555.3 280.3 L 563.6 279.6 L 562.1 284.9 L 564.4 290.2 L 559.8 297.8 L 556.8 306.9 L 551.5 316.0 L 548.4 317.6 L 542.4 329.0 L 534.8 337.3 L 527.2 344.9 L 518.0 354.0 L 514.2 356.3 L 505.1 364.7 L 496.8 372.3 L 489.9 381.8 L 484.6 386.7 L 478.5 393.6 L 475.5 400.0 L 470.9 408.0 L 469.4 414.8 L 472.4 420.9 L 472.4 429.3 L 474.0 436.9 L 475.5 444.5 L 479.3 447.5 L 481.6 449.0 L 482.3 456.6 L 481.6 467.8 L 482.3 475.6 L 483.1 479.4 L 483.8 483.2 L 477.8 492.4 L 466.4 498.4 L 455.0 505.3 L 451.2 510.6 L 446.6 512.9 L 439.0 519.7 L 439.8 525.0 L 442.8 534.2 L 442.8 542.5 L 443.6 550.9 L 443.6 552.4 L 436.7 557.0 L 429.9 559.6 L 423.8 563.0 L 421.5 566.6 L 423.8 573.3 L 423.8 581.3 L 417.7 588.1 L 409.4 596.5 L 403.3 604.8 L 395.7 611.7 L 385.8 620.0 L 375.2 625.4 L 368.3 627.6 L 362.2 629.2 L 353.1 627.4 L 341.7 629.2 L 331.8 630.7 L 325.8 633.7 L 320.4 632.2 L 314.4 630.3 L 313.6 626.9 L 312.8 622.3 L 309.8 620.0 L 312.8 613.2 L 309.8 604.8 L 302.2 593.4 L 299.2 586.6 L 293.8 576.0 L 288.9 571.8 L 286.2 560.8 L 284.0 544.0 L 282.4 537.2 L 279.4 534.9 L 272.6 522.8 L 265.0 509.1 L 263.4 500.0 L 266.1 484.8 L 269.5 474.1 L 275.6 465.0 L 277.9 452.8 L 274.1 436.1 L 271.8 424.7 L 266.5 414.8 L 263.8 405.7 L 258.9 398.9 L 254.7 395.1 L 249.0 386.0 L 242.2 376.8 L 239.9 373.8 L 242.2 369.2 L 245.2 366.2 L 245.2 361.6 L 248.2 355.2 L 248.2 351.4 L 249.0 347.2 L 247.5 338.8 L 241.4 335.0 L 228.5 335.8 L 220.9 336.6 L 214.8 328.6 L 213.3 326.7 L 208.7 323.6 L 199.6 320.6 L 192.0 321.0 L 182.9 322.9 L 173.8 325.9 L 172.2 327.1 L 166.2 331.2 L 157.8 333.1 L 151.0 330.5 L 143.4 329.0 L 135.0 330.5 L 127.4 331.6 L 115.2 335.8 L 109.2 333.5 L 100.0 327.4 L 91.7 321.4 L 86.4 316.8 L 73.4 304.6 L 69.6 297.0 L 62.8 289.4 L 55.2 279.2 L 46.8 275.0 L 47.6 267.4 L 46.1 264.4 L 40.8 257.5 L 48.4 247.6 L 50.6 240.0 L 52.2 231.7 L 49.1 221.0 L 44.6 210.4 L 48.4 199.8 L 52.2 189.1 L 59.8 179.2 L 64.3 170.1 L 73.4 163.3 L 75.7 156.8 L 86.4 154.2 L 94.7 147.3 L 100.8 138.2 L 99.3 129.8 L 103.8 122.2 L 109.2 116.9 L 116.0 113.9 L 122.1 110.8 L 126.6 101.7 Z" fill="#173F2A" fill-opacity="0.06" stroke="#173F2A" stroke-opacity="0.4" stroke-width="1.5" stroke-linejoin="round" />
+          <path d="M 128.9 97.2 L 133.5 96.4 L 133.5 99.4 L 140.3 101.7 L 151.7 101.7 L 158.6 102.5 L 166.2 99.4 L 168.8 97.5 L 177.6 93.4 L 187.4 91.5 L 196.6 89.6 L 208.0 88.8 L 212.5 89.9 L 219.4 89.2 L 226.2 88.8 L 233.0 88.8 L 239.9 88.4 L 248.2 85.8 L 252.0 86.1 L 257.4 87.3 L 254.3 92.6 L 254.3 97.2 L 258.1 101.7 L 255.8 105.5 L 250.5 111.6 L 256.6 113.1 L 261.2 117.3 L 269.5 120.0 L 274.1 119.2 L 281.7 120.7 L 288.5 123.0 L 294.6 123.0 L 299.9 132.1 L 309.8 135.9 L 318.2 139.0 L 322.7 138.2 L 326.5 133.6 L 326.5 125.3 L 332.6 120.7 L 341.0 119.2 L 345.5 121.5 L 349.3 123.0 L 356.2 125.3 L 364.5 129.1 L 375.2 129.8 L 380.5 131.0 L 393.4 134.4 L 401.0 132.1 L 404.8 129.8 L 409.4 129.1 L 415.4 129.8 L 419.2 131.4 L 421.1 141.2 L 420.0 144.3 L 423.8 154.2 L 429.1 161.0 L 431.4 166.3 L 435.2 173.2 L 439.0 178.5 L 443.6 186.1 L 445.8 187.6 L 454.2 200.5 L 456.5 209.6 L 456.5 220.3 L 457.2 224.1 L 459.5 232.4 L 465.6 241.6 L 470.2 248.4 L 474.0 250.7 L 479.3 255.2 L 486.9 262.1 L 493.0 267.4 L 498.3 270.4 L 502.1 272.7 L 502.8 278.8 L 501.3 281.1 L 508.2 286.4 L 515.8 290.2 L 527.2 287.9 L 537.0 284.1 L 546.2 283.4 L 555.3 280.3 L 563.6 279.6 L 562.1 284.9 L 564.4 290.2 L 559.8 297.8 L 556.8 306.9 L 551.5 316.0 L 548.4 317.6 L 542.4 329.0 L 534.8 337.3 L 527.2 344.9 L 518.0 354.0 L 514.2 356.3 L 505.1 364.7 L 496.8 372.3 L 489.9 381.8 L 484.6 386.7 L 478.5 393.6 L 475.5 400.0 L 470.9 408.0 L 469.4 414.8 L 472.4 420.9 L 472.4 429.3 L 474.0 436.9 L 475.5 444.5 L 479.3 447.5 L 481.6 449.0 L 482.3 456.6 L 481.6 467.8 L 482.3 475.6 L 483.1 479.4 L 483.8 483.2 L 477.8 492.4 L 466.4 498.4 L 455.0 505.3 L 451.2 510.6 L 446.6 512.9 L 439.0 519.7 L 439.8 525.0 L 442.8 534.2 L 442.8 542.5 L 443.6 550.9 L 443.6 552.4 L 436.7 557.0 L 429.9 559.6 L 423.8 563.0 L 421.5 566.6 L 423.8 573.3 L 423.8 581.3 L 417.7 588.1 L 409.4 596.5 L 403.3 604.8 L 395.7 611.7 L 385.8 620.0 L 375.2 625.4 L 368.3 627.6 L 362.2 629.2 L 353.1 627.4 L 341.7 629.2 L 331.8 630.7 L 325.8 633.7 L 320.4 632.2 L 314.4 630.3 L 313.6 626.9 L 312.8 622.3 L 309.8 620.0 L 312.8 613.2 L 309.8 604.8 L 302.2 593.4 L 299.2 586.6 L 293.8 576.0 L 288.9 571.8 L 286.2 560.8 L 284.0 544.0 L 282.4 537.2 L 279.4 534.9 L 272.6 522.8 L 265.0 509.1 L 263.4 500.0 L 266.1 484.8 L 269.5 474.1 L 275.6 465.0 L 277.9 452.8 L 274.1 436.1 L 271.8 424.7 L 266.5 414.8 L 263.8 405.7 L 258.9 398.9 L 254.7 395.1 L 249.0 386.0 L 242.2 376.8 L 239.9 373.8 L 242.2 369.2 L 245.2 366.2 L 245.2 361.6 L 248.2 355.2 L 248.2 351.4 L 249.0 347.2 L 247.5 338.8 L 241.4 335.0 L 228.5 335.8 L 220.9 336.6 L 214.8 328.6 L 213.3 326.7 L 208.7 323.6 L 199.6 320.6 L 192.0 321.0 L 182.9 322.9 L 173.8 325.9 L 172.2 327.1 L 166.2 331.2 L 157.8 333.1 L 151.0 330.5 L 143.4 329.0 L 135.0 330.5 L 127.4 331.6 L 115.2 335.8 L 109.2 333.5 L 100.0 327.4 L 91.7 321.4 L 86.4 316.8 L 73.4 304.6 L 69.6 297.0 L 62.8 289.4 L 55.2 279.2 L 46.8 275.0 L 47.6 267.4 L 46.1 264.4 L 40.8 257.5 L 48.4 247.6 L 50.6 240.0 L 52.2 231.7 L 49.1 221.0 L 44.6 210.4 L 48.4 199.8 L 52.2 189.1 L 59.8 179.2 L 64.3 170.1 L 73.4 163.3 L 75.7 156.8 L 86.4 154.2 L 94.7 147.3 L 100.8 138.2 L 99.3 129.8 L 103.8 122.2 L 109.2 116.9 L 116.0 113.9 L 122.1 110.8 L 126.6 101.7 Z" fill="url(#africaPattern)" stroke="none" />
+
+          <!-- Madagascar -->
+          <path d="M 548.4 461.2 L 553.0 468.0 L 556.8 484.8 L 552.2 497.7 L 550.0 506.8 L 542.4 525.0 L 537.0 544.0 L 531.7 558.5 L 518.8 563.8 L 508.2 558.5 L 502.8 538.0 L 503.6 531.1 L 511.2 520.5 L 509.7 509.8 L 508.2 501.5 L 523.4 489.3 L 532.5 483.2 L 538.6 475.6 L 542.4 468.0 Z" fill="#173F2A" fill-opacity="0.06" stroke="#173F2A" stroke-opacity="0.4" stroke-width="1.5" stroke-linejoin="round" />
+          <path d="M 548.4 461.2 L 553.0 468.0 L 556.8 484.8 L 552.2 497.7 L 550.0 506.8 L 542.4 525.0 L 537.0 544.0 L 531.7 558.5 L 518.8 563.8 L 508.2 558.5 L 502.8 538.0 L 503.6 531.1 L 511.2 520.5 L 509.7 509.8 L 508.2 501.5 L 523.4 489.3 L 532.5 483.2 L 538.6 475.6 L 542.4 468.0 Z" fill="url(#africaPattern)" stroke="none" />
+
+          <!-- Project countries (subtle highlight) -->
+          <path d="M 451.2 260.6 L 461.8 256.0 L 467.1 259.0 L 479.3 260.6 L 486.9 266.6 L 496.0 274.2 L 493.0 285.6 L 499.8 286.4 L 501.3 294.0 L 508.2 300.8 L 515.8 304.6 L 537.8 308.4 L 531.0 322.1 L 515.0 331.2 L 500.6 332.0 L 492.2 339.2 L 477.0 339.6 L 463.3 341.9 L 454.2 335.8 L 446.6 335.0 L 442.0 328.2 L 437.5 319.1 L 432.9 308.4 L 434.4 297.0 L 438.2 287.9 L 442.0 279.6 L 447.4 272.7 Z" fill="#C79A3B" fill-opacity="0.16" stroke="#173F2A" stroke-opacity="0.35" stroke-width="0.8" stroke-linejoin="round" pointer-events="none" />
+          <path d="M 398.7 379.9 L 404.8 377.6 L 407.8 376.8 L 431.4 376.8 L 432.9 367.0 L 436.0 360.1 L 439.0 355.6 L 439.8 346.4 L 432.2 337.3 L 423.8 341.1 L 410.9 340.4 L 407.8 342.6 L 408.6 351.8 L 401.8 354.0 L 401.0 357.8 L 398.7 362.4 L 401.0 369.2 L 399.5 373.0 Z" fill="#C79A3B" fill-opacity="0.16" stroke="#173F2A" stroke-opacity="0.35" stroke-width="0.8" stroke-linejoin="round" pointer-events="none" />
+          <path d="M 432.2 337.3 L 439.8 346.4 L 446.6 335.0 L 454.2 335.8 L 463.3 341.9 L 477.0 339.6 L 485.4 339.6 L 492.2 339.2 L 485.4 348.0 L 485.4 376.8 L 489.9 381.8 L 484.6 386.7 L 478.5 393.6 L 475.5 400.0 L 471.7 405.0 L 459.5 392.8 L 447.4 383.7 L 432.2 376.8 L 432.9 367.0 L 436.0 360.1 L 439.0 355.6 Z" fill="#C79A3B" fill-opacity="0.16" stroke="#173F2A" stroke-opacity="0.35" stroke-width="0.8" stroke-linejoin="round" pointer-events="none" />
+          <path d="M 393.4 387.5 L 394.9 382.2 L 398.7 379.9 L 404.8 377.6 L 407.8 377.6 L 408.6 382.2 L 407.8 386.7 L 405.6 387.5 L 401.0 390.5 L 397.2 390.5 Z" fill="#C79A3B" fill-opacity="0.16" stroke="#173F2A" stroke-opacity="0.35" stroke-width="0.8" stroke-linejoin="round" pointer-events="none" />
+          <path d="M 407.8 376.8 L 431.4 376.8 L 447.4 383.7 L 459.5 392.8 L 471.7 405.0 L 470.9 408.0 L 472.4 420.9 L 474.0 436.9 L 479.3 447.5 L 481.6 449.0 L 470.2 452.1 L 466.4 455.1 L 458.8 458.2 L 451.2 458.2 L 443.6 456.6 L 439.0 457.4 L 436.7 454.4 L 436.7 441.4 L 426.8 441.4 L 419.2 438.4 L 409.4 434.6 L 407.8 433.1 L 398.0 414.8 L 398.7 403.4 L 401.8 401.9 L 405.6 396.6 L 405.6 391.3 L 407.8 386.7 L 408.6 382.2 Z" fill="#C79A3B" fill-opacity="0.16" stroke="#173F2A" stroke-opacity="0.35" stroke-width="0.8" stroke-linejoin="round" pointer-events="none" />
+          <path d="M 426.1 441.4 L 431.4 443.0 L 436.7 455.9 L 436.0 464.2 L 439.8 471.8 L 445.8 478.7 L 441.3 487.8 L 442.0 496.9 L 439.0 490.8 L 434.4 488.6 L 436.7 479.4 L 432.2 479.4 L 426.1 475.6 L 424.6 470.3 L 426.8 462.7 L 424.6 452.8 Z" fill="#C79A3B" fill-opacity="0.16" stroke="#173F2A" stroke-opacity="0.35" stroke-width="0.8" stroke-linejoin="round" pointer-events="none" />
+
+          <!-- Great Lakes -->
+          <path d="M 415.4 372.3 L 419.2 367.0 L 427.6 367.7 L 432.2 370.0 L 432.9 376.8 L 430.6 383.7 L 424.6 388.2 L 418.5 388.2 L 415.4 382.2 L 414.7 376.8 Z" fill="#F4EFE3" stroke="#173F2A" stroke-opacity="0.35" stroke-width="0.8" stroke-linejoin="round" pointer-events="none" />
+          <path d="M 396.4 395.1 L 398.7 403.4 L 405.6 419.4 L 410.9 430.0 L 407.8 433.8 L 403.3 426.2 L 398.0 414.8 L 395.7 404.2 Z" fill="#F4EFE3" stroke="#173F2A" stroke-opacity="0.35" stroke-width="0.8" stroke-linejoin="round" pointer-events="none" />
+          <path d="M 436.7 440.7 L 439.0 444.5 L 436.7 452.8 L 439.0 460.4 L 441.3 471.1 L 441.3 478.7 L 438.2 475.6 L 436.0 468.0 L 435.2 457.4 L 434.4 449.8 L 434.4 444.5 Z" fill="#F4EFE3" stroke="#173F2A" stroke-opacity="0.35" stroke-width="0.8" stroke-linejoin="round" pointer-events="none" />
+
+          <!-- Continent label -->
+          <text x="300" y="55" font-family="Fraunces" font-size="22" font-weight="700" fill="#173F2A" fill-opacity="0.25" letter-spacing="8" text-anchor="middle">AFRICA</text>
+
+          <!-- Country markers -->
+          <!-- Ethiopia (NE, near Horn) -->
+          <g class="map-marker" data-country="Ethiopia" data-region="Southern Region" data-population="~15,000 across 10 villages" data-challenge="Severe water access; child malnutrition" data-project="Multi-Village Water + Food Program" data-progress="80" data-funded="$96,000 of $120,000" data-partner="Hawassa Christian Council">
+            <circle class="map-pulse" cx="466.4" cy="315.7" r="8" fill="#C79A3B" fill-opacity="0.5" />
+            <circle class="marker-dot" cx="466.4" cy="315.7" r="6" fill="#C79A3B" stroke="#173F2A" stroke-width="1.5" />
+          </g>
+
+          <!-- Uganda (central-east) -->
+          <g class="map-marker" data-country="Uganda" data-region="Central Region" data-population="~12,000 across 8 villages" data-challenge="Limited clean water and agricultural inputs" data-project="Borehole Wells + Farming Cooperative" data-progress="68" data-funded="$42,000 of $60,000" data-partner="Buganda Community Church">
+            <circle class="map-pulse" cx="421.5" cy="366.6" r="8" fill="#C79A3B" fill-opacity="0.5" />
+            <circle class="marker-dot" cx="421.5" cy="366.6" r="6" fill="#C79A3B" stroke="#173F2A" stroke-width="1.5" />
+          </g>
+
+          <!-- Kenya (east of Uganda, toward Horn) -->
+          <g class="map-marker" data-country="Kenya" data-region="Rift Valley" data-population="~8,500 across 5 villages" data-challenge="Drought-prone; food insecurity for 6 months/year" data-project="Irrigation + Seed Distribution" data-progress="45" data-funded="$28,000 of $62,000" data-partner="Eldoret Christian Fellowship">
+            <circle class="map-pulse" cx="442.0" cy="365.4" r="8" fill="#C79A3B" fill-opacity="0.5" />
+            <circle class="marker-dot" cx="442.0" cy="365.4" r="6" fill="#C79A3B" stroke="#173F2A" stroke-width="1.5" />
+          </g>
+
+          <!-- Rwanda (just south of Uganda) -->
+          <g class="map-marker" data-country="Rwanda" data-region="Northern Province" data-population="~4,800 across 3 villages" data-challenge="Small land plots; need intensive farming training" data-project="Agricultural Training Cooperative" data-progress="22" data-funded="$9,500 of $42,000" data-partner="Musanze Community Church">
+            <circle class="map-pulse" cx="398.7" cy="380.6" r="8" fill="#C79A3B" fill-opacity="0.5" />
+            <circle class="marker-dot" cx="398.7" cy="380.6" r="6" fill="#C79A3B" stroke="#173F2A" stroke-width="1.5" />
+          </g>
+
+          <!-- Tanzania (south of Kenya/Uganda) -->
+          <g class="map-marker" data-country="Tanzania" data-region="Central Highlands" data-population="~6,200 across 4 villages" data-challenge="Water scarcity during dry season" data-project="Water Filtration + Storage" data-progress="100" data-funded="$54,000 of $54,000" data-partner="Dodoma Village Church Network">
+            <circle class="map-pulse" cx="445.5" cy="416.4" r="8" fill="#173F2A" fill-opacity="0.5" />
+            <circle class="marker-dot" cx="445.5" cy="416.4" r="6" fill="#173F2A" stroke="#C79A3B" stroke-width="1.5" />
+          </g>
+
+          <!-- Malawi (further south) -->
+          <g class="map-marker" data-country="Malawi" data-region="Central Region" data-population="~5,400 across 4 villages" data-challenge="Climate-vulnerable farmland" data-project="Drought-Resistant Seeds + Training" data-progress="55" data-funded="$22,000 of $40,000" data-partner="Lilongwe Church Partnership">
+            <circle class="map-pulse" cx="430.6" cy="475.6" r="8" fill="#C79A3B" fill-opacity="0.5" />
+            <circle class="marker-dot" cx="430.6" cy="475.6" r="6" fill="#C79A3B" stroke="#173F2A" stroke-width="1.5" />
+          </g>
+        </svg>
+
+        <div class="mt-4 flex items-center gap-6 text-xs text-forest/60">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-gold border border-forest"></span>
+            <span>Active Project</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-forest border border-gold"></span>
+            <span>Completed</span>
+          </div>
+          <div class="flex items-center gap-2 ml-auto">
+            <i class="fas fa-hand-pointer text-gold/60"></i>
+            <span>Click a marker</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-2 bg-forest text-cream rounded-sm p-8" id="map-info">
+        <div id="info-default">
+          <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-3 inline-block">Community Profile</span>
+          <h3 class="font-display font-bold text-cream text-2xl mb-4">Select a marker on the map</h3>
+          <p class="text-cream/70 text-sm leading-relaxed mb-6">Click any pulsing marker to meet the community, see their needs, and follow the progress of the work happening there.</p>
+          <div class="space-y-3 pt-4 border-t border-cream/15">
+            <div class="flex items-center gap-3 text-cream/70 text-sm">
+              <i class="fas fa-location-dot text-gold w-5"></i><span>6 countries served</span>
+            </div>
+            <div class="flex items-center gap-3 text-cream/70 text-sm">
+              <i class="fas fa-house-flag text-gold w-5"></i><span>34 villages in active partnership</span>
+            </div>
+            <div class="flex items-center gap-3 text-cream/70 text-sm">
+              <i class="fas fa-people-group text-gold w-5"></i><span>~51,900 people impacted</span>
+            </div>
+          </div>
+        </div>
+        <div id="info-content" class="hidden">
+          <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-3 inline-block">Community Profile</span>
+          <h3 id="info-country" class="font-display font-bold text-cream text-3xl mb-1"></h3>
+          <p id="info-region" class="text-cream/60 text-sm mb-6"></p>
+
+          <div class="space-y-4 text-sm">
+            <div>
+              <div class="text-gold text-xs uppercase tracking-wider mb-1">Population Served</div>
+              <div id="info-population" class="text-cream/90"></div>
+            </div>
+            <div>
+              <div class="text-gold text-xs uppercase tracking-wider mb-1">Main Challenge</div>
+              <div id="info-challenge" class="text-cream/90"></div>
+            </div>
+            <div>
+              <div class="text-gold text-xs uppercase tracking-wider mb-1">Current Project</div>
+              <div id="info-project" class="text-cream/90"></div>
+            </div>
+            <div>
+              <div class="text-gold text-xs uppercase tracking-wider mb-1">Funding Progress</div>
+              <div class="flex items-center justify-between text-cream/90 mb-2">
+                <span id="info-funded"></span>
+                <span id="info-progress" class="font-display font-bold text-gold"></span>
+              </div>
+              <div class="h-2 bg-cream/15 rounded-full overflow-hidden">
+                <div id="info-bar" class="h-full bg-gold transition-all duration-700" style="width:0%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="text-gold text-xs uppercase tracking-wider mb-1">Local Partner</div>
+              <div id="info-partner" class="text-cream/90"></div>
+            </div>
+          </div>
+
+          <a href="#donate" class="btn-primary px-6 py-3 rounded-sm font-bold tracking-wide uppercase text-xs mt-8 inline-block w-full text-center">
+            Support This Community
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== STORY ============== -->
+<section id="stories" class="py-24 lg:py-32 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mb-16">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Stories That Restore Hope</span>
+      <h2 class="font-display font-bold text-forest text-4xl md:text-5xl lg:text-6xl leading-[1.05]">
+        Real stories. <span class="italic text-gold">Real</span> people.
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 items-center reveal">
+      <div class="relative">
+        <img src="assets/images/cote/232290.jpg" alt="Amara, a farmer in Uganda" class="w-full h-[600px] object-cover rounded-sm shadow-2xl" loading="lazy" />
+        <div class="absolute top-6 left-6 bg-gold text-forest px-3 py-1.5 rounded-sm text-xs tracking-wider uppercase font-bold">
+          Field Update
+        </div>
+      </div>
+
+      <div>
+        <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-3 inline-block">Meet Amara</span>
+        <h3 class="font-display font-bold text-forest text-3xl md:text-4xl leading-tight mb-6">
+          From surviving to feeding her village.
+        </h3>
+        <div class="space-y-5 text-forest/80 text-lg leading-relaxed">
+          <p>
+            Amara lives with her husband and four children in a rural farming community in central Uganda. Her family had access to land, but for years they lacked the quality seeds, tools, and training needed to make it productive.
+          </p>
+          <p>
+            Through a partnership with the local church, Amara received a starter package of seeds, basic tools, and hands-on agricultural training. Today, her small plot produces enough maize and vegetables to feed her family — with surplus to sell at the local market.
+          </p>
+          <p class="font-display italic text-forest text-xl pt-4 border-l-2 border-gold pl-6">
+            "Now I teach my neighbors what I learned. We are not waiting to be helped — we are growing together."
+          </p>
+        </div>
+        <div class="mt-8 flex items-center gap-6 flex-wrap">
+          <a href="#donate" class="btn-primary px-7 py-3.5 rounded-sm font-bold tracking-wide uppercase text-sm">
+            Help Another Family
+          </a>
+          <a href="#" class="text-gold font-semibold text-sm tracking-wider uppercase border-b border-gold/40 hover:border-gold transition pb-1">
+            Read More Stories
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CLOSING CTA ============== -->
+<section id="donate" class="py-24 lg:py-40 bg-forest relative overflow-hidden">
+  <img src="https://picsum.photos/seed/harvestfieldafrica/1920/1080.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-15" loading="lazy" />
+  <div class="absolute inset-0 bg-gradient-to-b from-forest via-forest/95 to-forest-dark"></div>
+
+  <div class="relative max-w-5xl mx-auto px-5 lg:px-8 text-center">
+    <div class="reveal">
+      <span class="text-gold text-xs tracking-[0.4em] uppercase font-semibold mb-6 inline-block">Your Invitation</span>
+      <h2 class="font-display font-bold text-cream text-4xl md:text-6xl lg:text-7xl leading-[1.05] mb-8">
+        You can change the story of a <span class="italic text-gold">community.</span>
+      </h2>
+      <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 mb-12 text-cream/80 text-lg md:text-xl font-display">
+        <span>Give Water.</span>
+        <span class="text-gold">•</span>
+        <span>Equip Farmers.</span>
+        <span class="text-gold">•</span>
+        <span>Feed Families.</span>
+        <span class="text-gold">•</span>
+        <span>Protect the Vulnerable.</span>
+        <span class="text-gold">•</span>
+        <span>Restore Hope.</span>
+      </div>
+      <p class="text-cream/70 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+        Your generosity can become part of a family's new beginning — in Africa and right here in Texas.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="javascript:void(0)" class="btn-primary px-10 py-5 rounded-sm font-bold tracking-wide uppercase text-base">
+          Donate Now <i class="fas fa-heart ml-2"></i>
+        </a>
+        <a href="javascript:void(0)" class="btn-outline px-10 py-5 rounded-sm font-bold tracking-wide uppercase text-base">
+          Become a Monthly Partner
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="bg-forest-dark text-cream/80 pt-20 pb-8 border-t border-gold/20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div>
+        <a href="#" class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
+            <i class="fas fa-seedling text-forest text-lg"></i>
+          </div>
+          <div class="flex flex-col leading-none">
+            <span class="font-display font-bold text-cream text-lg tracking-wide">HARVEST OF HOPE</span>
+            <span class="text-cream/60 text-[10px] tracking-[0.2em] uppercase mt-0.5">Faith in Action</span>
+          </div>
+        </a>
+        <p class="text-cream/60 text-sm leading-relaxed mb-6">
+          A Texas 501(c)(3) nonprofit Christian ministry serving underserved communities in Africa through clean water, food security, and sustainable agriculture — and serving families in Texas with food pantries, housing & school support, kids programs, advocacy against domestic violence, and care for single mothers.
+        </p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="Instagram"><i class="fab fa-instagram text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="YouTube"><i class="fab fa-youtube text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="Email"><i class="fas fa-envelope text-sm"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-cream text-sm uppercase tracking-wider mb-5">Explore</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#about" class="hover:text-gold transition">About Us</a></li>
+          <li><a href="#what-we-do" class="hover:text-gold transition">What We Do</a></li>
+          <li><a href="#where" class="hover:text-gold transition">Where We Work</a></li>
+          <li><a href="#impact" class="hover:text-gold transition">Our Impact</a></li>
+          <li><a href="#projects" class="hover:text-gold transition">Projects</a></li>
+          <li><a href="#stories" class="hover:text-gold transition">Stories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-cream text-sm uppercase tracking-wider mb-5">Get Involved</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="#donate" class="hover:text-gold transition">Donate</a></li>
+          <li><a href="#" class="hover:text-gold transition">Monthly Giving</a></li>
+          <li><a href="#" class="hover:text-gold transition">Sponsor a Village</a></li>
+          <li><a href="#" class="hover:text-gold transition">Church Partnerships</a></li>
+          <li><a href="#" class="hover:text-gold transition">Corporate Partnerships</a></li>
+          <li><a href="#" class="hover:text-gold transition">Volunteer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-cream text-sm uppercase tracking-wider mb-5">Field Updates</h4>
+        <p class="text-cream/60 text-sm mb-4 leading-relaxed">Receive field stories, prayer requests, and impact reports directly.</p>
+        <form class="space-y-3" id="newsletter-form">
+          <input type="email" placeholder="Your email address" required class="w-full px-4 py-3 bg-cream/5 border border-cream/15 text-cream placeholder-cream/40 text-sm focus:border-gold focus:outline-none rounded-sm" />
+          <button type="submit" class="btn-primary w-full px-4 py-3 rounded-sm font-bold tracking-wide uppercase text-xs">Subscribe</button>
+          <p class="form-msg hidden text-gold text-xs">Thank you — we'll be in touch soon.</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="h-px bg-cream/10 mb-8"></div>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-8 text-sm">
+      <div>
+        <div class="text-cream font-semibold mb-2">Contact</div>
+        <p class="text-cream/60">
+          P.O. Box 4217<br/>
+          Dallas–Fort Worth, TX 75001<br/>
+          <a href="mailto:hello@harvestofhope.org" class="text-gold hover:underline">hello@harvestofhope.org</a>
+        </p>
+      </div>
+      <div>
+        <div class="text-cream font-semibold mb-2">Tax Status</div>
+        <p class="text-cream/60">
+          501(c)(3) Public Charity<br/>
+          EIN available upon request<br/>
+          All gifts tax-deductible
+        </p>
+      </div>
+      <div>
+        <div class="text-cream font-semibold mb-2">Accountability</div>
+        <p class="text-cream/60">
+          <a href="#" class="hover:text-gold block">Financial Transparency</a>
+          <a href="#" class="hover:text-gold block">Annual Reports</a>
+          <a href="#" class="hover:text-gold block">Governance & Policies</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/50">
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="hover:text-gold transition">Privacy Policy</a>
+        <a href="#" class="hover:text-gold transition">Donor Privacy</a>
+        <a href="#" class="hover:text-gold transition">Terms</a>
+        <a href="#" class="hover:text-gold transition">Financial Transparency</a>
+      </div>
+      <div class="font-display italic text-cream/60">
+        Faith in Action. Communities Transformed.
+      </div>
+    </div>
+
+    <div class="mt-6 text-center text-cream/40 text-xs">
+      © 2026 Harvest of Hope Ministry. A Texas 501(c)(3) nonprofit organization.
+    </div>
+  </div>
+</footer>
+
+<!-- Floating mobile donate -->
+<a href="#donate" class="float-donate lg:hidden fixed bottom-6 right-6 z-40 bg-gold text-forest font-bold tracking-wide uppercase text-xs px-5 py-3.5 rounded-sm flex items-center gap-2 shadow-lg">
+  <i class="fas fa-heart"></i> Donate
+</a>
+
+<script>
+  // Mobile menu
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    const icon = mobileToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      const icon = mobileToggle.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    });
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal, .reveal-stagger');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('in-view');
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+  reveals.forEach(el => io.observe(el));
+
+  // Counters
+  const counters = document.querySelectorAll('.counter');
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const duration = 2200;
+        const start = performance.now();
+        function update(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const val = Math.floor(target * eased);
+          el.textContent = val.toLocaleString() + suffix;
+          if (progress < 1) requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+        counterIO.unobserve(el);
+      }
+    });
+  }, { threshold: 0.3 });
+  counters.forEach(c => counterIO.observe(c));
+
+  // Map interaction
+  const markers = document.querySelectorAll('.map-marker');
+  const infoDefault = document.getElementById('info-default');
+  const infoContent = document.getElementById('info-content');
+  markers.forEach(marker => {
+    marker.addEventListener('click', () => {
+      markers.forEach(m => m.classList.remove('active'));
+      marker.classList.add('active');
+
+      infoDefault.classList.add('hidden');
+      infoContent.classList.remove('hidden');
+
+      document.getElementById('info-country').textContent = marker.dataset.country;
+      document.getElementById('info-region').textContent = marker.dataset.region;
+      document.getElementById('info-population').textContent = marker.dataset.population;
+      document.getElementById('info-challenge').textContent = marker.dataset.challenge;
+      document.getElementById('info-project').textContent = marker.dataset.project;
+      document.getElementById('info-funded').textContent = marker.dataset.funded;
+      document.getElementById('info-progress').textContent = marker.dataset.progress + '% Funded';
+      document.getElementById('info-partner').textContent = marker.dataset.partner;
+
+      const progress = parseInt(marker.dataset.progress);
+      const bar = document.getElementById('info-bar');
+      bar.style.width = '0%';
+      setTimeout(() => { bar.style.width = progress + '%'; }, 80);
+    });
+  });
+
+  // Nav scroll shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) nav.classList.add('nav-scrolled');
+    else nav.classList.remove('nav-scrolled');
+  });
+
+  // Newsletter
+  const form = document.getElementById('newsletter-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.querySelector('input').value = '';
+      form.querySelector('.form-msg').classList.remove('hidden');
+    });
+  }
+</script>
+
+</body>
+</html>
+
