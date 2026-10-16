@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -159,9 +160,131 @@
   .impact-card:hover { background-color: rgba(42,92,66,0.25); }
   .impact-card:hover .impact-icon { background-color: rgba(199,154,59,0.25); border-color: rgba(199,154,59,0.6); }
 
+  /* ===== Portrait media carousel (Food & Agriculture) ===== */
+  .fa-carousel { position: relative; max-width: 420px; margin: 0 auto; }
+  .fa-viewport {
+    overflow: hidden;
+    border-radius: 4px;
+    background: #0F2D1F;
+    box-shadow: 0 25px 60px -25px rgba(15,45,31,0.55);
+  }
+  .fa-track {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.16,1,0.3,1);
+    will-change: transform;
+  }
+  .fa-slide { flex: 0 0 100%; min-width: 100%; position: relative; }
+  .fa-media-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    background: #0F2D1F;
+    overflow: hidden;
+  }
+  .fa-media-wrap img,
+  .fa-media-wrap video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+  .fa-slide.is-active img { animation: fa-kenburns 14s ease-in-out infinite alternate; }
+  @keyframes fa-kenburns {
+    0%   { transform: scale(1.02) translate(0,0); }
+    100% { transform: scale(1.12) translate(-1.5%, -1.5%); }
+  }
+  .fa-slide-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(15,45,31,0) 45%, rgba(15,45,31,0.92) 100%);
+    pointer-events: none; z-index: 1;
+  }
+  .fa-slide-caption {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 1.5rem;
+    color: #F7F1E5;
+    z-index: 2;
+  }
+  .fa-slide-tag {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: rgba(199,154,59,0.95);
+    color: #173F2A;
+    font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700;
+    padding: 0.35rem 0.7rem;
+    border-radius: 2px;
+    margin-bottom: 0.7rem;
+  }
+  .fa-slide-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem; font-weight: 700; line-height: 1.15;
+    margin-bottom: 0.4rem;
+  }
+  .fa-slide-desc {
+    font-size: 0.85rem;
+    color: rgba(247,241,229,0.78);
+    line-height: 1.45;
+  }
+  .fa-slide-type {
+    position: absolute; top: 1rem; right: 1rem; z-index: 2;
+    width: 36px; height: 36px;
+    border-radius: 999px;
+    background: rgba(15,45,31,0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #F7F1E5;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+  }
+  .fa-counter {
+    position: absolute; top: 1rem; left: 1rem; z-index: 2;
+    background: rgba(15,45,31,0.7);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #F7F1E5;
+    font-family: 'Fraunces', serif;
+    font-size: 12px;
+    padding: 0.35rem 0.75rem;
+    border-radius: 2px;
+    letter-spacing: 0.1em;
+  }
+  /* Arrows */
+  .fa-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    z-index: 10;
+    width: 48px; height: 48px;
+    border-radius: 999px;
+    background: rgba(247,241,229,0.95);
+    border: 1px solid rgba(23,63,42,0.15);
+    color: #173F2A;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: 0 8px 24px -10px rgba(0,0,0,0.35);
+  }
+  .fa-arrow:hover {
+    background: #C79A3B; border-color: #C79A3B; color: #173F2A;
+    transform: translateY(-50%) scale(1.08);
+  }
+  .fa-arrow:disabled { opacity: 0.35; cursor: not-allowed; transform: translateY(-50%); }
+  .fa-arrow.prev { left: -16px; }
+  .fa-arrow.next { right: -16px; }
+  @media (min-width: 1024px) {
+    .fa-arrow.prev { left: -24px; }
+    .fa-arrow.next { right: -24px; }
+  }
+  /* Dots */
+  .fa-dots { display: flex; justify-content: center; align-items: center; gap: 0.5rem; margin-top: 1.5rem; }
+  .fa-dot {
+    width: 8px; height: 8px; border-radius: 999px;
+    background: rgba(23,63,42,0.2);
+    border: none; cursor: pointer; padding: 0;
+    transition: all .35s cubic-bezier(0.16,1,0.3,1);
+  }
+  .fa-dot.active { width: 28px; background: #C79A3B; }
+  .fa-dot:hover:not(.active) { background: rgba(23,63,42,0.45); }
+
   @media (prefers-reduced-motion: reduce) {
-    .hero-img, .map-pulse, .ripple { animation: none; }
+    .hero-img, .map-pulse, .ripple, .fa-slide.is-active img { animation: none; }
     .reveal, .reveal-stagger > * { transition: none; opacity: 1; transform: none; }
+    .fa-track { transition: none; }
   }
 </style>
 </head>
@@ -175,7 +298,7 @@
         <!-- <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
           <i class="fas fa-seedling text-forest text-lg"></i>
         </div> -->
-        <img src="assets/images/logo.jpeg" style="width:80px;height:auto;">
+        <img src="assets/images/logo.jpeg" style="width:65px;height:auto;border-radius:100px;">
         <div class="flex flex-col leading-none">
           <span class="font-display font-bold text-cream text-lg tracking-wide">Tent of Worship</span>
           <span class="text-cream/60 text-[10px] tracking-[0.2em] uppercase mt-0.5">& Restoration of Souls</span>
@@ -666,6 +789,166 @@
       <p class="font-display italic text-forest text-2xl md:text-3xl leading-relaxed">
         "When a community moves from needing help to feeding themselves through their own harvest, everything changes — for this generation and the next."
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOD & AGRICULTURE IN ACTION (PORTRAIT MEDIA) ============== -->
+<section id="food-agriculture" class="py-24 lg:py-32 bg-cream relative overflow-hidden">
+  <!-- Soft decorative accents -->
+  <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-gold/5 blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-forest/5 blur-3xl pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Left: Copy -->
+      <div class="reveal lg:col-span-5">
+        <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Food &amp; Agriculture in Action</span>
+        <h2 class="font-display font-bold text-forest text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-6">
+          From seed to <span class="italic text-gold">harvest.</span>
+        </h2>
+        <p class="text-forest/75 text-lg leading-relaxed mb-5">
+          Sustainable agriculture is the long-term answer to hunger. We walk with farmers from the first handful of seeds to a flourishing harvest — providing tools, training, irrigation, and the dignity of feeding their own families.
+        </p>
+        <p class="text-forest/70 text-base leading-relaxed mb-8">
+          Swipe through moments from the field: hands in the soil, women leading cooperatives, children carrying fresh produce home, and the quiet pride of a harvest earned. Each portrait frame is a story — a family, a season, a step toward self-sufficiency.
+        </p>
+
+        <div class="grid grid-cols-3 gap-4 mb-8">
+          <div class="border-l-2 border-gold/60 pl-3">
+            <div class="font-display text-forest text-2xl font-bold">850+</div>
+            <div class="text-forest/60 text-[11px] uppercase tracking-wider">Farmers Equipped</div>
+          </div>
+          <div class="border-l-2 border-gold/60 pl-3">
+            <div class="font-display text-forest text-2xl font-bold">1,500+</div>
+            <div class="text-forest/60 text-[11px] uppercase tracking-wider">Acres Cultivated</div>
+          </div>
+          <div class="border-l-2 border-gold/60 pl-3">
+            <div class="font-display text-forest text-2xl font-bold">6</div>
+            <div class="text-forest/60 text-[11px] uppercase tracking-wider">Nations Served</div>
+          </div>
+        </div>
+
+        <a href="#donate" class="btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-sm font-bold tracking-wide uppercase text-sm">
+          Plant a Season of Hope
+          <i class="fas fa-arrow-right text-xs"></i>
+        </a>
+      </div>
+
+      <!-- Right: Portrait (9:16) media carousel -->
+      <div class="reveal lg:col-span-7">
+        <div class="fa-carousel" id="fa-carousel" aria-roledescription="carousel" aria-label="Food and agriculture field moments">
+          <div class="fa-viewport">
+            <div class="fa-track" id="fa-track">
+
+              <!-- Slide 1 — Video -->
+              <div class="fa-slide is-active" data-type="video" role="group" aria-roledescription="slide" aria-label="1 of 6">
+                <div class="fa-media-wrap">
+                  <video muted loop playsinline preload="metadata" poster="assets/images/togo/232333.webp" aria-label="Video of agricultural work in the field">
+                    <source src="assets/images/agric/video_1.mp4" type="video/mp4">
+                  </video>
+                  <div class="fa-slide-overlay"></div>
+                </div>
+                <div class="fa-counter">01 / 05</div>
+                <div class="fa-slide-type" title="Video"><i class="fas fa-play"></i></div>
+                <div class="fa-slide-caption">
+                  <span class="fa-slide-tag"><i class="fas fa-seedling"></i> Sowing</span>
+                  <div class="fa-slide-title">Seeds of a new season</div>
+                  <div class="fa-slide-desc">Quality, climate-suited seeds placed into the hands of farmers ready to plant a future.</div>
+                </div>
+              </div>
+
+              <div class="fa-slide is-active" data-type="video" role="group" aria-roledescription="slide" aria-label="1 of 6">
+                <div class="fa-media-wrap">
+                  <video muted loop playsinline preload="metadata" poster="assets/images/togo/232333.webp" aria-label="Video of agricultural work in the field">
+                    <source src="assets/images/agric/video_2.mp4" type="video/mp4">
+                  </video>
+                  <div class="fa-slide-overlay"></div>
+                </div>
+                <div class="fa-counter">02 / 05</div>
+                <div class="fa-slide-type" title="Video"><i class="fas fa-play"></i></div>
+                <div class="fa-slide-caption">
+                  <span class="fa-slide-tag"><i class="fas fa-seedling"></i> Sowing</span>
+                  <div class="fa-slide-title">Seeds of a new season</div>
+                  <div class="fa-slide-desc">Quality, climate-suited seeds placed into the hands of farmers ready to plant a future.</div>
+                </div>
+              </div>
+
+              <!-- Slide 3 — Image -->
+              <div class="fa-slide" data-type="image" role="group" aria-roledescription="slide" aria-label="3 of 6">
+                <div class="fa-media-wrap">
+                  <img src="assets/images/agric/image_1.jpeg" alt="Food distribution" loading="lazy" />
+                  <div class="fa-slide-overlay"></div>
+                </div>
+                <div class="fa-counter">03 / 05</div>
+                <div class="fa-slide-type" title="Photo"><i class="fas fa-camera"></i></div>
+                <div class="fa-slide-caption">
+                  <span class="fa-slide-tag"><i class="fas fa-wheat-awn"></i> Harvest</span>
+                  <div class="fa-slide-title">Today's harvest, tomorrow's meal</div>
+                  <div class="fa-slide-desc">Food assistance bridges the gap while farmers build toward lasting self-sufficiency.</div>
+                </div>
+              </div>
+
+              <!-- Slide 4 — Image -->
+              <div class="fa-slide" data-type="image" role="group" aria-roledescription="slide" aria-label="4 of 6">
+                <div class="fa-media-wrap">
+                  <img src="assets/images/agric/image_2.jpeg" alt="A mother and her children" loading="lazy" />
+                  <div class="fa-slide-overlay"></div>
+                </div>
+                <div class="fa-counter">04 / 05</div>
+                <div class="fa-slide-type" title="Photo"><i class="fas fa-camera"></i></div>
+                <div class="fa-slide-caption">
+                  <span class="fa-slide-tag"><i class="fas fa-people-group"></i> Community</span>
+                  <div class="fa-slide-title">Families fed, dignity preserved</div>
+                  <div class="fa-slide-desc">Mothers and children receive nutritious food as part of long-term family development.</div>
+                </div>
+              </div>
+
+              <!-- Slide 5 — Image -->
+              <div class="fa-slide" data-type="image" role="group" aria-roledescription="slide" aria-label="5 of 6">
+                <div class="fa-media-wrap">
+                  <img src="assets/images/agric/image_3.jpeg" alt="Water project supporting agriculture" loading="lazy" />
+                  <div class="fa-slide-overlay"></div>
+                </div>
+                <div class="fa-counter">05 / 05</div>
+                <div class="fa-slide-type" title="Photo"><i class="fas fa-camera"></i></div>
+                <div class="fa-slide-caption">
+                  <span class="fa-slide-tag"><i class="fas fa-droplet"></i> Irrigation</span>
+                  <div class="fa-slide-title">Water that wakes the soil</div>
+                  <div class="fa-slide-desc">Sustainable irrigation extends the growing season well beyond the rains.</div>
+                </div>
+              </div>
+
+              
+              <!-- <div class="fa-slide" data-type="image" role="group" aria-roledescription="slide" aria-label="6 of 6">
+                <div class="fa-media-wrap">
+                  <img src="assets/images/togo/232327.webp" alt="Community gathering after harvest" loading="lazy" />
+                  <div class="fa-slide-overlay"></div>
+                </div>
+                <div class="fa-counter">06 / 06</div>
+                <div class="fa-slide-type" title="Photo"><i class="fas fa-camera"></i></div>
+                <div class="fa-slide-caption">
+                  <span class="fa-slide-tag"><i class="fas fa-hands-holding-child"></i> Generational</span>
+                  <div class="fa-slide-title">A harvest that outlives us</div>
+                  <div class="fa-slide-desc">When a community feeds itself, the next generation inherits hope, not hunger.</div>
+                </div>
+              </div> -->
+
+            </div>
+          </div>
+
+          <!-- Arrows -->
+          <button class="fa-arrow prev" id="fa-prev" aria-label="Previous slide" type="button">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="fa-arrow next" id="fa-next" aria-label="Next slide" type="button">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+
+          <!-- Dots -->
+          <div class="fa-dots" id="fa-dots" role="tablist" aria-label="Carousel navigation"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1233,6 +1516,136 @@
       form.querySelector('.form-msg').classList.remove('hidden');
     });
   }
+
+  // ===== Portrait media carousel (Food & Agriculture) =====
+  (function() {
+    const carousel = document.getElementById('fa-carousel');
+    if (!carousel) return;
+    const track = document.getElementById('fa-track');
+    const slides = Array.from(track.querySelectorAll('.fa-slide'));
+    const prevBtn = document.getElementById('fa-prev');
+    const nextBtn = document.getElementById('fa-next');
+    const dotsContainer = document.getElementById('fa-dots');
+    const viewport = carousel.querySelector('.fa-viewport');
+    const total = slides.length;
+    let current = 0;
+    let autoplayTimer = null;
+    const AUTOPLAY_MS = 6000;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Build dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'fa-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+    const dots = Array.from(dotsContainer.querySelectorAll('.fa-dot'));
+
+    function update() {
+      track.style.transform = `translateX(-${current * 100}%)`;
+      slides.forEach((s, i) => s.classList.toggle('is-active', i === current));
+      dots.forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+        d.setAttribute('aria-selected', i === current ? 'true' : 'false');
+      });
+      // Play only the active video; pause and rewind others
+      slides.forEach((slide, i) => {
+        const video = slide.querySelector('video');
+        if (!video) return;
+        if (i === current) {
+          const p = video.play();
+          if (p && typeof p.catch === 'function') p.catch(() => {});
+        } else {
+          video.pause();
+          try { video.currentTime = 0; } catch (e) {}
+        }
+      });
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+    }
+
+    function goTo(i) {
+      current = Math.max(0, Math.min(total - 1, i));
+      update();
+      restartAutoplay();
+    }
+    function next() { goTo(current + 1); }
+    function prev() { goTo(current - 1); }
+
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
+
+    // Keyboard navigation when carousel is focused
+    carousel.setAttribute('tabindex', '0');
+    carousel.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); prev(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+    });
+
+    // Touch / swipe support
+    let touchStartX = 0, touchDeltaX = 0, isSwiping = false;
+    viewport.addEventListener('touchstart', (e) => {
+      touchStartX = e.touches[0].clientX;
+      touchDeltaX = 0;
+      isSwiping = true;
+      pauseAutoplay();
+    }, { passive: true });
+    viewport.addEventListener('touchmove', (e) => {
+      if (!isSwiping) return;
+      touchDeltaX = e.touches[0].clientX - touchStartX;
+    }, { passive: true });
+    viewport.addEventListener('touchend', () => {
+      if (!isSwiping) return;
+      if (Math.abs(touchDeltaX) > 45) {
+        if (touchDeltaX < 0) next(); else prev();
+      }
+      isSwiping = false;
+      touchDeltaX = 0;
+      restartAutoplay();
+    });
+
+    // Autoplay (only when in view & motion allowed)
+    function startAutoplay() {
+      if (autoplayTimer || reducedMotion) return;
+      autoplayTimer = setInterval(() => {
+        if (current >= total - 1) goTo(0);
+        else next();
+      }, AUTOPLAY_MS);
+    }
+    function pauseAutoplay() {
+      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+    }
+    function restartAutoplay() {
+      pauseAutoplay();
+      startAutoplay();
+    }
+    if (!reducedMotion) {
+      const carouselIO = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) startAutoplay();
+          else pauseAutoplay();
+        });
+      }, { threshold: 0.4 });
+      carouselIO.observe(carousel);
+
+      // Pause on hover (desktop)
+      carousel.addEventListener('mouseenter', pauseAutoplay);
+      carousel.addEventListener('mouseleave', startAutoplay);
+
+      // Pause when tab is hidden
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) pauseAutoplay();
+        else restartAutoplay();
+      });
+    }
+
+    // Initial paint
+    update();
+  })();
 </script>
 
 </body>
