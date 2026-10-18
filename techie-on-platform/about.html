@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Techieon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-dark': '#0B2E1F',
+            'brand-darker': '#071F15',
+            'brand-lime': '#C8F060',
+            'brand-yellow': '#D4F06A',
+            'brand-green': '#1A4D35',
+            'brand-purple': '#E8D5F5',
+            'brand-purple-dark': '#6B3FA0',
+            'sponsor-purple': '#2D1B4E',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .nav-pill { background: rgba(255,255,255,0.12); }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-full bg-brand-lime/20 flex items-center justify-center border border-brand-lime/40">
+            <svg class="w-5 h-5 text-brand-lime" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+          </div>
+          <span class="font-semibold text-lg tracking-tight hidden sm:inline">techieon</span>
+        </a>
+
+        <nav class="hidden md:flex items-center">
+          <div class="nav-pill rounded-full px-1.5 py-1.5 flex items-center gap-1">
+            <a href="index.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white text-sm font-medium">Home</a>
+            <a href="courses.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white text-sm font-medium">Courses</a>
+            <a href="solutions.html" class="px-4 py-1.5 rounded-full text-white/90 hover:text-white text-sm font-medium">Solutions</a>
+            <a href="about.html" class="px-4 py-1.5 rounded-full bg-white text-brand-dark text-sm font-medium">About</a>
+          </div>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="#" class="text-sm font-medium text-white/90 hover:text-white hidden sm:inline">Sign in</a>
+          <a href="index.html#scholarship" class="bg-brand-lime text-brand-dark text-sm font-semibold px-4 py-2 rounded-lg hover:bg-brand-yellow transition">
+            Apply For Scholarship
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 pb-4">
+      <div class="flex flex-col gap-1 pt-3">
+        <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-white/90">Home</a>
+        <a href="courses.html" class="px-3 py-2 rounded-lg text-sm font-medium text-white/90">Courses</a>
+        <a href="solutions.html" class="px-3 py-2 rounded-lg text-sm font-medium text-white/90">Solutions</a>
+        <a href="about.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-medium">About</a>
+        <a href="#" class="px-3 py-2 rounded-lg text-sm font-medium text-white/90">Sign in</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="bg-brand-dark text-white relative overflow-hidden pt-16 md:pt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="max-w-3xl">
+        <p class="text-brand-lime text-sm font-semibold tracking-wide uppercase mb-4">About TechieOnPlatform</p>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+          Building Digital Solutions.<br />
+          <span class="text-brand-lime">Building the Future Workforce.</span>
+        </h1>
+        <p class="mt-6 text-base sm:text-lg text-white/75 leading-relaxed max-w-2xl">
+          TechieOnPlatform is a technology and digital skills platform committed to empowering individuals, businesses, and organizations through innovative digital solutions and practical technology training.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BRIDGE SECTION ========== -->
+  <section class="bg-white py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
+            Bridging skills and real-world opportunity
+          </h2>
+          <p class="mt-5 text-gray-600 leading-relaxed">
+            We equip individuals with industry-relevant knowledge while helping businesses leverage technology to grow, innovate, and compete in the digital economy.
+          </p>
+          <p class="mt-4 text-gray-600 leading-relaxed">
+            From website and mobile application development to AI-powered solutions, digital skills training, and scholarship programmes, we create opportunities that drive sustainable growth and digital transformation.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="rounded-2xl overflow-hidden shadow-xl">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=700&h=500&fit=crop"
+              alt="Team collaborating"
+              class="w-full h-72 sm:h-80 object-cover"
+            />
+          </div>
+          <div class="absolute -bottom-4 -left-4 bg-brand-lime text-brand-dark font-bold text-sm px-4 py-2 rounded-xl shadow-lg">
+            500M+ lives to empower
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MISSION + VISION ========== -->
+  <section class="bg-brand-dark text-white py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-16">
+        <div>
+          <span class="inline-block text-brand-lime text-xs font-semibold tracking-wider uppercase mb-3">Mission</span>
+          <h2 class="text-2xl font-bold leading-snug">
+            Empower 500 million individuals and businesses
+          </h2>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            with the digital skills, innovative solutions, and opportunities needed to thrive in the digital age.
+          </p>
+        </div>
+        <div>
+          <span class="inline-block text-brand-lime text-xs font-semibold tracking-wider uppercase mb-3">Vision</span>
+          <h2 class="text-2xl font-bold leading-snug">
+            A leading platform for digital innovation
+          </h2>
+          <p class="mt-4 text-white/70 leading-relaxed">
+            talent development, and technology-driven business growth — creating a future where everyone can access the skills and solutions needed to succeed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CORE VALUES ========== -->
+  <section class="bg-gray-50 py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Our Core Values</h2>
+        <p class="mt-3 text-gray-500 max-w-lg mx-auto">The principles that guide every programme, partnership, and product we build.</p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8 border border-gray-100">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-dark text-brand-lime font-bold flex items-center justify-center text-lg">A</div>
+          <div>
+            <h3 class="font-bold text-gray-900 text-lg">Accessibility</h3>
+            <p class="mt-1 text-gray-600 leading-relaxed">Making digital education and technology opportunities accessible to more people through training and scholarship programmes.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8 border border-gray-100">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-dark text-brand-lime font-bold flex items-center justify-center text-lg">I</div>
+          <div>
+            <h3 class="font-bold text-gray-900 text-lg">Innovation</h3>
+            <p class="mt-1 text-gray-600 leading-relaxed">Building creative, practical, and technology-driven solutions that solve real-world problems.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8 border border-gray-100">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-dark text-brand-lime font-bold flex items-center justify-center text-lg">E</div>
+          <div>
+            <h3 class="font-bold text-gray-900 text-lg">Excellence</h3>
+            <p class="mt-1 text-gray-600 leading-relaxed">Delivering quality training and digital solutions that meet professional standards.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8 border border-gray-100">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-dark text-brand-lime font-bold flex items-center justify-center text-lg">C</div>
+          <div>
+            <h3 class="font-bold text-gray-900 text-lg">Collaboration</h3>
+            <p class="mt-1 text-gray-600 leading-relaxed">Partnering with businesses, educational institutions, and organizations to expand opportunities and create meaningful impact.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-8 border border-gray-100">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-brand-dark text-brand-lime font-bold flex items-center justify-center text-lg">E</div>
+          <div>
+            <h3 class="font-bold text-gray-900 text-lg">Empowerment</h3>
+            <p class="mt-1 text-gray-600 leading-relaxed">Equipping individuals with valuable digital skills and connecting talent with opportunities for career and business growth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHAT WE DO ========== -->
+  <section class="bg-white py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">What We Do</h2>
+        <p class="mt-3 text-gray-500 max-w-lg mx-auto">Five pillars that power everything at TechieOnPlatform.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="relative bg-brand-dark text-white rounded-2xl p-7 overflow-hidden">
+          <span class="text-5xl font-extrabold text-white/10 absolute top-4 right-5">01</span>
+          <h3 class="relative font-bold text-lg">Digital Solutions</h3>
+          <p class="relative mt-3 text-sm text-white/70 leading-relaxed">
+            Website development, mobile applications, AI agents, chatbots, and business automation.
+          </p>
+        </div>
+
+        <div class="relative bg-brand-dark text-white rounded-2xl p-7 overflow-hidden">
+          <span class="text-5xl font-extrabold text-white/10 absolute top-4 right-5">02</span>
+          <h3 class="relative font-bold text-lg">Technology Training</h3>
+          <p class="relative mt-3 text-sm text-white/70 leading-relaxed">
+            Practical programmes in software development, product design, cybersecurity, data analytics, and more.
+          </p>
+        </div>
+
+        <div class="relative bg-brand-dark text-white rounded-2xl p-7 overflow-hidden">
+          <span class="text-5xl font-extrabold text-white/10 absolute top-4 right-5">03</span>
+          <h3 class="relative font-bold text-lg">Scholarship Programmes</h3>
+          <p class="relative mt-3 text-sm text-white/70 leading-relaxed">
+            Collaborating with organizations and partners to expand access to digital skills education.
+          </p>
+        </div>
+
+        <div class="relative bg-brand-dark text-white rounded-2xl p-7 overflow-hidden">
+          <span class="text-5xl font-extrabold text-white/10 absolute top-4 right-5">04</span>
+          <h3 class="relative font-bold text-lg">Talent Development</h3>
+          <p class="relative mt-3 text-sm text-white/70 leading-relaxed">
+            Preparing individuals for employment, freelancing, entrepreneurship, and the evolving digital workplace.
+          </p>
+        </div>
+
+        <div class="relative bg-brand-lime text-brand-dark rounded-2xl p-7 overflow-hidden sm:col-span-2 lg:col-span-1">
+          <span class="text-5xl font-extrabold text-brand-dark/10 absolute top-4 right-5">05</span>
+          <h3 class="relative font-bold text-lg">Corporate Training</h3>
+          <p class="relative mt-3 text-sm text-brand-dark/80 leading-relaxed">
+            Helping businesses and institutions build digital capacity through customized training and technology solutions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMMITMENT BANNER ========== -->
+  <section class="bg-[#C8F060] py-14 md:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-dark leading-tight">
+        Our Commitment
+      </h2>
+      <p class="mt-5 text-brand-dark/80 leading-relaxed">
+        We believe technology creates greater impact when people have the skills to use it. We are committed to developing digital talent, delivering effective technology solutions, and building partnerships that create lasting value for individuals, businesses, and communities.
+      </p>
+      <p class="mt-6 font-semibold text-brand-dark">
+        TechieOnPlatform — Building Digital Solutions. Building the Future Workforce.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="courses.html" class="inline-flex items-center bg-brand-dark text-white font-semibold px-6 py-3 rounded-lg hover:bg-brand-green transition text-sm">
+          Explore Courses
+        </a>
+        <a href="index.html#scholarship" class="inline-flex items-center border-2 border-brand-dark text-brand-dark font-semibold px-6 py-3 rounded-lg hover:bg-brand-dark hover:text-white transition text-sm">
+          Apply For Scholarship
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHATSAPP COMMUNITY ========== -->
+  <section class="bg-brand-dark py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#1A4D35] rounded-2xl px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <span class="font-semibold text-white text-sm sm:text-base">Join Our WhatsApp Community</span>
+        </div>
+        <a href="#" class="bg-brand-lime text-brand-dark font-semibold px-5 py-2.5 rounded-lg hover:bg-brand-yellow transition text-sm whitespace-nowrap">
+          Join Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-brand-darker text-white pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+        <div>
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <div class="w-9 h-9 rounded-full bg-brand-lime/20 flex items-center justify-center border border-brand-lime/40">
+              <svg class="w-5 h-5 text-brand-lime" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            </div>
+            <span class="font-semibold text-lg">techieon</span>
+          </a>
+          <p class="text-sm text-white/60 leading-relaxed max-w-xs">
+            To empower 500 million individuals and businesses with the digital skills, innovative solutions, and opportunities needed to thrive in the digital age.
+          </p>
+          <div class="flex gap-3 mt-5">
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition" aria-label="Facebook">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition" aria-label="LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition" aria-label="YouTube">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-white/50 mb-4">Service</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="index.html" class="text-white/80 hover:text-white transition">Home</a></li>
+            <li><a href="courses.html" class="text-white/80 hover:text-white transition">Courses</a></li>
+            <li><a href="solutions.html" class="text-white/80 hover:text-white transition">Solutions</a></li>
+            <li><a href="about.html" class="text-white/80 hover:text-white transition">About</a></li>
+            <li><a href="#" class="text-white/80 hover:text-white transition">Sign in</a></li>
+            <li><a href="index.html#scholarship" class="text-white/80 hover:text-white transition">Apply For Scholarship</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-white/50 mb-4">Contact Us</h4>
+          <ul class="space-y-2.5 text-sm text-white/80">
+            <li><a href="mailto:info@techieonplatform.com" class="hover:text-white transition">info@techieonplatform.com</a></li>
+            <li><a href="tel:+2348104428395" class="hover:text-white transition">08104428395</a></li>
+            <li>No 5, Bonojo Eleruku Ijebu ode</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-6 text-center text-xs text-white/40">
+        All Rights Reserved © 2026
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --- Mobile menu toggle ---
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

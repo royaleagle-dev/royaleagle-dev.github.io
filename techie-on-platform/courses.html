@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses — Techieon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-dark': '#0B2E1F',
+            'brand-darker': '#071F15',
+            'brand-lime': '#C8F060',
+            'brand-yellow': '#D4F06A',
+            'brand-green': '#1A4D35',
+            'brand-purple': '#E8D5F5',
+            'brand-purple-dark': '#6B3FA0',
+            'sponsor-purple': '#2D1B4E',
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .nav-pill { background: rgba(255,255,255,0.95); }
+    .hero-img-frame {
+      border: 2px solid rgba(200, 240, 96, 0.45);
+      border-radius: 1.25rem;
+    }
+    /* Filter dropdown */
+    .filter-dropdown { display: none; }
+    .filter-dropdown.open { display: block; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-brand-dark text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-full bg-brand-lime/20 flex items-center justify-center border border-brand-lime/40">
+            <svg class="w-5 h-5 text-brand-lime" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+            </svg>
+          </div>
+          <span class="font-semibold text-lg tracking-tight hidden sm:inline">techieon</span>
+        </a>
+
+        <!-- Center Nav -->
+        <nav class="hidden md:flex items-center">
+          <div class="nav-pill rounded-full px-1.5 py-1.5 flex items-center gap-1">
+            <a href="index.html" class="px-4 py-1.5 rounded-full text-brand-dark/80 hover:text-brand-dark text-sm font-medium">Home</a>
+            <a href="courses.html" class="px-4 py-1.5 rounded-full text-brand-dark text-sm font-semibold underline underline-offset-4 decoration-2">Courses</a>
+            <a href="index.html#solutions" class="px-4 py-1.5 rounded-full text-brand-dark/80 hover:text-brand-dark text-sm font-medium">Solutions</a>
+            <a href="index.html#about" class="px-4 py-1.5 rounded-full text-brand-dark/80 hover:text-brand-dark text-sm font-medium">About</a>
+          </div>
+        </nav>
+
+        <!-- Right actions -->
+        <div class="flex items-center gap-3">
+          <a href="#" class="text-sm font-medium text-white/90 hover:text-white hidden sm:inline">Sign in</a>
+          <a href="index.html#scholarship" class="bg-brand-dark border border-white/30 text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-brand-green transition">
+            Apply For Scholarship
+          </a>
+          <!-- Mobile menu button -->
+          <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-white/10" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 pb-4">
+      <div class="flex flex-col gap-1 pt-3">
+        <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-white/90">Home</a>
+        <a href="courses.html" class="px-3 py-2 rounded-lg bg-white/10 text-sm font-medium">Courses</a>
+        <a href="index.html#solutions" class="px-3 py-2 rounded-lg text-sm font-medium text-white/90">Solutions</a>
+        <a href="index.html#about" class="px-3 py-2 rounded-lg text-sm font-medium text-white/90">About</a>
+        <a href="#" class="px-3 py-2 rounded-lg text-sm font-medium text-white/90">Sign in</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="bg-brand-dark text-white relative overflow-hidden pt-16 md:pt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <!-- Left content -->
+        <div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight">
+            Build the global career<br />you were made for
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-white/70 max-w-md">
+            We gives you a path to keep growing as work changes around you.
+          </p>
+        </div>
+
+        <!-- Right images -->
+        <div class="relative flex justify-center lg:justify-end gap-4 sm:gap-6">
+          <img src="assets/images/courses_hero.png" class="min-w-[400px]">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SEARCH + FILTER ========== -->
+  <section class="bg-white border-b border-gray-100 sticky top-16 md:top-20 z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 items-stretch sm:items-center">
+        <!-- Search -->
+        <div class="relative flex-1 max-w-xl">
+          <svg class="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input
+            id="course-search"
+            type="search"
+            placeholder="Search"
+            class="w-full pl-11 pr-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-dark/20 focus:border-brand-dark transition"
+          />
+        </div>
+
+        <!-- Filter by -->
+        <div class="relative">
+          <button
+            id="filter-btn"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-gray-200 text-sm font-medium text-gray-700 hover:bg-gray-50 transition whitespace-nowrap"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"/>
+            </svg>
+            Filter by
+            <svg class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+
+          <!-- Filter dropdown -->
+          <div id="filter-dropdown" class="filter-dropdown absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-100 py-2 z-50">
+            <button class="filter-option w-full text-left px-4 py-2 text-sm hover:bg-gray-50 font-medium text-brand-dark" data-category="all">All Categories</button>
+            <button class="filter-option w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700" data-category="technology">Technology & Development</button>
+            <button class="filter-option w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700" data-category="design">Design & Creative Media</button>
+            <button class="filter-option w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700" data-category="ai">Artificial Intelligence and Management</button>
+            <button class="filter-option w-full text-left px-4 py-2 text-sm hover:bg-gray-50 text-gray-700" data-category="data">Data and others</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COURSES GRID ========== -->
+  <main class="bg-gray-50/50 py-10 md:py-7">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+      <!-- Technology & Development -->
+      <section class="course-category" data-category="technology">
+        <h2 class="text-xl font-bold text-gray-900 mb-5">Technology & Development</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Front End -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Front End Development" data-desc="Learn HTML, CSS, JavaScript, responsive design, and React to build attractive, interactive websites that work on mobile phones, tablets, and computers.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_1.png" alt="Front End Development" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Front End Development</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Learn HTML, CSS, JavaScript, responsive design, and React to build attractive, interactive websites that work on mobile phones, tablets, and computers.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Back End -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Back End Development" data-desc="Learn server-side programming, databases, APIs, authentication, and application logic using technologies such as Node.js, Python, and SQL.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_1.png" alt="Back End Development" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Back End Development</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Learn server-side programming, databases, APIs, authentication, and application logic using technologies such as Node.js, Python, and SQL.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Cybersecurity -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Cybersecurity" data-desc="Understand cyber threats, network security, ethical hacking fundamentals, vulnerability assessment, security monitoring, and incident response in authorised environments.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_1.png" alt="Cybersecurity" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Cybersecurity</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Understand cyber threats, network security, ethical hacking fundamentals, vulnerability assessment, security monitoring, and incident response in authorised environments.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Mobile App -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Mobile App Development" data-desc="Learn to create Android and iOS applications using Flutter, React Native, or native development technologies.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_1.png" alt="Mobile App Development" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Mobile App Development</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Learn to create Android and iOS applications using Flutter, React Native, or native development technologies.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Design & Creative Media -->
+      <section class="course-category" data-category="design">
+        <h2 class="text-xl font-bold text-gray-900 mb-5">Design & Creative Media</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Video Editing -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Video Editing & Motion Graphics" data-desc="Learn video cutting, transitions, audio editing, colour correction, subtitles, storytelling, animation, and promotional video production using Premiere Pro, CapCut, or After Effects.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_2.png" alt="Video Editing" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Video Editing & Motion Graphics</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Learn video cutting, transitions, audio editing, colour correction, subtitles, storytelling, animation, and promotional video production using Premiere Pro, CapCut, or After Effects.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- UI/UX -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="UI/UX Design & Product Design" data-desc="Learn user research, user journeys, wireframing, prototyping, usability testing and interface design with Figma. Develop digital products based on user needs.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_3.png" alt="UI/UX Design" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">UI/UX Design & Product Design</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Learn user research, user journeys, wireframing, prototyping, usability testing and interface design with Figma. Develop digital products based on user needs.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Graphic Design -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Graphic Design & Branding" data-desc="Master layout, typography, colour theory, branding, logo creation, flyers, posters, and social-media graphics using tools such as Photoshop, Illustrator, and Canva.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_4.png" alt="Graphic Design" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Graphic Design & Branding</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Master layout, typography, colour theory, branding, logo creation, flyers, posters, and social-media graphics using tools such as Photoshop, Illustrator, and Canva.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Social Media Marketing -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Social Media Marketing" data-desc="Cinematography is a valuable skill in the digital age, offering opportunities for storytelling, creativity, and career prospects in various digital platforms and industries.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_5.png" alt="Social Media Marketing" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Social Media Marketing</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Cinematography is a valuable skill in the digital age, offering opportunities for storytelling, creativity, and career prospects in various digital platforms and industries.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Artificial Intelligence and Management -->
+      <section class="course-category" data-category="ai">
+        <h2 class="text-xl font-bold text-gray-900 mb-5">Artificial Intelligence and Management</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- AI Agents -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="AI Agents & Chatbot" data-desc="Build AI-powered chatbots and assistants for customer support, automation, sales, and business operations. Learn prompting, knowledge bases, tool integration, and workflow design.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_2.png" alt="AI Agents" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">AI Agents & Chatbot</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Build AI-powered chatbots and assistants for customer support, automation, sales, and business operations. Learn prompting, knowledge bases, tool integration, and workflow design.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- DevOps -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="DevOps & Cloud Engineering" data-desc="Learn Git, Linux, CI/CD pipelines, Docker, deployment automation, infrastructure management, and application monitoring.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_3.png" alt="DevOps" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">DevOps & Cloud Engineering</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Learn Git, Linux, CI/CD pipelines, Docker, deployment automation, infrastructure management, and application monitoring.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Product Management -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Product Management" data-desc="Learn product discovery, customer research, product roadmaps, requirements, prioritisation, metrics, and collaboration with design and engineering teams.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_4.png" alt="Product Management" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Product Management</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Learn product discovery, customer research, product roadmaps, requirements, prioritisation, metrics, and collaboration with design and engineering teams.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Cloud Computing -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Cloud Computing" data-desc="Learn cloud infrastructure, storage, networking, identity management, deployment, and monitoring with AWS, Microsoft Azure, or Google Cloud.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_5.png" alt="Cloud Computing" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Cloud Computing</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Learn cloud infrastructure, storage, networking, identity management, deployment, and monitoring with AWS, Microsoft Azure, or Google Cloud.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Data and others -->
+      <section class="course-category" data-category="data">
+        <h2 class="text-xl font-bold text-gray-900 mb-5">Data and others</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Data Analytics -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Data Analytics" data-desc="Learn data cleaning, analysis, visualisation, and reporting using Excel, SQL, Python, and Power BI to support business decisions.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_2.png" alt="Data Analytics" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Data Analytics</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Learn data cleaning, analysis, visualisation, and reporting using Excel, SQL, Python, and Power BI to support business decisions.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Data Science -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Data Science" data-desc="Explore statistics, Python, exploratory data analysis, predictive modelling and machine learning to solve complex problems with data.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_3.png" alt="Data Science" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Data Science</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Explore statistics, Python, exploratory data analysis, predictive modelling and machine learning to solve complex problems with data.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Virtual Assistance -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Virtual Assistance" data-desc="Develop skills in email and calendar management, online research, data entry, document preparation, customer communication and remote-work tools.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_4.png" alt="Virtual Assistance" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Virtual Assistance</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Develop skills in email and calendar management, online research, data entry, document preparation, customer communication and remote-work tools.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+
+          <!-- Robotics -->
+          <article class="course-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition" data-title="Robotics" data-desc="Cinematography is a valuable skill in the digital age, offering opportunities for storytelling, creativity, and career prospects in various digital platforms and industries.">
+            <div class="aspect-[4/3] overflow-hidden">
+              <img src="assets/images/courses/image_5.png" alt="Robotics" class="w-full h-full object-cover" />
+            </div>
+            <div class="p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-medium text-emerald-600">Available Course</span>
+                <span class="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center">
+                  <svg class="w-3.5 h-3.5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                </span>
+              </div>
+              <h3 class="font-bold text-gray-900 text-sm leading-snug">Robotics</h3>
+              <p class="mt-1.5 text-xs text-gray-500 leading-relaxed line-clamp-3">
+                Cinematography is a valuable skill in the digital age, offering opportunities for storytelling, creativity, and career prospects in various digital platforms and industries.
+              </p>
+              <a href="#" class="mt-4 inline-flex w-full justify-center items-center text-sm font-semibold text-brand-dark border border-gray-200 rounded-full py-2 hover:bg-gray-50 transition">
+                Enroll Now
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========== WOMAN IN TECH ========== -->
+  <section class="bg-white py-14 md:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+        <div>
+          <img
+              src="assets/images/women_in_tech.png"
+              alt="Woman in Tech"
+              class="md:w-[400px]"
+        />
+        </div>
+        <div class="flex-1 bg-[#E8F0FE] rounded-2xl p-8 md:p-10">
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900">Woman in Tech</h2>
+          <p class="mt-4 text-gray-700 leading-relaxed max-w-xl">
+            At <strong>TOP</strong> trained women have already demonstrated significant economic and social contributions in their workplaces. Through <strong>TOP WiT</strong> and your backing, we can empower additional women to initiate and thrive in their tech careers.
+          </p>
+          <a href="index.html#scholarship" class="mt-6 inline-flex items-center bg-brand-dark text-white font-semibold px-5 py-2.5 rounded-lg hover:bg-brand-green transition text-sm">
+            Apply For Scholarship
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== WHATSAPP COMMUNITY ========== -->
+  <section class="bg-brand-dark py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-[#1A4D35] rounded-2xl px-5 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#25D366] flex items-center justify-center flex-shrink-0">
+            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <span class="font-semibold text-white text-sm sm:text-base">Join Our WhatsApp Community</span>
+        </div>
+        <a href="#" class="bg-brand-lime text-brand-dark font-semibold px-5 py-2.5 rounded-lg hover:bg-brand-yellow transition text-sm whitespace-nowrap">
+          Join Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-brand-darker text-white pt-12 pb-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+        <!-- Brand -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 mb-4">
+            <div class="w-9 h-9 rounded-full bg-brand-lime/20 flex items-center justify-center border border-brand-lime/40">
+              <svg class="w-5 h-5 text-brand-lime" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+            </div>
+            <span class="font-semibold text-lg">techieon</span>
+          </a>
+          <p class="text-sm text-white/60 leading-relaxed max-w-xs">
+            To empower 500 million individuals and businesses with the digital skills, innovative solutions, and opportunities needed to thrive in the digital age.
+          </p>
+          <div class="flex gap-3 mt-5">
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition" aria-label="Facebook">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition" aria-label="LinkedIn">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition" aria-label="YouTube">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Service links -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-white/50 mb-4">Service</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="index.html" class="text-white/80 hover:text-white transition">Home</a></li>
+            <li><a href="courses.html" class="text-white/80 hover:text-white transition">Courses</a></li>
+            <li><a href="index.html#solutions" class="text-white/80 hover:text-white transition">Solutions</a></li>
+            <li><a href="index.html#about" class="text-white/80 hover:text-white transition">About</a></li>
+            <li><a href="#" class="text-white/80 hover:text-white transition">Sign in</a></li>
+            <li><a href="index.html#scholarship" class="text-white/80 hover:text-white transition">Apply For Scholarship</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="font-semibold text-sm uppercase tracking-wider text-white/50 mb-4">Contact Us</h4>
+          <ul class="space-y-2.5 text-sm text-white/80">
+            <li>
+              <a href="mailto:info@techieonplatform.com" class="hover:text-white transition">info@techieonplatform.com</a>
+            </li>
+            <li>
+              <a href="tel:+2348104428395" class="hover:text-white transition">08104428395</a>
+            </li>
+            <li>No 5, Bonojo Eleruku Ijebu ode</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-6 text-center text-xs text-white/40">
+        All Rights Reserved © 2026
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    // --- Mobile menu toggle (shared with homepage pattern) ---
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn?.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // --- Filter dropdown toggle ---
+    // Necessary for the "Filter by" UI interaction shown in the design
+    const filterBtn = document.getElementById('filter-btn');
+    const filterDropdown = document.getElementById('filter-dropdown');
+    filterBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      filterDropdown.classList.toggle('open');
+    });
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+      filterDropdown?.classList.remove('open');
+    });
+
+    // --- Category filter ---
+    // Necessary so "Filter by" actually filters the course sections
+    const filterOptions = document.querySelectorAll('.filter-option');
+    const categories = document.querySelectorAll('.course-category');
+    let activeCategory = 'all';
+
+    filterOptions.forEach(opt => {
+      opt.addEventListener('click', () => {
+        activeCategory = opt.dataset.category;
+        filterDropdown.classList.remove('open');
+        applyFilters();
+      });
+    });
+
+    // --- Search ---
+    // Necessary so the search input filters course cards by title/description
+    const searchInput = document.getElementById('course-search');
+    searchInput?.addEventListener('input', () => {
+      applyFilters();
+    });
+
+    function applyFilters() {
+      const query = (searchInput?.value || '').toLowerCase().trim();
+
+      categories.forEach(section => {
+        const sectionCat = section.dataset.category;
+        const cards = section.querySelectorAll('.course-card');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const title = (card.dataset.title || '').toLowerCase();
+          const desc = (card.dataset.desc || '').toLowerCase();
+          const matchesSearch = !query || title.includes(query) || desc.includes(query);
+          const matchesCategory = activeCategory === 'all' || sectionCat === activeCategory;
+
+          if (matchesSearch && matchesCategory) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Hide entire category section if no cards match
+        section.style.display = visibleCount > 0 ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
