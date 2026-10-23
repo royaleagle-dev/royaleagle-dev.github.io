@@ -464,7 +464,7 @@
       <!-- Video frame with gold accents -->
       <div class="relative aspect-video w-full rounded-sm overflow-hidden shadow-2xl border-2 border-gold/30 bg-forest">
         <iframe
-          src="https://drive.google.com/file/d/1dwmmDR4u5uiSD4-8NW6q0TaGse2dwidf/preview"
+          src="https://drive.google.com/file/d/1CAfmi-v2fP389N3Obwx2_0eZEGiGjTa_/preview"
           class="absolute inset-0 w-full h-full"
           allow="autoplay; accelerometer; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -518,14 +518,38 @@
         </div>
       </div>
 
-      <div class="reveal grid grid-cols-2 gap-4">
-        <div class="space-y-4">
-          <img src="assets/images/burundi/232258.jpg" alt="A mother and her children" class="w-full h-64 object-cover rounded-sm shadow-lg" loading="lazy" />
-          <img src="assets/images/cote/232290.jpg" alt="Water project" class="w-full h-48 object-cover rounded-sm shadow-lg" loading="lazy" />
+      <div class="reveal space-y-4">
+        <!-- 16:9 video -->
+        <div class="relative aspect-video w-full rounded-sm overflow-hidden shadow-lg bg-forest">
+          <video
+            class="absolute inset-0 w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="assets/images/togo/232333.webp"
+            aria-label="Agricultural work and community life in the field"
+          >
+            <source src="assets/images/agric/video_1.mp4" type="video/mp4">
+          </video>
+          <div class="absolute bottom-3 left-3 z-10">
+            <span class="inline-flex items-center gap-1.5 bg-gold/95 text-forest text-[10px] tracking-wider uppercase font-bold px-2.5 py-1 rounded-sm">
+              <i class="fas fa-play text-[8px]"></i> Field Video
+            </span>
+          </div>
         </div>
-        <div class="space-y-4 pt-12">
-          <img src="assets/images/togo/232333.webp" alt="Farmland" class="w-full h-48 object-cover rounded-sm shadow-lg" loading="lazy" />
-          <img src="assets/images/togo/232327.webp" alt="Community gathering" class="w-full h-64 object-cover rounded-sm shadow-lg" loading="lazy" />
+
+        <!-- Photo grid -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <img src="assets/images/burundi/232258.jpg" alt="A mother and her children" class="w-full h-48 object-cover rounded-sm shadow-lg" loading="lazy" />
+            <img src="assets/images/cote/232290.jpg" alt="Water project" class="w-full h-40 object-cover rounded-sm shadow-lg" loading="lazy" />
+          </div>
+          <div class="space-y-4 pt-8">
+            <img src="assets/images/togo/232333.webp" alt="Farmland" class="w-full h-40 object-cover rounded-sm shadow-lg" loading="lazy" />
+            <img src="assets/images/togo/232327.webp" alt="Community gathering" class="w-full h-48 object-cover rounded-sm shadow-lg" loading="lazy" />
+          </div>
         </div>
       </div>
     </div>
