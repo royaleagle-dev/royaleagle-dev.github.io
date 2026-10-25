@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Where We Work | Harvest of Hope | Faith in Action</title>
+<meta name="description" content="Discover where Harvest of Hope works — communities across Ethiopia, Uganda, Kenya, Rwanda, Tanzania, and Malawi, plus local outreach in Texas through food pantries, housing, kids programs, and advocacy against domestic violence." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest: '#173F2A',
+          'forest-dark': '#0F2D1F',
+          'forest-light': '#2A5C42',
+          gold: '#C79A3B',
+          'gold-light': '#D9B565',
+          'gold-dark': '#A67E2A',
+          cream: '#F7F1E5',
+          'cream-dark': '#EDE3CC',
+          earth: '#6B4A2B',
+          'earth-light': '#8A6238'
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['Manrope', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  /* ========== SHARED STYLES (from homepage) ========== */
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', sans-serif; background-color: #F7F1E5; color: #173F2A; }
+  .font-display { font-family: 'Fraunces', serif; font-optical-sizing: auto; }
+
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(0.16,1,0.3,1), transform 1s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+  .reveal-stagger > * { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+  .reveal-stagger.in-view > * { opacity: 1; transform: translateY(0); }
+  .reveal-stagger.in-view > *:nth-child(1){transition-delay:.05s}
+  .reveal-stagger.in-view > *:nth-child(2){transition-delay:.12s}
+  .reveal-stagger.in-view > *:nth-child(3){transition-delay:.19s}
+  .reveal-stagger.in-view > *:nth-child(4){transition-delay:.26s}
+  .reveal-stagger.in-view > *:nth-child(5){transition-delay:.33s}
+  .reveal-stagger.in-view > *:nth-child(6){transition-delay:.4s}
+  .reveal-stagger.in-view > *:nth-child(7){transition-delay:.47s}
+
+  .hero-overlay { background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.92) 100%); }
+
+  .btn-primary {
+    background: #C79A3B; color: #173F2A;
+    transition: all .3s ease; position: relative; overflow: hidden;
+  }
+  .btn-primary:hover { background: #D9B565; transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(199,154,59,.55); }
+  .btn-primary::before {
+    content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+    transition: left .6s ease;
+  }
+  .btn-primary:hover::before { left: 100%; }
+
+  .btn-outline {
+    background: transparent; color: #F7F1E5;
+    border: 2px solid rgba(247,241,229,.4);
+    transition: all .3s ease;
+  }
+  .btn-outline:hover { background: rgba(247,241,229,.08); border-color: #C79A3B; color: #C79A3B; }
+
+  .mobile-menu { transition: max-height .4s ease; max-height: 0; overflow: hidden; }
+  .mobile-menu.open { max-height: 600px; }
+
+  .pattern-bg { background-image: radial-gradient(circle, rgba(199,154,59,.08) 1px, transparent 1px); background-size: 24px 24px; }
+
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #F7F1E5; }
+  ::-webkit-scrollbar-thumb { background: #173F2A; border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover { background: #2A5C42; }
+
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid #C79A3B; outline-offset: 2px;
+  }
+
+  .nav-scrolled { box-shadow: 0 8px 30px -10px rgba(0,0,0,.4); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-stagger > * { transition: none; opacity: 1; transform: none; }
+  }
+  /* ========== END SHARED STYLES ========== */
+
+  /* ========== WHERE WE WORK PAGE ONLY CSS ========== */
+  .www-hero { min-height: 48vh; }
+
+  .country-card {
+    transition: all .35s cubic-bezier(0.16,1,0.3,1);
+    cursor: pointer;
+  }
+  .country-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(199,154,59,0.5);
+    box-shadow: 0 20px 40px -20px rgba(23,63,42,0.3);
+  }
+  .country-card.active {
+    border-color: #C79A3B;
+    box-shadow: 0 20px 40px -15px rgba(199,154,59,0.25);
+  }
+
+  .progress-bar {
+    height: 6px;
+    background: rgba(23,63,42,0.1);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: #C79A3B;
+    border-radius: 999px;
+    transition: width 0.8s cubic-bezier(0.16,1,0.3,1);
+  }
+
+  .status-badge {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    border-radius: 2px;
+  }
+  .status-active { background: rgba(199,154,59,0.15); color: #A67E2A; }
+  .status-complete { background: rgba(23,63,42,0.12); color: #173F2A; }
+
+  .detail-panel {
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  /* ========== END WHERE WE WORK PAGE ONLY CSS ========== */
+</style>
+</head>
+<body>
+
+<!-- ============== NAV (same as homepage) ============== -->
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-forest/95 backdrop-blur-md border-b border-gold/20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/logo.jpeg" style="width:65px;height:auto;border-radius:100px;" alt="Logo">
+        <div class="flex flex-col leading-none">
+          <span class="font-display font-[600] text-cream text-lg tracking-wide" style="padding:0;margin:0;">Tent of Worship</span>
+          <span class="font-display font-[600] text-cream text-lg tracking-wide" style="padding:0;margin:0;">& Restoration of Souls</span>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-8 text-sm">
+        <a href="about.html" class="text-cream/80 hover:text-gold transition">About</a>
+        <a href="what-we-do.html" class="text-cream/80 hover:text-gold transition">What We Do</a>
+        <a href="where-we-work.html" class="text-cream/80 hover:text-gold transition">Where We Work</a>
+        <a href="#impact" class="text-cream/80 hover:text-gold transition">Impact</a>
+        <a href="#projects" class="text-cream/80 hover:text-gold transition">Projects</a>
+        <a href="#stories" class="text-cream/80 hover:text-gold transition">Stories</a>
+        <a href="#donate" class="btn-primary px-5 py-2.5 rounded-sm font-semibold tracking-wide uppercase text-xs flex items-center gap-2">
+          <i class="fas fa-heart"></i>Donate
+        </a>
+      </div>
+      <button id="mobile-toggle" class="lg:hidden text-cream p-2" aria-label="Open menu">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden">
+      <div class="flex flex-col gap-4 py-6 text-cream/80">
+        <a href="about.html" class="hover:text-gold">About</a>
+        <a href="what-we-do.html" class="hover:text-gold">What We Do</a>
+        <a href="where-we-work.html" class="hover:text-gold">Where We Work</a>
+        <a href="#impact" class="hover:text-gold">Impact</a>
+        <a href="#projects" class="hover:text-gold">Projects</a>
+        <a href="#stories" class="hover:text-gold">Stories</a>
+        <a href="#donate" class="btn-primary px-5 py-3 rounded-sm font-semibold uppercase text-sm text-center">Donate Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============== PAGE HERO ============== -->
+<section class="www-hero relative flex items-end pt-20 overflow-hidden">
+  <img src="assets/images/cote/232288.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 w-full py-16 lg:py-24">
+    <div class="max-w-3xl">
+      <div class="reveal inline-flex items-center gap-2 bg-black/20 px-4 py-2.5 rounded-full mb-6 backdrop-blur-sm">
+        <span class="text-cream text-xs tracking-[0.2em] uppercase font-semibold">6 African Nations · Texas Local</span>
+      </div>
+      <h1 class="reveal font-display font-bold text-cream text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-5">
+        Where We <span class="text-gold italic">Work</span>
+      </h1>
+      <p class="reveal text-cream/85 text-lg md:text-xl max-w-2xl leading-relaxed">
+        From villages across Africa to neighborhoods in Texas — communities we serve, projects underway, and partners on the ground.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== OVERVIEW STATS ============== -->
+<section class="py-12 lg:py-16 bg-forest relative overflow-hidden">
+  <div class="absolute inset-0 pattern-bg opacity-30"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 text-center">
+      <div>
+        <div class="font-display text-gold text-3xl lg:text-4xl font-bold mb-1">6</div>
+        <div class="text-cream/70 text-xs tracking-wider uppercase">African Nations</div>
+      </div>
+      <div>
+        <div class="font-display text-gold text-3xl lg:text-4xl font-bold mb-1">34+</div>
+        <div class="text-cream/70 text-xs tracking-wider uppercase">Villages in Partnership</div>
+      </div>
+      <div>
+        <div class="font-display text-gold text-3xl lg:text-4xl font-bold mb-1">~52K</div>
+        <div class="text-cream/70 text-xs tracking-wider uppercase">People Impacted</div>
+      </div>
+      <div>
+        <div class="font-display text-gold text-3xl lg:text-4xl font-bold mb-1">TX</div>
+        <div class="text-cream/70 text-xs tracking-wider uppercase">Local Outreach</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== AFRICA INTRO ============== -->
+<section class="py-16 lg:py-20 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mb-4">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Africa</span>
+      <h2 class="font-display font-bold text-forest text-3xl md:text-4xl lg:text-5xl leading-[1.08] mb-5">
+        Communities across Africa
+      </h2>
+      <p class="text-forest/70 text-lg leading-relaxed">
+        Select a country to see the region, challenges, current project, funding progress, and local church partner. Every location is served through partnership — not from a distance.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== COUNTRY CARDS + DETAIL ============== -->
+<section class="pb-20 lg:pb-28 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-8">
+      <!-- Country list -->
+      <div class="lg:col-span-5 space-y-3 reveal-stagger" id="country-list">
+        <!-- Ethiopia -->
+        <button type="button" class="country-card active w-full text-left bg-cream border border-gold rounded-sm p-5"
+          data-country="Ethiopia"
+          data-region="Southern Region"
+          data-population="~15,000 across 10 villages"
+          data-challenge="Severe water access; child malnutrition"
+          data-project="Multi-Village Water + Food Program"
+          data-progress="80"
+          data-funded="$96,000 of $120,000"
+          data-partner="Hawassa Christian Council"
+          data-status="active">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-display font-bold text-forest text-xl">Ethiopia</h3>
+            <span class="status-badge status-active">Active</span>
+          </div>
+          <p class="text-forest/60 text-sm">Southern Region · Water + Food</p>
+          <div class="progress-bar mt-3"><div class="progress-fill" style="width:80%"></div></div>
+        </button>
+
+        <!-- Uganda -->
+        <button type="button" class="country-card w-full text-left bg-cream border border-forest/10 rounded-sm p-5"
+          data-country="Uganda"
+          data-region="Central Region"
+          data-population="~12,000 across 8 villages"
+          data-challenge="Limited clean water and agricultural inputs"
+          data-project="Borehole Wells + Farming Cooperative"
+          data-progress="68"
+          data-funded="$42,000 of $60,000"
+          data-partner="Buganda Community Church"
+          data-status="active">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-display font-bold text-forest text-xl">Uganda</h3>
+            <span class="status-badge status-active">Active</span>
+          </div>
+          <p class="text-forest/60 text-sm">Central Region · Wells + Farming</p>
+          <div class="progress-bar mt-3"><div class="progress-fill" style="width:68%"></div></div>
+        </button>
+
+        <!-- Kenya -->
+        <button type="button" class="country-card w-full text-left bg-cream border border-forest/10 rounded-sm p-5"
+          data-country="Kenya"
+          data-region="Rift Valley"
+          data-population="~8,500 across 5 villages"
+          data-challenge="Drought-prone; food insecurity for 6 months/year"
+          data-project="Irrigation + Seed Distribution"
+          data-progress="45"
+          data-funded="$28,000 of $62,000"
+          data-partner="Eldoret Christian Fellowship"
+          data-status="active">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-display font-bold text-forest text-xl">Kenya</h3>
+            <span class="status-badge status-active">Active</span>
+          </div>
+          <p class="text-forest/60 text-sm">Rift Valley · Irrigation + Seeds</p>
+          <div class="progress-bar mt-3"><div class="progress-fill" style="width:45%"></div></div>
+        </button>
+
+        <!-- Rwanda -->
+        <button type="button" class="country-card w-full text-left bg-cream border border-forest/10 rounded-sm p-5"
+          data-country="Rwanda"
+          data-region="Northern Province"
+          data-population="~4,800 across 3 villages"
+          data-challenge="Small land plots; need intensive farming training"
+          data-project="Agricultural Training Cooperative"
+          data-progress="22"
+          data-funded="$9,500 of $42,000"
+          data-partner="Musanze Community Church"
+          data-status="active">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-display font-bold text-forest text-xl">Rwanda</h3>
+            <span class="status-badge status-active">Active</span>
+          </div>
+          <p class="text-forest/60 text-sm">Northern Province · Ag Training</p>
+          <div class="progress-bar mt-3"><div class="progress-fill" style="width:22%"></div></div>
+        </button>
+
+        <!-- Tanzania -->
+        <button type="button" class="country-card w-full text-left bg-cream border border-forest/10 rounded-sm p-5"
+          data-country="Tanzania"
+          data-region="Central Highlands"
+          data-population="~6,200 across 4 villages"
+          data-challenge="Water scarcity during dry season"
+          data-project="Water Filtration + Storage"
+          data-progress="100"
+          data-funded="$54,000 of $54,000"
+          data-partner="Dodoma Village Church Network"
+          data-status="complete">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-display font-bold text-forest text-xl">Tanzania</h3>
+            <span class="status-badge status-complete">Completed</span>
+          </div>
+          <p class="text-forest/60 text-sm">Central Highlands · Water Complete</p>
+          <div class="progress-bar mt-3"><div class="progress-fill" style="width:100%"></div></div>
+        </button>
+
+        <!-- Malawi -->
+        <button type="button" class="country-card w-full text-left bg-cream border border-forest/10 rounded-sm p-5"
+          data-country="Malawi"
+          data-region="Central Region"
+          data-population="~5,400 across 4 villages"
+          data-challenge="Climate-vulnerable farmland"
+          data-project="Drought-Resistant Seeds + Training"
+          data-progress="55"
+          data-funded="$22,000 of $40,000"
+          data-partner="Lilongwe Church Partnership"
+          data-status="active">
+          <div class="flex items-center justify-between mb-1">
+            <h3 class="font-display font-bold text-forest text-xl">Malawi</h3>
+            <span class="status-badge status-active">Active</span>
+          </div>
+          <p class="text-forest/60 text-sm">Central Region · Drought-Resistant Seeds</p>
+          <div class="progress-bar mt-3"><div class="progress-fill" style="width:55%"></div></div>
+        </button>
+      </div>
+
+      <!-- Detail panel -->
+      <div class="lg:col-span-7 reveal">
+        <div id="detail-panel" class="detail-panel bg-forest text-cream rounded-sm p-8 lg:p-10 sticky top-28">
+          <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-3 inline-block">Community Profile</span>
+          <h3 id="d-country" class="font-display font-bold text-cream text-3xl lg:text-4xl mb-1">Ethiopia</h3>
+          <p id="d-region" class="text-cream/60 text-sm mb-8">Southern Region</p>
+
+          <div class="space-y-5 text-sm">
+            <div>
+              <div class="text-gold text-xs uppercase tracking-wider mb-1">Population Served</div>
+              <div id="d-population" class="text-cream/90">~15,000 across 10 villages</div>
+            </div>
+            <div>
+              <div class="text-gold text-xs uppercase tracking-wider mb-1">Main Challenge</div>
+              <div id="d-challenge" class="text-cream/90">Severe water access; child malnutrition</div>
+            </div>
+            <div>
+              <div class="text-gold text-xs uppercase tracking-wider mb-1">Current Project</div>
+              <div id="d-project" class="text-cream/90">Multi-Village Water + Food Program</div>
+            </div>
+            <div>
+              <div class="text-gold text-xs uppercase tracking-wider mb-1">Funding Progress</div>
+              <div class="flex items-center justify-between text-cream/90 mb-2">
+                <span id="d-funded">$96,000 of $120,000</span>
+                <span id="d-progress" class="font-display font-bold text-gold">80% Funded</span>
+              </div>
+              <div class="h-2 bg-cream/15 rounded-full overflow-hidden">
+                <div id="d-bar" class="h-full bg-gold transition-all duration-700" style="width:80%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="text-gold text-xs uppercase tracking-wider mb-1">Local Partner</div>
+              <div id="d-partner" class="text-cream/90">Hawassa Christian Council</div>
+            </div>
+          </div>
+
+          <a href="index.html#donate" class="btn-primary px-6 py-3.5 rounded-sm font-bold tracking-wide uppercase text-xs mt-8 inline-block w-full text-center">
+            Support This Community
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== TEXAS ============== -->
+<section id="texas" class="py-20 lg:py-28 bg-cream-dark/40">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="reveal">
+        <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">United States</span>
+        <h2 class="font-display font-bold text-forest text-3xl md:text-4xl lg:text-5xl leading-[1.08] mb-6">
+          Texas — our home base
+        </h2>
+        <div class="space-y-4 text-forest/80 text-lg leading-relaxed mb-8">
+          <p>
+            Harvest of Hope is <strong class="text-forest">based and incorporated in Texas</strong>. From our Dallas–Fort Worth headquarters we serve families in our own communities while coordinating work overseas.
+          </p>
+          <p>
+            Local outreach includes food pantries, housing and school support, programs for children, advocacy against domestic violence, and practical care for single mothers.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4 mb-8">
+          <div class="p-4 bg-cream border border-forest/10 rounded-sm">
+            <i class="fas fa-basket-shopping text-gold mb-2"></i>
+            <div class="font-semibold text-forest text-sm">Food Pantries</div>
+          </div>
+          <div class="p-4 bg-cream border border-forest/10 rounded-sm">
+            <i class="fas fa-house text-gold mb-2"></i>
+            <div class="font-semibold text-forest text-sm">Housing Support</div>
+          </div>
+          <div class="p-4 bg-cream border border-forest/10 rounded-sm">
+            <i class="fas fa-school text-gold mb-2"></i>
+            <div class="font-semibold text-forest text-sm">Schooling &amp; Kids</div>
+          </div>
+          <div class="p-4 bg-cream border border-forest/10 rounded-sm">
+            <i class="fas fa-shield-heart text-gold mb-2"></i>
+            <div class="font-semibold text-forest text-sm">Anti-DV &amp; Mothers</div>
+          </div>
+        </div>
+        <p class="text-forest/60 text-sm">
+          <i class="fas fa-location-dot text-gold mr-1"></i>
+          P.O. Box 4217 · Dallas–Fort Worth, TX 75001
+        </p>
+      </div>
+      <div class="reveal">
+        <div class="aspect-[4/3] rounded-sm overflow-hidden shadow-xl">
+          <img src="assets/images/burundi/232258.jpg" alt="Texas local outreach — families and community" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== HOW WE PARTNER ============== -->
+<section class="py-20 lg:py-28 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mb-14 text-center mx-auto">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Our Model</span>
+      <h2 class="font-display font-bold text-forest text-3xl md:text-4xl leading-[1.08] mb-5">
+        How we work on the ground
+      </h2>
+      <p class="text-forest/70 text-lg leading-relaxed">
+        We never drop in and leave. Every location is served through local churches and community leaders who know the needs and carry the work forward.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
+      <div class="text-center p-6 border border-forest/10 rounded-sm bg-cream">
+        <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-forest text-cream flex items-center justify-center">
+          <i class="fas fa-church text-gold"></i>
+        </div>
+        <h3 class="font-display font-bold text-forest text-lg mb-2">Local partners</h3>
+        <p class="text-forest/65 text-sm leading-relaxed">Churches and leaders who identify needs and own the work long-term.</p>
+      </div>
+      <div class="text-center p-6 border border-forest/10 rounded-sm bg-cream">
+        <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-forest text-cream flex items-center justify-center">
+          <i class="fas fa-clipboard-check text-gold"></i>
+        </div>
+        <h3 class="font-display font-bold text-forest text-lg mb-2">Verified projects</h3>
+        <p class="text-forest/65 text-sm leading-relaxed">Documented outcomes only. We never publish what we cannot verify.</p>
+      </div>
+      <div class="text-center p-6 border border-forest/10 rounded-sm bg-cream">
+        <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-forest text-cream flex items-center justify-center">
+          <i class="fas fa-seedling text-gold"></i>
+        </div>
+        <h3 class="font-display font-bold text-forest text-lg mb-2">Agriculture focus</h3>
+        <p class="text-forest/65 text-sm leading-relaxed">Seeds, tools, training, and water so harvest becomes lasting security.</p>
+      </div>
+      <div class="text-center p-6 border border-forest/10 rounded-sm bg-cream">
+        <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-forest text-cream flex items-center justify-center">
+          <i class="fas fa-heart text-gold"></i>
+        </div>
+        <h3 class="font-display font-bold text-forest text-lg mb-2">Texas + Africa</h3>
+        <p class="text-forest/65 text-sm leading-relaxed">The same calling at home and abroad — from our Texas base to the field.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CTA ============== -->
+<section class="py-20 lg:py-28 bg-forest relative overflow-hidden">
+  <div class="absolute inset-0 pattern-bg opacity-40"></div>
+  <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center">
+    <div class="reveal">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Get Involved</span>
+      <h2 class="font-display font-bold text-cream text-3xl md:text-4xl lg:text-5xl leading-[1.08] mb-6">
+        Support a community
+      </h2>
+      <p class="text-cream/70 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+        Choose a country above, or give generally to water, agriculture, Texas outreach, or protection of the vulnerable. Every gift is tied to real places and real people.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="index.html#donate" class="btn-primary px-8 py-4 rounded-sm font-bold tracking-wide uppercase text-sm">
+          Donate Now <i class="fas fa-heart ml-2"></i>
+        </a>
+        <a href="index.html#projects" class="btn-outline px-8 py-4 rounded-sm font-bold tracking-wide uppercase text-sm text-center">
+          Sponsor a Project
+        </a>
+        <a href="what-we-do.html" class="btn-outline px-8 py-4 rounded-sm font-bold tracking-wide uppercase text-sm text-center">
+          What We Do
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER (same as homepage) ============== -->
+<footer class="bg-forest-dark text-cream/80 pt-20 pb-8 border-t border-gold/20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div>
+        <a href="index.html" class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
+            <i class="fas fa-seedling text-forest text-lg"></i>
+          </div>
+          <div class="flex flex-col leading-none">
+            <span class="font-display font-bold text-cream text-lg tracking-wide">HARVEST OF HOPE</span>
+            <span class="text-cream/60 text-[10px] tracking-[0.2em] uppercase mt-0.5">Faith in Action</span>
+          </div>
+        </a>
+        <p class="text-cream/60 text-sm leading-relaxed mb-6">
+          A Texas-based and incorporated 501(c)(3) nonprofit Christian ministry serving underserved communities in Africa through clean water, food security, and sustainable agriculture — and serving families in Texas with food pantries, housing &amp; school support, kids programs, advocacy against domestic violence, and care for single mothers.
+        </p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="Instagram"><i class="fab fa-instagram text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="YouTube"><i class="fab fa-youtube text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="Email"><i class="fas fa-envelope text-sm"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-cream text-sm uppercase tracking-wider mb-5">Explore</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-gold transition">About Us</a></li>
+          <li><a href="what-we-do.html" class="hover:text-gold transition">What We Do</a></li>
+          <li><a href="where-we-work.html" class="hover:text-gold transition">Where We Work</a></li>
+          <li><a href="index.html#impact" class="hover:text-gold transition">Our Impact</a></li>
+          <li><a href="index.html#projects" class="hover:text-gold transition">Projects</a></li>
+          <li><a href="index.html#stories" class="hover:text-gold transition">Stories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-cream text-sm uppercase tracking-wider mb-5">Get Involved</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="index.html#donate" class="hover:text-gold transition">Donate</a></li>
+          <li><a href="#" class="hover:text-gold transition">Monthly Giving</a></li>
+          <li><a href="#" class="hover:text-gold transition">Sponsor a Village</a></li>
+          <li><a href="#" class="hover:text-gold transition">Church Partnerships</a></li>
+          <li><a href="#" class="hover:text-gold transition">Corporate Partnerships</a></li>
+          <li><a href="#" class="hover:text-gold transition">Volunteer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-cream text-sm uppercase tracking-wider mb-5">Field Updates</h4>
+        <p class="text-cream/60 text-sm mb-4 leading-relaxed">Receive field stories, prayer requests, and impact reports directly.</p>
+        <form class="space-y-3" id="newsletter-form">
+          <input type="email" placeholder="Your email address" required class="w-full px-4 py-3 bg-cream/5 border border-cream/15 text-cream placeholder-cream/40 text-sm focus:border-gold focus:outline-none rounded-sm" />
+          <button type="submit" class="btn-primary w-full px-4 py-3 rounded-sm font-bold tracking-wide uppercase text-xs">Subscribe</button>
+          <p class="form-msg hidden text-gold text-xs">Thank you — we'll be in touch soon.</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="h-px bg-cream/10 mb-8"></div>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-8 text-sm">
+      <div>
+        <div class="text-cream font-semibold mb-2">Contact</div>
+        <p class="text-cream/60">
+          P.O. Box 4217<br/>
+          Dallas–Fort Worth, TX 75001<br/>
+          <a href="mailto:hello@harvestofhope.org" class="text-gold hover:underline">hello@harvestofhope.org</a>
+        </p>
+      </div>
+      <div>
+        <div class="text-cream font-semibold mb-2">Tax Status &amp; Incorporation</div>
+        <p class="text-cream/60">
+          Incorporated in Texas<br/>
+          501(c)(3) Public Charity<br/>
+          EIN available upon request<br/>
+          All gifts tax-deductible
+        </p>
+      </div>
+      <div>
+        <div class="text-cream font-semibold mb-2">Accountability</div>
+        <p class="text-cream/60">
+          <a href="#" class="hover:text-gold block">Financial Transparency</a>
+          <a href="#" class="hover:text-gold block">Annual Reports</a>
+          <a href="#" class="hover:text-gold block">Governance &amp; Policies</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/50">
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="hover:text-gold transition">Privacy Policy</a>
+        <a href="#" class="hover:text-gold transition">Donor Privacy</a>
+        <a href="#" class="hover:text-gold transition">Terms</a>
+        <a href="#" class="hover:text-gold transition">Financial Transparency</a>
+      </div>
+      <div class="font-display italic text-cream/60">
+        Faith in Action. Communities Transformed.
+      </div>
+    </div>
+
+    <div class="mt-6 text-center text-cream/40 text-xs">
+      © 2026 Harvest of Hope Ministry. Based and Incorporated in Texas. A 501(c)(3) nonprofit organization.
+    </div>
+  </div>
+</footer>
+
+<!-- Floating mobile donate -->
+<a href="index.html#donate" class="float-donate lg:hidden fixed bottom-6 right-6 z-40 bg-gold text-forest font-bold tracking-wide uppercase text-xs px-5 py-3.5 rounded-sm flex items-center gap-2 shadow-lg">
+  <i class="fas fa-heart"></i> Donate
+</a>
+
+<script>
+  /* ========== SHARED JS (from homepage) ========== */
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    const icon = mobileToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      const icon = mobileToggle.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    });
+  });
+
+  const reveals = document.querySelectorAll('.reveal, .reveal-stagger');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('in-view');
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+  reveals.forEach(el => io.observe(el));
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) nav.classList.add('nav-scrolled');
+    else nav.classList.remove('nav-scrolled');
+  });
+
+  const form = document.getElementById('newsletter-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.querySelector('input').value = '';
+      form.querySelector('.form-msg').classList.remove('hidden');
+    });
+  }
+  /* ========== END SHARED JS ========== */
+
+  /* ========== WHERE WE WORK PAGE ONLY JS ========== */
+  (function() {
+    const cards = document.querySelectorAll('.country-card');
+    const panel = document.getElementById('detail-panel');
+    if (!cards.length || !panel) return;
+
+    function showCountry(card) {
+      cards.forEach(c => {
+        c.classList.remove('active');
+        c.classList.remove('border-gold');
+        c.classList.add('border-forest/10');
+      });
+      card.classList.add('active');
+      card.classList.remove('border-forest/10');
+      card.classList.add('border-gold');
+
+      document.getElementById('d-country').textContent = card.dataset.country;
+      document.getElementById('d-region').textContent = card.dataset.region;
+      document.getElementById('d-population').textContent = card.dataset.population;
+      document.getElementById('d-challenge').textContent = card.dataset.challenge;
+      document.getElementById('d-project').textContent = card.dataset.project;
+      document.getElementById('d-funded').textContent = card.dataset.funded;
+      document.getElementById('d-progress').textContent = card.dataset.progress + '% Funded';
+      document.getElementById('d-partner').textContent = card.dataset.partner;
+
+      const bar = document.getElementById('d-bar');
+      bar.style.width = '0%';
+      setTimeout(() => { bar.style.width = card.dataset.progress + '%'; }, 50);
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => showCountry(card));
+    });
+  })();
+  /* ========== END WHERE WE WORK PAGE ONLY JS ========== */
+</script>
+
+</body>
+</html>

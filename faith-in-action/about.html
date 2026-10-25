@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us | Harvest of Hope | Faith in Action</title>
+<meta name="description" content="Learn about Harvest of Hope — a Texas-based and incorporated 501(c)(3) Christian ministry serving communities in Africa and families in Texas through clean water, sustainable agriculture, food security, and advocacy against domestic violence." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest: '#173F2A',
+          'forest-dark': '#0F2D1F',
+          'forest-light': '#2A5C42',
+          gold: '#C79A3B',
+          'gold-light': '#D9B565',
+          'gold-dark': '#A67E2A',
+          cream: '#F7F1E5',
+          'cream-dark': '#EDE3CC',
+          earth: '#6B4A2B',
+          'earth-light': '#8A6238'
+        },
+        fontFamily: {
+          serif: ['Fraunces', 'serif'],
+          sans: ['Manrope', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+<style>
+  /* ========== SHARED STYLES (from homepage) ========== */
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Manrope', sans-serif; background-color: #F7F1E5; color: #173F2A; }
+  .font-display { font-family: 'Fraunces', serif; font-optical-sizing: auto; }
+
+  /* Scroll reveal */
+  .reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(0.16,1,0.3,1), transform 1s cubic-bezier(0.16,1,0.3,1); }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+  .reveal-stagger > * { opacity: 0; transform: translateY(30px); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+  .reveal-stagger.in-view > * { opacity: 1; transform: translateY(0); }
+  .reveal-stagger.in-view > *:nth-child(1){transition-delay:.05s}
+  .reveal-stagger.in-view > *:nth-child(2){transition-delay:.12s}
+  .reveal-stagger.in-view > *:nth-child(3){transition-delay:.19s}
+  .reveal-stagger.in-view > *:nth-child(4){transition-delay:.26s}
+  .reveal-stagger.in-view > *:nth-child(5){transition-delay:.33s}
+  .reveal-stagger.in-view > *:nth-child(6){transition-delay:.4s}
+  .reveal-stagger.in-view > *:nth-child(7){transition-delay:.47s}
+
+  /* Hero overlay */
+  .hero-overlay { background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.92) 100%); }
+
+  /* Grain */
+  .grain::after {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    opacity: 0.5; mix-blend-mode: overlay; pointer-events: none;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    background: #C79A3B; color: #173F2A;
+    transition: all .3s ease; position: relative; overflow: hidden;
+  }
+  .btn-primary:hover { background: #D9B565; transform: translateY(-2px); box-shadow: 0 10px 30px -10px rgba(199,154,59,.55); }
+  .btn-primary::before {
+    content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+    transition: left .6s ease;
+  }
+  .btn-primary:hover::before { left: 100%; }
+
+  .btn-outline {
+    background: transparent; color: #F7F1E5;
+    border: 2px solid rgba(247,241,229,.4);
+    transition: all .3s ease;
+  }
+  .btn-outline:hover { background: rgba(247,241,229,.08); border-color: #C79A3B; color: #C79A3B; }
+
+  /* Mobile nav */
+  .mobile-menu { transition: max-height .4s ease; max-height: 0; overflow: hidden; }
+  .mobile-menu.open { max-height: 600px; }
+
+  /* Patterns */
+  .pattern-bg { background-image: radial-gradient(circle, rgba(199,154,59,.08) 1px, transparent 1px); background-size: 24px 24px; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #F7F1E5; }
+  ::-webkit-scrollbar-thumb { background: #173F2A; border-radius: 5px; }
+  ::-webkit-scrollbar-thumb:hover { background: #2A5C42; }
+
+  /* Focus */
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid #C79A3B; outline-offset: 2px;
+  }
+
+  /* Nav shadow on scroll */
+  .nav-scrolled { box-shadow: 0 8px 30px -10px rgba(0,0,0,.4); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-stagger > * { transition: none; opacity: 1; transform: none; }
+  }
+  /* ========== END SHARED STYLES ========== */
+
+  /* ========== ABOUT PAGE ONLY CSS ========== */
+  .about-hero {
+    min-height: 52vh;
+  }
+  .value-card {
+    transition: all .35s cubic-bezier(0.16,1,0.3,1);
+  }
+  .value-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(199,154,59,0.5);
+    box-shadow: 0 16px 40px -20px rgba(23,63,42,0.25);
+  }
+  .timeline-line {
+    position: absolute;
+    left: 1.25rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #C79A3B 0%, rgba(199,154,59,0.2) 100%);
+  }
+  @media (min-width: 768px) {
+    .timeline-line { left: 50%; transform: translateX(-50%); }
+  }
+  /* ========== END ABOUT PAGE ONLY CSS ========== */
+</style>
+</head>
+<body>
+
+<!-- ============== NAV (same as homepage) ============== -->
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 bg-forest/95 backdrop-blur-md border-b border-gold/20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/logo.jpeg" style="width:65px;height:auto;border-radius:100px;" alt="Logo">
+        <div class="flex flex-col leading-none">
+          <span class="font-display font-[600] text-cream text-lg tracking-wide" style="padding:0;margin:0;">Tent of Worship</span>
+          <span class="font-display font-[600] text-cream text-lg tracking-wide" style="padding:0;margin:0;">& Restoration of Souls</span>
+        </div>
+      </a>
+      <div class="hidden lg:flex items-center gap-8 text-sm">
+        <a href="about.html" class="text-cream/80 hover:text-gold transition">About</a>
+        <a href="what-we-do.html" class="text-cream/80 hover:text-gold transition">What We Do</a>
+        <a href="where-we-work.html" class="text-cream/80 hover:text-gold transition">Where We Work</a>
+        <a href="#impact" class="text-cream/80 hover:text-gold transition">Impact</a>
+        <a href="#projects" class="text-cream/80 hover:text-gold transition">Projects</a>
+        <a href="#stories" class="text-cream/80 hover:text-gold transition">Stories</a>
+        <a href="#donate" class="btn-primary px-5 py-2.5 rounded-sm font-semibold tracking-wide uppercase text-xs flex items-center gap-2">
+          <i class="fas fa-heart"></i>Donate
+        </a>
+      </div>
+      <button id="mobile-toggle" class="lg:hidden text-cream p-2" aria-label="Open menu">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu lg:hidden">
+      <div class="flex flex-col gap-4 py-6 text-cream/80">
+        <a href="about.html" class="hover:text-gold">About</a>
+        <a href="what-we-do.html" class="hover:text-gold">What We Do</a>
+        <a href="where-we-work.html" class="hover:text-gold">Where We Work</a>
+        <a href="#impact" class="hover:text-gold">Impact</a>
+        <a href="#projects" class="hover:text-gold">Projects</a>
+        <a href="#stories" class="hover:text-gold">Stories</a>
+        <a href="#donate" class="btn-primary px-5 py-3 rounded-sm font-semibold uppercase text-sm text-center">Donate Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============== PAGE HERO ============== -->
+<section class="about-hero relative flex items-end pt-20 overflow-hidden">
+  <img src="assets/images/cote/232288.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager" />
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 w-full py-16 lg:py-24">
+    <div class="max-w-3xl">
+      <div class="reveal inline-flex items-center gap-2 bg-black/20 px-4 py-2.5 rounded-full mb-6 backdrop-blur-sm">
+        <span class="text-cream text-xs tracking-[0.2em] uppercase font-semibold">Texas-Based · Incorporated · 501(c)(3)</span>
+      </div>
+      <h1 class="reveal font-display font-bold text-cream text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-tight mb-5">
+        About <span class="text-gold italic">Harvest of Hope</span>
+      </h1>
+      <p class="reveal text-cream/85 text-lg md:text-xl max-w-2xl leading-relaxed">
+        A Texas-based and incorporated Christian ministry called to proclaim good news to the poor — through clean water, sustainable agriculture, local outreach, and standing with the oppressed.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHO WE ARE ============== -->
+<section class="py-20 lg:py-28 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <div class="reveal lg:col-span-5">
+        <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Who We Are</span>
+        <h2 class="font-display font-bold text-forest text-3xl md:text-4xl lg:text-5xl leading-[1.08] mb-6">
+          Faith in action — from Texas to Africa.
+        </h2>
+        <div class="space-y-4 text-forest/80 text-lg leading-relaxed">
+          <p>
+            Harvest of Hope is a <strong class="text-forest">Texas-based and incorporated 501(c)(3)</strong> nonprofit Christian ministry. We are headquartered in the Dallas–Fort Worth area and governed under Texas law as a public charity.
+          </p>
+          <p>
+            Our calling is clear: to bring practical help and lasting hope to underserved communities — overseas and right here at home.
+          </p>
+        </div>
+      </div>
+      <div class="reveal lg:col-span-7 space-y-6">
+        <div class="p-6 lg:p-8 bg-forest text-cream rounded-sm">
+          <h3 class="font-display font-bold text-gold text-xl mb-3">Our Mission</h3>
+          <p class="text-cream/90 text-lg leading-relaxed">
+            To equip families and communities with clean water, food security, sustainable agriculture, and the practical support they need to move from dependency to dignity — while demonstrating the love of Christ and standing with the vulnerable, including survivors of domestic violence and single mothers.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="p-5 border border-forest/10 rounded-sm bg-cream-dark/30">
+            <div class="text-gold text-xs tracking-wider uppercase font-semibold mb-2">Incorporation</div>
+            <p class="text-forest font-semibold">Texas 501(c)(3)</p>
+            <p class="text-forest/60 text-sm mt-1">Public charity · Tax-deductible gifts</p>
+          </div>
+          <div class="p-5 border border-forest/10 rounded-sm bg-cream-dark/30">
+            <div class="text-gold text-xs tracking-wider uppercase font-semibold mb-2">Headquarters</div>
+            <p class="text-forest font-semibold">Dallas–Fort Worth, TX</p>
+            <p class="text-forest/60 text-sm mt-1">P.O. Box 4217 · 75001</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAITH FOUNDATION ============== -->
+<section class="py-20 lg:py-28 bg-forest relative overflow-hidden">
+  <div class="absolute inset-0 pattern-bg opacity-40"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mx-auto text-center mb-14">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Our Foundation</span>
+      <h2 class="font-display font-bold text-cream text-3xl md:text-4xl lg:text-5xl leading-[1.08] mb-6">
+        Why we serve
+      </h2>
+      <p class="text-cream/70 text-lg leading-relaxed">
+        Jesus taught us to care for the hungry, the thirsty, the poor, and the oppressed. That calling shapes everything we do.
+      </p>
+    </div>
+
+    <div class="reveal max-w-4xl mx-auto">
+      <blockquote class="border-l-4 border-gold pl-6 lg:pl-8">
+        <p class="font-display italic text-cream text-xl md:text-2xl leading-relaxed mb-4">
+          “The Spirit of the Lord is on me, because he has anointed me to proclaim good news to the poor. He has sent me to proclaim freedom for the prisoners and recovery of sight for the blind, to set the oppressed free, to proclaim the year of the Lord’s favor.”
+        </p>
+        <cite class="text-gold text-sm tracking-wider uppercase font-semibold not-italic">— Luke 4:18–19</cite>
+      </blockquote>
+    </div>
+
+    <div class="reveal mt-14 grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <div class="text-center p-6">
+        <i class="fas fa-hands-praying text-gold text-2xl mb-3"></i>
+        <h3 class="font-display font-bold text-cream text-lg mb-2">Faith</h3>
+        <p class="text-cream/60 text-sm leading-relaxed">We believe faith should become action — not only words.</p>
+      </div>
+      <div class="text-center p-6">
+        <i class="fas fa-seedling text-gold text-2xl mb-3"></i>
+        <h3 class="font-display font-bold text-cream text-lg mb-2">Empowerment</h3>
+        <p class="text-cream/60 text-sm leading-relaxed">We equip people to feed themselves and rebuild with dignity.</p>
+      </div>
+      <div class="text-center p-6">
+        <i class="fas fa-shield-heart text-gold text-2xl mb-3"></i>
+        <h3 class="font-display font-bold text-cream text-lg mb-2">Protection</h3>
+        <p class="text-cream/60 text-sm leading-relaxed">We stand with the vulnerable and campaign against domestic violence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== WHERE WE SERVE ============== -->
+<section class="py-20 lg:py-28 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mb-14">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Where We Serve</span>
+      <h2 class="font-display font-bold text-forest text-3xl md:text-4xl lg:text-5xl leading-[1.08] mb-6">
+        Two fronts. One calling.
+      </h2>
+      <p class="text-forest/70 text-lg leading-relaxed">
+        We work across Africa and right here in Texas — meeting urgent needs while building long-term pathways out of poverty and oppression.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 reveal-stagger">
+      <!-- Africa -->
+      <div class="bg-cream border border-forest/10 rounded-sm overflow-hidden shadow-sm">
+        <div class="aspect-[16/9] overflow-hidden">
+          <img src="assets/images/togo/232333.webp" alt="Agricultural work in Africa" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-6 lg:p-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full bg-gold"></span>
+            <span class="text-gold text-xs tracking-wider uppercase font-semibold">Overseas</span>
+          </div>
+          <h3 class="font-display font-bold text-forest text-2xl mb-3">Communities Across Africa</h3>
+          <p class="text-forest/75 leading-relaxed mb-5">
+            Clean water projects, sustainable agriculture, food relief, and faith partnerships with local churches. We equip farmers with seeds, tools, training, and market pathways so harvest becomes lasting security — not just temporary aid.
+          </p>
+          <ul class="space-y-2 text-sm text-forest/70">
+            <li class="flex items-start gap-2"><i class="fas fa-check text-gold mt-1 text-xs"></i> Wells, boreholes &amp; water access</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-gold mt-1 text-xs"></i> Seeds, tools, irrigation &amp; agricultural training</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-gold mt-1 text-xs"></i> Food assistance paired with long-term solutions</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-gold mt-1 text-xs"></i> Partnership with local churches and leaders</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Texas -->
+      <div class="bg-cream border border-forest/10 rounded-sm overflow-hidden shadow-sm">
+        <div class="aspect-[16/9] overflow-hidden bg-forest-dark flex items-center justify-center">
+          <img src="assets/images/burundi/232258.jpg" alt="Families and community support" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="p-6 lg:p-8">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="w-2 h-2 rounded-full bg-gold"></span>
+            <span class="text-gold text-xs tracking-wider uppercase font-semibold">Local · Texas</span>
+          </div>
+          <h3 class="font-display font-bold text-forest text-2xl mb-3">Families in Texas</h3>
+          <p class="text-forest/75 leading-relaxed mb-5">
+            As a ministry based and incorporated in Texas, we serve our own communities: food pantries, housing and school support, programs for children, advocacy against domestic violence, and practical care for single mothers — so no family faces hardship alone.
+          </p>
+          <ul class="space-y-2 text-sm text-forest/70">
+            <li class="flex items-start gap-2"><i class="fas fa-check text-gold mt-1 text-xs"></i> Food pantries &amp; emergency relief</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-gold mt-1 text-xs"></i> Housing &amp; schooling assistance</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-gold mt-1 text-xs"></i> Kids programs &amp; educational support</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-gold mt-1 text-xs"></i> Campaign against domestic violence</li>
+            <li class="flex items-start gap-2"><i class="fas fa-check text-gold mt-1 text-xs"></i> Care for single mothers &amp; children</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== OUR APPROACH ============== -->
+<section class="py-20 lg:py-28 bg-cream-dark/40">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mb-14 text-center mx-auto">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Our Approach</span>
+      <h2 class="font-display font-bold text-forest text-3xl md:text-4xl lg:text-5xl leading-[1.08] mb-6">
+        From relief to self-sufficiency
+      </h2>
+      <p class="text-forest/70 text-lg leading-relaxed">
+        We don’t want families to depend on aid forever. Sustainable agriculture and local partnership are the bridge to lasting change.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-stagger">
+      <div class="value-card bg-cream border border-forest/10 rounded-sm p-6 text-center">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-forest text-cream flex items-center justify-center font-display text-xl font-bold">1</div>
+        <h3 class="font-display font-bold text-forest text-lg mb-2">Meet the need</h3>
+        <p class="text-forest/65 text-sm leading-relaxed">Emergency food, clean water, and safety for those in crisis — with dignity.</p>
+      </div>
+      <div class="value-card bg-cream border border-forest/10 rounded-sm p-6 text-center">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-forest text-cream flex items-center justify-center font-display text-xl font-bold">2</div>
+        <h3 class="font-display font-bold text-forest text-lg mb-2">Equip &amp; train</h3>
+        <p class="text-forest/65 text-sm leading-relaxed">Seeds, tools, irrigation, farming knowledge, and practical skills that last.</p>
+      </div>
+      <div class="value-card bg-cream border border-forest/10 rounded-sm p-6 text-center">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-gold text-forest flex items-center justify-center font-display text-xl font-bold">3</div>
+        <h3 class="font-display font-bold text-forest text-lg mb-2">Harvest &amp; income</h3>
+        <p class="text-forest/65 text-sm leading-relaxed">Families produce food for themselves and surplus that can become income.</p>
+      </div>
+      <div class="value-card bg-cream border border-forest/10 rounded-sm p-6 text-center">
+        <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-gold text-forest flex items-center justify-center font-display text-xl font-bold">4</div>
+        <h3 class="font-display font-bold text-forest text-lg mb-2">Stronger community</h3>
+        <p class="text-forest/65 text-sm leading-relaxed">Local churches and leaders carry the work forward — generational hope.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== VALUES ============== -->
+<section class="py-20 lg:py-28 bg-cream">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal max-w-3xl mb-14">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">What Guides Us</span>
+      <h2 class="font-display font-bold text-forest text-3xl md:text-4xl lg:text-5xl leading-[1.08]">
+        Our values
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-stagger">
+      <div class="value-card bg-cream border border-forest/10 rounded-sm p-6">
+        <i class="fas fa-cross text-gold text-xl mb-4"></i>
+        <h3 class="font-display font-bold text-forest text-xl mb-2">Christ-centered</h3>
+        <p class="text-forest/70 text-sm leading-relaxed">Everything we do flows from the gospel — proclaiming good news to the poor and freedom for the oppressed.</p>
+      </div>
+      <div class="value-card bg-cream border border-forest/10 rounded-sm p-6">
+        <i class="fas fa-handshake text-gold text-xl mb-4"></i>
+        <h3 class="font-display font-bold text-forest text-xl mb-2">Local partnership</h3>
+        <p class="text-forest/70 text-sm leading-relaxed">We work alongside churches and community leaders. Lasting change is owned by the people we serve.</p>
+      </div>
+      <div class="value-card bg-cream border border-forest/10 rounded-sm p-6">
+        <i class="fas fa-tractor text-gold text-xl mb-4"></i>
+        <h3 class="font-display font-bold text-forest text-xl mb-2">Agriculture first</h3>
+        <p class="text-forest/70 text-sm leading-relaxed">Sustainable farming is at the heart of long-term food security and dignity overseas.</p>
+      </div>
+      <div class="value-card bg-cream border border-forest/10 rounded-sm p-6">
+        <i class="fas fa-shield-halved text-gold text-xl mb-4"></i>
+        <h3 class="font-display font-bold text-forest text-xl mb-2">Accountability</h3>
+        <p class="text-forest/70 text-sm leading-relaxed">We publish verified impact, practice financial transparency, and never report what we cannot document.</p>
+      </div>
+      <div class="value-card bg-cream border border-forest/10 rounded-sm p-6">
+        <i class="fas fa-house-chimney text-gold text-xl mb-4"></i>
+        <h3 class="font-display font-bold text-forest text-xl mb-2">Texas roots</h3>
+        <p class="text-forest/70 text-sm leading-relaxed">Based and incorporated in Texas, we serve our neighbors with the same heart we bring to the field abroad.</p>
+      </div>
+      <div class="value-card bg-cream border border-forest/10 rounded-sm p-6">
+        <i class="fas fa-heart text-gold text-xl mb-4"></i>
+        <h3 class="font-display font-bold text-forest text-xl mb-2">Dignity for all</h3>
+        <p class="text-forest/70 text-sm leading-relaxed">We walk with survivors of domestic violence and single mothers — practical help, safety, and restored hope.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ACCOUNTABILITY STRIP ============== -->
+<section class="py-16 bg-forest relative overflow-hidden">
+  <div class="absolute inset-0 pattern-bg opacity-30"></div>
+  <div class="relative max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="reveal grid md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <div class="text-gold text-xs tracking-wider uppercase font-semibold mb-2">Legal Status</div>
+        <p class="text-cream font-display font-bold text-xl mb-1">Texas 501(c)(3)</p>
+        <p class="text-cream/60 text-sm">Incorporated in Texas · Public charity</p>
+      </div>
+      <div>
+        <div class="text-gold text-xs tracking-wider uppercase font-semibold mb-2">Transparency</div>
+        <p class="text-cream font-display font-bold text-xl mb-1">Verified Impact</p>
+        <p class="text-cream/60 text-sm">Documented outcomes · Annual reports</p>
+      </div>
+      <div>
+        <div class="text-gold text-xs tracking-wider uppercase font-semibold mb-2">Giving</div>
+        <p class="text-cream font-display font-bold text-xl mb-1">Tax-Deductible</p>
+        <p class="text-cream/60 text-sm">EIN available upon request</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== CTA ============== -->
+<section class="py-20 lg:py-28 bg-cream">
+  <div class="max-w-4xl mx-auto px-5 lg:px-8 text-center">
+    <div class="reveal">
+      <span class="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4 inline-block">Join Us</span>
+      <h2 class="font-display font-bold text-forest text-3xl md:text-4xl lg:text-5xl leading-[1.08] mb-6">
+        Be part of the story
+      </h2>
+      <p class="text-forest/70 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+        From our Texas headquarters to villages across Africa, your partnership helps families move from survival to hope — one community, one harvest, one life at a time.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="index.html#donate" class="btn-primary px-8 py-4 rounded-sm font-bold tracking-wide uppercase text-sm">
+          Donate Now <i class="fas fa-heart ml-2"></i>
+        </a>
+        <a href="index.html#what-we-do" class="inline-flex items-center justify-center px-8 py-4 rounded-sm font-bold tracking-wide uppercase text-sm border-2 border-forest/20 text-forest hover:border-gold hover:text-gold transition">
+          See What We Do
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER (same as homepage) ============== -->
+<footer class="bg-forest-dark text-cream/80 pt-20 pb-8 border-t border-gold/20">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      <div>
+        <a href="index.html" class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
+            <i class="fas fa-seedling text-forest text-lg"></i>
+          </div>
+          <div class="flex flex-col leading-none">
+            <span class="font-display font-bold text-cream text-lg tracking-wide">HARVEST OF HOPE</span>
+            <span class="text-cream/60 text-[10px] tracking-[0.2em] uppercase mt-0.5">Faith in Action</span>
+          </div>
+        </a>
+        <p class="text-cream/60 text-sm leading-relaxed mb-6">
+          A Texas-based and incorporated 501(c)(3) nonprofit Christian ministry serving underserved communities in Africa through clean water, food security, and sustainable agriculture — and serving families in Texas with food pantries, housing &amp; school support, kids programs, advocacy against domestic violence, and care for single mothers.
+        </p>
+        <div class="flex gap-3">
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="Facebook"><i class="fab fa-facebook-f text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="Instagram"><i class="fab fa-instagram text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="YouTube"><i class="fab fa-youtube text-sm"></i></a>
+          <a href="#" class="w-9 h-9 rounded-full border border-cream/20 hover:border-gold hover:text-gold flex items-center justify-center transition" aria-label="Email"><i class="fas fa-envelope text-sm"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-cream text-sm uppercase tracking-wider mb-5">Explore</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="about.html" class="hover:text-gold transition">About Us</a></li>
+          <li><a href="index.html#what-we-do" class="hover:text-gold transition">What We Do</a></li>
+          <li><a href="index.html#where" class="hover:text-gold transition">Where We Work</a></li>
+          <li><a href="index.html#impact" class="hover:text-gold transition">Our Impact</a></li>
+          <li><a href="index.html#projects" class="hover:text-gold transition">Projects</a></li>
+          <li><a href="index.html#stories" class="hover:text-gold transition">Stories</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-cream text-sm uppercase tracking-wider mb-5">Get Involved</h4>
+        <ul class="space-y-3 text-sm">
+          <li><a href="index.html#donate" class="hover:text-gold transition">Donate</a></li>
+          <li><a href="#" class="hover:text-gold transition">Monthly Giving</a></li>
+          <li><a href="#" class="hover:text-gold transition">Sponsor a Village</a></li>
+          <li><a href="#" class="hover:text-gold transition">Church Partnerships</a></li>
+          <li><a href="#" class="hover:text-gold transition">Corporate Partnerships</a></li>
+          <li><a href="#" class="hover:text-gold transition">Volunteer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display font-bold text-cream text-sm uppercase tracking-wider mb-5">Field Updates</h4>
+        <p class="text-cream/60 text-sm mb-4 leading-relaxed">Receive field stories, prayer requests, and impact reports directly.</p>
+        <form class="space-y-3" id="newsletter-form">
+          <input type="email" placeholder="Your email address" required class="w-full px-4 py-3 bg-cream/5 border border-cream/15 text-cream placeholder-cream/40 text-sm focus:border-gold focus:outline-none rounded-sm" />
+          <button type="submit" class="btn-primary w-full px-4 py-3 rounded-sm font-bold tracking-wide uppercase text-xs">Subscribe</button>
+          <p class="form-msg hidden text-gold text-xs">Thank you — we'll be in touch soon.</p>
+        </form>
+      </div>
+    </div>
+
+    <div class="h-px bg-cream/10 mb-8"></div>
+
+    <div class="grid md:grid-cols-3 gap-8 mb-8 text-sm">
+      <div>
+        <div class="text-cream font-semibold mb-2">Contact</div>
+        <p class="text-cream/60">
+          P.O. Box 4217<br/>
+          Dallas–Fort Worth, TX 75001<br/>
+          <a href="mailto:hello@harvestofhope.org" class="text-gold hover:underline">hello@harvestofhope.org</a>
+        </p>
+      </div>
+      <div>
+        <div class="text-cream font-semibold mb-2">Tax Status &amp; Incorporation</div>
+        <p class="text-cream/60">
+          Incorporated in Texas<br/>
+          501(c)(3) Public Charity<br/>
+          EIN available upon request<br/>
+          All gifts tax-deductible
+        </p>
+      </div>
+      <div>
+        <div class="text-cream font-semibold mb-2">Accountability</div>
+        <p class="text-cream/60">
+          <a href="#" class="hover:text-gold block">Financial Transparency</a>
+          <a href="#" class="hover:text-gold block">Annual Reports</a>
+          <a href="#" class="hover:text-gold block">Governance &amp; Policies</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-cream/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-cream/50">
+      <div class="flex flex-wrap gap-4">
+        <a href="#" class="hover:text-gold transition">Privacy Policy</a>
+        <a href="#" class="hover:text-gold transition">Donor Privacy</a>
+        <a href="#" class="hover:text-gold transition">Terms</a>
+        <a href="#" class="hover:text-gold transition">Financial Transparency</a>
+      </div>
+      <div class="font-display italic text-cream/60">
+        Faith in Action. Communities Transformed.
+      </div>
+    </div>
+
+    <div class="mt-6 text-center text-cream/40 text-xs">
+      © 2026 Harvest of Hope Ministry. Based and Incorporated in Texas. A 501(c)(3) nonprofit organization.
+    </div>
+  </div>
+</footer>
+
+<!-- Floating mobile donate -->
+<a href="index.html#donate" class="float-donate lg:hidden fixed bottom-6 right-6 z-40 bg-gold text-forest font-bold tracking-wide uppercase text-xs px-5 py-3.5 rounded-sm flex items-center gap-2 shadow-lg">
+  <i class="fas fa-heart"></i> Donate
+</a>
+
+<script>
+  /* ========== SHARED JS (from homepage) ========== */
+  // Mobile menu
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+    const icon = mobileToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-xmark');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      const icon = mobileToggle.querySelector('i');
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    });
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal, .reveal-stagger');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('in-view');
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+  reveals.forEach(el => io.observe(el));
+
+  // Nav scroll shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) nav.classList.add('nav-scrolled');
+    else nav.classList.remove('nav-scrolled');
+  });
+
+  // Newsletter
+  const form = document.getElementById('newsletter-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.querySelector('input').value = '';
+      form.querySelector('.form-msg').classList.remove('hidden');
+    });
+  }
+  /* ========== END SHARED JS ========== */
+
+  /* ========== ABOUT PAGE ONLY JS ========== */
+  // (none required beyond shared reveal / nav / menu)
+  /* ========== END ABOUT PAGE ONLY JS ========== */
+</script>
+
+</body>
+</html>
