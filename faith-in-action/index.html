@@ -322,9 +322,9 @@
     </div>
     <div id="mobile-menu" class="mobile-menu lg:hidden">
       <div class="flex flex-col gap-4 py-6 text-cream/80">
-        <a href="#about" class="hover:text-gold">About</a>
-        <a href="#what-we-do" class="hover:text-gold">What We Do</a>
-        <a href="#where" class="hover:text-gold">Where We Work</a>
+        <a href="about.html" class="hover:text-gold">About</a>
+        <a href="what-we-do.html" class="hover:text-gold">What We Do</a>
+        <a href="where-we-work.html" class="hover:text-gold">Where We Work</a>
         <a href="#impact" class="hover:text-gold">Impact</a>
         <a href="#projects" class="hover:text-gold">Projects</a>
         <a href="#stories" class="hover:text-gold">Stories</a>
@@ -385,7 +385,7 @@
   <!-- Replaced <img> with <video> -->
   <video 
     autoplay 
-    muted 
+    muted
     loop 
     playsinline 
     poster="https://images.unsplash.com/photo-1610733376381-010db4468779" 
@@ -523,8 +523,7 @@
         <div class="relative aspect-video w-full rounded-sm overflow-hidden shadow-lg bg-forest">
           <video
             class="absolute inset-0 w-full h-full object-cover"
-            autoplay
-            muted
+            controls
             loop
             playsinline
             preload="metadata"
@@ -534,9 +533,9 @@
             <source src="assets/images/video_1.mp4" type="video/mp4">
           </video>
           <div class="absolute bottom-3 left-3 z-10">
-            <span class="inline-flex items-center gap-1.5 bg-gold/95 text-forest text-[10px] tracking-wider uppercase font-bold px-2.5 py-1 rounded-sm">
+            <!-- <span class="inline-flex items-center gap-1.5 bg-gold/95 text-forest text-[10px] tracking-wider uppercase font-bold px-2.5 py-1 rounded-sm">
               <i class="fas fa-play text-[8px]"></i> Field Video
-            </span>
+            </span> -->
           </div>
         </div>
 
@@ -920,7 +919,7 @@
               <!-- Slide 1 — Video -->
               <div class="fa-slide is-active" data-type="video" role="group" aria-roledescription="slide" aria-label="1 of 6">
                 <div class="fa-media-wrap">
-                  <video muted loop playsinline preload="metadata" poster="assets/images/togo/232333.webp" aria-label="Video of agricultural work in the field">
+                  <video controls loop playsinline preload="metadata" poster="assets/images/togo/232333.webp" aria-label="Video of agricultural work in the field">
                     <source src="assets/images/agric/video_1.mp4" type="video/mp4">
                   </video>
                   <div class="fa-slide-overlay"></div>
@@ -936,7 +935,7 @@
 
               <div class="fa-slide is-active" data-type="video" role="group" aria-roledescription="slide" aria-label="1 of 6">
                 <div class="fa-media-wrap">
-                  <video muted loop playsinline preload="metadata" poster="assets/images/togo/232333.webp" aria-label="Video of agricultural work in the field">
+                  <video controls loop playsinline preload="metadata" poster="assets/images/togo/232333.webp" aria-label="Video of agricultural work in the field">
                     <source src="assets/images/agric/video_2.mp4" type="video/mp4">
                   </video>
                   <div class="fa-slide-overlay"></div>
